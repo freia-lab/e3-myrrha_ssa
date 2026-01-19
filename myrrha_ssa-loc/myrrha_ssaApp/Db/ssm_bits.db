@@ -1,0 +1,646 @@
+# bi records referencing bits of Modbus status registers.
+
+record(bi, "$(PREFIX)-$(SSM_NUM):LimSumm") {
+    field(DESC, "Limit status summary")
+    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStat.B0 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):WarnSumm") {
+    field(DESC, "Warning status summary")
+    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStat.B1 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):CommStat") {
+    field(DESC, "Communication status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStat.B2 CP MSS")
+    field(ZNAM, "Comm Error")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Mode") {
+    field(DESC, "Operational mode")
+    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStat.B3 CP MSS")
+    field(ZNAM, "")
+    field(ONAM, "")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):MemBankInd") {
+    field(DESC, "Diagnostic buffer memory bank indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStat.B5 CP MSS")
+    field(ZNAM, "Bank 1")
+    field(ONAM, "Bank 2")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):TrigStat") {
+    field(DESC, "Diagnostic buffer trigger status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStat.B6 CP MSS")
+    field(ZNAM, "Unarmed")
+    field(ONAM, "Armed")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):MajorFlt") {
+    field(DESC, "Major issue indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStat.BF CP MSS")
+    field(ZNAM, "Major issue")
+    field(ONAM, "No issue")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall1On") {
+    field(DESC, "Pallet on/off status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.B0 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall2On") {
+    field(DESC, "Pallet on/off status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.B1 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall3On") {
+    field(DESC, "Pallet on/off status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.B2 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall4On") {
+    field(DESC, "Pallet on/off status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.B3 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall5On") {
+    field(DESC, "Pallet on/off status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.B4 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall6On") {
+    field(DESC, "Pallet on/off status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.B5 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall1Sanity") {
+    field(DESC, "Pallet sanity status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.B8 CP MSS")
+    field(ZNAM, "Not passed")
+    field(ONAM, "Passed")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall2Sanity") {
+    field(DESC, "Pallet sanity status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.B9 CP MSS")
+    field(ZNAM, "Not passed")
+    field(ONAM, "Passed")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall3Sanity") {
+    field(DESC, "Pallet sanity status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.BA CP MSS")
+    field(ZNAM, "Not passed")
+    field(ONAM, "Passed")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall4Sanity") {
+    field(DESC, "Pallet sanity status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.BB CP MSS")
+    field(ZNAM, "Not passed")
+    field(ONAM, "Passed")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall5Sanity") {
+    field(DESC, "Pallet sanity status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.BC CP MSS")
+    field(ZNAM, "Not passed")
+    field(ONAM, "Passed")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall6Sanity") {
+    field(DESC, "Pallet sanity status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PallStat.BD CP MSS")
+    field(ZNAM, "Not passed")
+    field(ONAM, "Passed")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall1RstNeeded") {
+    field(DESC, "Pallet reset required indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RstStat.B0 CP MSS")
+    field(ZNAM, "Needs reset")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall2RstNeeded") {
+    field(DESC, "Pallet reset required indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RstStat.B1 CP MSS")
+    field(ZNAM, "Needs reset")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall3RstNeeded") {
+    field(DESC, "Pallet reset required indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RstStat.B2 CP MSS")
+    field(ZNAM, "Needs reset")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall4RstNeeded") {
+    field(DESC, "Pallet reset required indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RstStat.B3 CP MSS")
+    field(ZNAM, "Needs reset")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall5RstNeeded") {
+    field(DESC, "Pallet reset required indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RstStat.B4 CP MSS")
+    field(ZNAM, "Needs reset")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall6RstNeeded") {
+    field(DESC, "Pallet reset required indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RstStat.B5 CP MSS")
+    field(ZNAM, "Needs reset")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefRstNeeded") {
+    field(DESC, "Reference reset required indicator")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RstStat.B8 CP MSS")
+    field(ZNAM, "Needs reset")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall1VswrStat") {
+    field(DESC, "Pallet VSWR status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B0 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall2VswrStat") {
+    field(DESC, "Pallet VSWR status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B1 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall3VswrStat") {
+    field(DESC, "Pallet VSWR status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B2 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall4VswrStat") {
+    field(DESC, "Pallet VSWR status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B3 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall5VswrStat") {
+    field(DESC, "Pallet VSWR status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B4 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall6VswrStat") {
+    field(DESC, "Pallet VSWR status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B5 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):CombVswrStat") {
+    field(DESC, "Combiner VSWR status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B6 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):LoadVswrStat") {
+    field(DESC, "Load VSWR status")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B7 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall1PwrDisLim") {
+    field(DESC, "Power dissipation over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B8 CP MSS")
+    field(ZNAM, "Fault")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall2PwrDisLim") {
+    field(DESC, "Power dissipation over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.B9 CP MSS")
+    field(ZNAM, "Fault")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall3PwrDisLim") {
+    field(DESC, "Power dissipation over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.BA CP MSS")
+    field(ZNAM, "Fault")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall4PwrDisLim") {
+    field(DESC, "Power dissipation over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.BB CP MSS")
+    field(ZNAM, "Fault")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall5PwrDisLim") {
+    field(DESC, "Power dissipation over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.BC CP MSS")
+    field(ZNAM, "Fault")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall6PwrDisLim") {
+    field(DESC, "Power dissipation over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.BD CP MSS")
+    field(ZNAM, "Fault")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):PwrWarn") {
+    field(DESC, "Power output warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.BE CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):PwrLim") {
+    field(DESC, "Power output over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStat.BF CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall1VoltLim") {
+    field(DESC, "Pallet voltage over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStat.B0 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall2VoltLim") {
+    field(DESC, "Pallet voltage over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStat.B1 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall3VoltLim") {
+    field(DESC, "Pallet voltage over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStat.B2 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall4VoltLim") {
+    field(DESC, "Pallet voltage over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStat.B3 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall5VoltLim") {
+    field(DESC, "Pallet voltage over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStat.B4 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall6VoltLim") {
+    field(DESC, "Pallet voltage over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStat.B5 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall1CurrLim") {
+    field(DESC, "Pallet current over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStat.B0 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall2CurrLim") {
+    field(DESC, "Pallet current over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStat.B1 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall3CurrLim") {
+    field(DESC, "Pallet current over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStat.B2 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall4CurrLim") {
+    field(DESC, "Pallet current over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStat.B3 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall5CurrLim") {
+    field(DESC, "Pallet current over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStat.B4 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall6CurrLim") {
+    field(DESC, "Pallet current over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStat.B5 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):WaterInTWarn") {
+    field(DESC, "Water inlet temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B0 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):WaterOutTWarn") {
+    field(DESC, "Water outlet temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B1 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):AirInTWarn") {
+    field(DESC, "Air inlet temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B2 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):AirOutTWarn") {
+    field(DESC, "Air outlet temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B3 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Load1TWarn") {
+    field(DESC, "Load temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B4 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Load2TWarn") {
+    field(DESC, "Load temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B5 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):IOBoardTWarn") {
+    field(DESC, "IO Board temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B6 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Ref10kTWarn") {
+    field(DESC, "10k reference temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B7 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):ADCTWarn") {
+    field(DESC, "ADC temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B8 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall12TWarn") {
+    field(DESC, "Pallet temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.B9 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall34TWarn") {
+    field(DESC, "Pallet temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.BA CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall56TWarn") {
+    field(DESC, "Pallet temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.BB CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):CPUTWarn") {
+    field(DESC, "Processor temperature warning")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStat.BC CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):WaterInTLim") {
+    field(DESC, "Water inlet temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B0 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):WaterOutTLim") {
+    field(DESC, "Water outlet temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B1 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):AirInTLim") {
+    field(DESC, "Air inlet temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B2 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):AirOutTLim") {
+    field(DESC, "Air outlet temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B3 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Load1TLim") {
+    field(DESC, "Load temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B4 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Load2TLim") {
+    field(DESC, "Load temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B5 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):IOBoardTLim") {
+    field(DESC, "IO Board temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B6 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Ref10kTLim") {
+    field(DESC, "10k reference temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B7 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):ADCTLim") {
+    field(DESC, "ADC temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B8 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall12TLim") {
+    field(DESC, "Pallet temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.B9 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall34TLim") {
+    field(DESC, "Pallet temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.BA CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):Pall56TLim") {
+    field(DESC, "Pallet temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.BB CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):CPUTLim") {
+    field(DESC, "Processor temperature over limit")
+    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStat.BC CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatPSU") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.B0 CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStat12V") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.B1 CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatRef") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.B2 CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatGnd") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.B3 CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatADC") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.B4 CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStat12VFan") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.B5 CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan1") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.B8 CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan2") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.B9 CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan3") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.BA CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan1PSU") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.BB CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan2PSU") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.BC CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan3PSU") {
+    field(DESC, "Debugging information")
+    field(INP, "$(PREFIX)-$(SSM_NUM):RefStat.BD CP MSS")
+    field(ZNAM, "Not OK")
+    field(ONAM, "OK")
+}
+

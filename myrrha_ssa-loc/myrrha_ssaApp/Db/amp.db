@@ -1,0 +1,52 @@
+# Status of an amplifier.
+
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Stat", "$(PREFIX)-$(AMP_CHAR):Stat")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)NrRunning", "$(PREFIX)-$(AMP_CHAR):NrRunning")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Alarms", "$(PREFIX)-$(AMP_CHAR):Alarm")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Warnings", "$(PREFIX)-$(AMP_CHAR):Warn")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)FwdPwr", "$(PREFIX)-$(AMP_CHAR):FwdPwr")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)RflPwr", "$(PREFIX)-$(AMP_CHAR):RflPwr")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Vswr", "$(PREFIX)-$(AMP_CHAR):Vswr")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Eff", "$(PREFIX)-$(AMP_CHAR):Eff")
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):CommStat") {
+    field(DESC, "Communication status of all SSMs")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B0 CP MSS")
+    field(ZNAM, "Comm error")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):AllPallRunning") {
+    field(DESC, "Whether all pallets are running")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B1 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):SomePallRunning") {
+    field(DESC, "Whether any pallets are running")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B2 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):PSUVoltStat") {
+    field(DESC, "PSU voltage over 90% of setpoint")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B3 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):RFDriverPSUStat") {
+    field(DESC, "Status of RF driver's PSU")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B4 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):RFDriverStat") {
+    field(DESC, "RF driver on/off status")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B5 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}

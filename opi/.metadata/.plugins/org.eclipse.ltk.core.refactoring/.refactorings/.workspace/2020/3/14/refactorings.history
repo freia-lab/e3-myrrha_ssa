@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;CSS/PSU/SSA_PSU_start&apos;" deleteContents="false" description="Delete resource &apos;CSS/PSU/SSA_PSU_start&apos;" element1="/CSS/PSU/SSA_PSU_start" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1585473449811"/>
+</session>

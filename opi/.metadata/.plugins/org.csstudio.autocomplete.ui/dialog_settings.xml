@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="auto_complete_history">
+		<list key="PV">
+			<item value="$(PREFIX):Pall$(N)VswrStat"/>
+			<item value="$(PREFIX):Pall$(N)VoltLim"/>
+			<item value="$(PREFIX):Pall$(N)"/>
+			<item value="$(PREFIX):Pall$(N)SanityClosed"/>
+			<item value="$(PREFIX):Pall$(N)SanityOpen"/>
+			<item value="$(PREFIX):Pall$(N)TripCnt"/>
+			<item value="$(PREFIX):Pall$(N)JunctT"/>
+			<item value="$(PREFIX):Pall$(N)Vswr"/>
+			<item value="$(PREFIX):Pall$(N)Curr"/>
+			<item value="$(PREFIX):Pall$(N)RflPwr"/>
+			<item value="$(PREFIX):Pall$(N)FwdPwr"/>
+			<item value="$(PREFIX):CPUT"/>
+			<item value="$(PREFIX):Pall56T"/>
+			<item value="$(PREFIX):Pall34T"/>
+			<item value="$(PREFIX):Pall12T"/>
+			<item value="$(PREFIX):ADCT"/>
+			<item value="$(PREFIX):Ref10kT"/>
+			<item value="$(PREFIX):IOBoardT"/>
+			<item value="$(PREFIX):Load2T"/>
+			<item value="$(PREFIX):Load1T"/>
+			<item value="$(PREFIX):AirOutT"/>
+			<item value="$(PREFIX):AirInT"/>
+			<item value="$(PREFIX):WaterOutT"/>
+			<item value="$(PREFIX):WaterInT"/>
+			<item value="$(PREFIX):"/>
+			<item value="$(PREFIX):ADCRefVolt"/>
+			<item value="$(PREFIX):PSUFeedback"/>
+			<item value="$(PREFIX):Fan3S"/>
+			<item value="$(PREFIX):Fan2S"/>
+			<item value="$(PREFIX):Fan1S"/>
+			<item value="$(PREFIX):FanXPwm"/>
+			<item value="$(PREFIX):CombPflPwr"/>
+			<item value="$(PREFIX):CombRflPwr"/>
+			<item value="$(PREFIX):CombVswr"/>
+			<item value="$(PREFIX):LoadVswr"/>
+			<item value="$(PREFIX):LOad6kWRflPwr"/>
+			<item value="$(PREFIX):Load6kWFwdPwr"/>
+			<item value="$(PREFIX):FlowRateOnReq"/>
+			<item value="$(PREFIX):FlowRate"/>
+			<item value="$(PREFIX):LiveCnt"/>
+			<item value="$(PREFIX):HwVersion"/>
+			<item value="$(PREFIX):Ser"/>
+			<item value="$(PREFIX):SwVersion"/>
+			<item value="$(PREFIX):Addr"/>
+			<item value="$(PREFIX)$(SSM_NUM):$(NAME)-Sts"/>
+			<item value="$(PREFIX)$(SSM_NUM):$(NAME)-Sel"/>
+		</list>
+	</section>
+</section>

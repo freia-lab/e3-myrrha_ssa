@@ -1,0 +1,6 @@
+# Commands for an amplifier.
+
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)OnReq", "$(PREFIX)-$(AMP_CHAR):On-Cmd")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)OffReq", "$(PREFIX)-$(AMP_CHAR):Off-Cmd")
+alias("$(PREFIX_CGD):iRF$(AMP_CHAR)OnReq", "$(PREFIX)-$(AMP_CHAR):RFOn-Cmd")
+alias("$(PREFIX_CGD):iRF$(AMP_CHAR)OffReq", "$(PREFIX)-$(AMP_CHAR):RFOff-Cmd")

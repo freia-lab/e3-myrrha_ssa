@@ -1,0 +1,11 @@
+# Miscellaneous cabinet records.
+
+record(calcout, "$(PREFIX):iKeepAliveCalc") {
+    field(DESC, "Maintains the keepalive register")
+    field(SCAN, ".2 second")
+    field(CALC, "VAL + 1")
+    field(OUT, "$(PREFIX):KeepAlive PP")
+}
+
+alias("$(PREFIX):iPSUOnReq-All", "$(PREFIX):PSUOn-Cmd")
+alias("$(PREFIX):iPSUOffReq-All", "$(PREFIX):PSUOff-Cmd")

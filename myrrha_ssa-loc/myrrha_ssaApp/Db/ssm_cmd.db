@@ -1,0 +1,28 @@
+# Commands for an SSM.
+
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OnReq-PallAll", "$(PREFIX)-$(SSM_NUM):On-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OnReq-Pall1", "$(PREFIX)-$(SSM_NUM):Pall1On-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OnReq-Pall2", "$(PREFIX)-$(SSM_NUM):Pall2On-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OnReq-Pall3", "$(PREFIX)-$(SSM_NUM):Pall3On-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OnReq-Pall4", "$(PREFIX)-$(SSM_NUM):Pall4On-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OnReq-Pall5", "$(PREFIX)-$(SSM_NUM):Pall5On-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OnReq-Pall6", "$(PREFIX)-$(SSM_NUM):Pall6On-Cmd")
+
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OffReq-PallAll", "$(PREFIX)-$(SSM_NUM):Off-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OffReq-Pall1", "$(PREFIX)-$(SSM_NUM):Pall1Off-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OffReq-Pall2", "$(PREFIX)-$(SSM_NUM):Pall2Off-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OffReq-Pall3", "$(PREFIX)-$(SSM_NUM):Pall3Off-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OffReq-Pall4", "$(PREFIX)-$(SSM_NUM):Pall4Off-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OffReq-Pall5", "$(PREFIX)-$(SSM_NUM):Pall5Off-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)OffReq-Pall6", "$(PREFIX)-$(SSM_NUM):Pall6Off-Cmd")
+
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)RstReq-PallAll", "$(PREFIX)-$(SSM_NUM):Rst-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)RstReq-Pall1", "$(PREFIX)-$(SSM_NUM):Pall1Rst-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)RstReq-Pall2", "$(PREFIX)-$(SSM_NUM):Pall2Rst-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)RstReq-Pall3", "$(PREFIX)-$(SSM_NUM):Pall3Rst-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)RstReq-Pall4", "$(PREFIX)-$(SSM_NUM):Pall4Rst-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)RstReq-Pall5", "$(PREFIX)-$(SSM_NUM):Pall5Rst-Cmd")
+alias("$(PREFIX_CGD):iSSM$(SSM_NUM)RstReq-Pall6", "$(PREFIX)-$(SSM_NUM):Pall6Rst-Cmd")
+
+alias("$(PREFIX_CGD):iSSMSanityReq-SSM$(SSM_NUM)", "$(PREFIX)-$(SSM_NUM):Sanity-Cmd")
+alias("$(PREFIX_CGD):iSSMFlowReq-SSM$(SSM_NUM)", "$(PREFIX)-$(SSM_NUM):Flow-Cmd")

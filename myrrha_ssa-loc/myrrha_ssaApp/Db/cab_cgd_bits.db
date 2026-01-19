@@ -1,0 +1,113 @@
+# Bits of the CGD status registers.
+
+record(bi, "$(PREFIX):EStop") {
+    field(DESC, "Emergency button state")
+    field(INP, "$(PREFIX):GeneralStat1.B0 CP MSS")
+    field(ZNAM, "Not pushed")
+    field(ONAM, "Pushed")
+}
+
+record(bi, "$(PREFIX):ExtIntlk1") {
+    field(DESC, "External interlock 1 state")
+    field(INP, "$(PREFIX):GeneralStat1.B1 CP MSS")
+    field(ZNAM, "No interlock")
+    field(ONAM, "Interlock active")
+}
+
+record(bi, "$(PREFIX):ExtIntlk2") {
+    field(DESC, "External interlock 2 state")
+    field(INP, "$(PREFIX):GeneralStat1.B2 CP MSS")
+    field(ZNAM, "No interlock")
+    field(ONAM, "Interlock active")
+}
+
+record(bi, "$(PREFIX):WaterFlowInRange") {
+    field(DESC, "Water flow rate measurement")
+    field(INP, "$(PREFIX):GeneralStat1.B3 CP MSS")
+    field(ZNAM, "Not in range")
+    field(ONAM, "In range")
+}
+
+record(bi, "$(PREFIX):WaterFlowStat") {
+    field(DESC, "Water flow on/off sensor")
+    field(INP, "$(PREFIX):GeneralStat1.B4 CP MSS")
+    field(ZNAM, "No flow")
+    field(ONAM, "Flow OK")
+}
+
+record(bi, "$(PREFIX):Leak") {
+    field(DESC, "Leak detection status")
+    field(INP, "$(PREFIX):GeneralStat1.B5 CP MSS")
+    field(ZNAM, "Leak detected")
+    field(ONAM, "No leak")
+}
+
+record(bi, "$(PREFIX):DoorFrontStat") {
+    field(DESC, "Front door state")
+    field(INP, "$(PREFIX):GeneralStat1.B6 CP MSS")
+    field(ZNAM, "Open")
+    field(ONAM, "Closed")
+}
+
+record(bi, "$(PREFIX):DoorRearStat") {
+    field(DESC, "Rear door state")
+    field(INP, "$(PREFIX):GeneralStat1.B7 CP MSS")
+    field(ZNAM, "Open")
+    field(ONAM, "Closed")
+}
+
+record(bi, "$(PREFIX):LocalCtrlStat") {
+    field(DESC, "Local control status")
+    field(INP, "$(PREFIX):GeneralStat2.B0 CP MSS")
+    field(ZNAM, "Remote control")
+    field(ONAM, "Local control")
+}
+
+record(bi, "$(PREFIX):RFLineTStat") {
+    field(DESC, "RF line temperature status")
+    field(INP, "$(PREFIX):GeneralStat2.B1 CP MSS")
+    field(ZNAM, "Over limit")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX):ExtT1Warn") {
+    field(DESC, "External temperature 1 warning")
+    field(INP, "$(PREFIX):GeneralStat2.B2 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX):ExtT2Warn") {
+    field(DESC, "External temperature 2 warning")
+    field(INP, "$(PREFIX):GeneralStat2.B3 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX):IntTWarn") {
+    field(DESC, "Internal temperature warning")
+    field(INP, "$(PREFIX):GeneralStat2.B4 CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX):ExtT1Err") {
+    field(DESC, "External temperature 1 error")
+    field(INP, "$(PREFIX):GeneralStat2.B5 CP MSS")
+    field(ZNAM, "Error")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX):ExtT2Err") {
+    field(DESC, "External temperature 2 error")
+    field(INP, "$(PREFIX):GeneralStat2.B6 CP MSS")
+    field(ZNAM, "Error")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX):IntTErr") {
+    field(DESC, "Internal temperature error")
+    field(INP, "$(PREFIX):GeneralStat2.B7 CP MSS")
+    field(ZNAM, "Error")
+    field(ONAM, "OK")
+}

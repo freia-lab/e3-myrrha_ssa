@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CSS/SSM_select.opi&apos; to &apos;SSM_single_inf.opi&apos;" description="Rename resource &apos;SSM_select.opi&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SSM_select.opi" name="SSM_single_inf.opi" stamp="1585038695092" updateReferences="true"/>
+</session>

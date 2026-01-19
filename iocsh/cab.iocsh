@@ -1,0 +1,21 @@
+##############################################################################
+####                            Cabinet iocsh                              ###
+##############################################################################
+#- PREFIX_CGD    - Prefix used for record names
+#- CAB_NUM       - The number of the cabinet
+#- SLAVE_ID      - EtherCAT slave ID
+#- ECAT_FREQ     - EtherCAT update frequency in Hz
+#-#############################################################################
+
+epicsEnvSet(PDO, 0)
+epicsEnvSet(SYNC_MAN_CMD, 2)
+epicsEnvSet(SYNC_MAN_CGD, 3)
+
+ecat2configure(0, $(ECAT_FREQ), 0, 1)
+
+dbLoadRecords("cab_cmd.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CMD),PDO=$(PDO)")
+dbLoadRecords("cab_cmd_bits.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CMD),PDO=$(PDO)")
+
+dbLoadRecords("cab_cgd.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CGD),PDO=$(PDO)")
+dbLoadRecords("cab_cgd_bits.db", "PREFIX=$(PREFIX_CGD)")
+dbLoadRecords("cab_misc.db", "PREFIX=$(PREFIX_CGD)")

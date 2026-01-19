@@ -1,0 +1,565 @@
+# The main Modbus data frame.
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Addr") {
+    field(DESC, "SSM address")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),0)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Ser") {
+    field(DESC, "Serial Number")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),1)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):HwVersion") {
+    field(DESC, "Hardware version")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),2)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):SwVersion") {
+    field(DESC, "Software version")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),3)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):LiveCnt") {
+    field(DESC, "Live counter")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),4)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):SSMStat") {
+    field(DESC, "SSM status bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),5,0xFFFF)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):PallStat") {
+    field(DESC, "Pallet status bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),6,0xFFFF)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):RstStat") {
+    field(DESC, "Reset status bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),7,0xFFFF)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):PwrStat") {
+    field(DESC, "Power status bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),8,0xFFFF)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):VoltLimStat") {
+    field(DESC, "Voltage limit status bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),9,0xFFFF)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):CurrLimStat") {
+    field(DESC, "Current limit status bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),10,0xFFFF)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):TWarnStat") {
+    field(DESC, "Warning temperature bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),11,0xFFFF)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):TLimStat") {
+    field(DESC, "Over temperature bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),12,0xFFFF)UINT16")
+}
+
+record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):RefStat") {
+    field(DESC, "Reference status bits")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(PORT),13,0xFFFF)UINT16")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall1FwdPwr") {
+    field(DESC, "Pallet forward power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),14)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall2FwdPwr") {
+    field(DESC, "Pallet forward power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),16)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall3FwdPwr") {
+    field(DESC, "Pallet forward power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),18)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall4FwdPwr") {
+    field(DESC, "Pallet forward power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),20)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall5FwdPwr") {
+    field(DESC, "Pallet forward power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),22)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall6FwdPwr") {
+    field(DESC, "Pallet forward power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),24)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall1RflPwr") {
+    field(DESC, "Pallet reflected power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),26)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall2RflPwr") {
+    field(DESC, "Pallet reflected power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),28)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall3RflPwr") {
+    field(DESC, "Pallet reflected power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),30)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall4RflPwr") {
+    field(DESC, "Pallet reflected power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),32)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall5RflPwr") {
+    field(DESC, "Pallet reflected power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),34)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall6RflPwr") {
+    field(DESC, "Pallet reflected power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),36)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):CombFwdPwr") {
+    field(DESC, "Combiner forward power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),38)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):CombRflPwr") {
+    field(DESC, "Combiner reflected power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),40)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Load6kWFwdPwr") {
+    field(DESC, "6 kW load forward power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),42)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Load6kWRflPwr") {
+    field(DESC, "6 kW load reflected power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),44)FLOAT32_BE")
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall1Curr") {
+    field(DESC, "Pallet current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),46)FLOAT32_BE")
+    field(EGU, "A")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall2Curr") {
+    field(DESC, "Pallet current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),48)FLOAT32_BE")
+    field(EGU, "A")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall3Curr") {
+    field(DESC, "Pallet current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),50)FLOAT32_BE")
+    field(EGU, "A")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall4Curr") {
+    field(DESC, "Pallet current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),52)FLOAT32_BE")
+    field(EGU, "A")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall5Curr") {
+    field(DESC, "Pallet current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),54)FLOAT32_BE")
+    field(EGU, "A")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall6Curr") {
+    field(DESC, "Pallet current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),56)FLOAT32_BE")
+    field(EGU, "A")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Pall1TripCnt") {
+    field(DESC, "Pallet trip counter")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),58)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Pall2TripCnt") {
+    field(DESC, "Pallet trip counter")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),59)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Pall3TripCnt") {
+    field(DESC, "Pallet trip counter")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),60)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Pall4TripCnt") {
+    field(DESC, "Pallet trip counter")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),61)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Pall5TripCnt") {
+    field(DESC, "Pallet trip counter")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),62)UINT16")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Pall6TripCnt") {
+    field(DESC, "Pallet trip counter")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),63)UINT16")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall1Volt") {
+    field(DESC, "Pallet voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),64)FLOAT32_BE")
+    field(EGU, "V")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall2Volt") {
+    field(DESC, "Pallet voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),66)FLOAT32_BE")
+    field(EGU, "V")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall3Volt") {
+    field(DESC, "Pallet voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),68)FLOAT32_BE")
+    field(EGU, "V")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall4Volt") {
+    field(DESC, "Pallet voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),70)FLOAT32_BE")
+    field(EGU, "V")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall5Volt") {
+    field(DESC, "Pallet voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),72)FLOAT32_BE")
+    field(EGU, "V")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall6Volt") {
+    field(DESC, "Pallet voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),74)FLOAT32_BE")
+    field(EGU, "V")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):WaterInT") {
+    field(DESC, "Water inlet temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),76)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):WaterOutT") {
+    field(DESC, "Water outlet temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),78)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):AirInT") {
+    field(DESC, "Air inlet temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),80)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):AirOutT") {
+    field(DESC, "Air outlet temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),82)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Load1T") {
+    field(DESC, "Load temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),84)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Load2T") {
+    field(DESC, "Load temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),86)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):IOBoardT") {
+    field(DESC, "IO board temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),88)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Ref10kT") {
+    field(DESC, "10k reference temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),90)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):ADCT") {
+    field(DESC, "ADC temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),92)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):CPUT") {
+    field(DESC, "Processor temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),94)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall12T") {
+    field(DESC, "Pallets 1-2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),96)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall34T") {
+    field(DESC, "Pallets 3-4 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),98)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall56T") {
+    field(DESC, "Pallets 5-6 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),100)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):FanXPwm") {
+    field(DESC, "Fan PWM percentage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),102)UINT16")
+    field(EGU, "%")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Fan1S") {
+    field(DESC, "Fan rotation speed")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),103)UINT16")
+    field(EGU, "rpm")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Fan2S") {
+    field(DESC, "Fan rotation speed")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),104)UINT16")
+    field(EGU, "rpm")
+}
+
+record(longin, "$(PREFIX)-$(SSM_NUM):Fan3S") {
+    field(DESC, "Fan rotation speed")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynInt32")
+    field(INP, "@asyn($(PORT),105)UINT16")
+    field(EGU, "rpm")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):PSUFeedback") {
+    field(DESC, "50V PSU feedback")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),106)FLOAT32_BE")
+    field(EGU, "V")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):ADCRefVolt") {
+    field(DESC, "ADC voltage reference")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),108)FLOAT32_BE")
+    field(EGU, "V")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall1JunctT") {
+    field(DESC, "Pallet junction temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),110)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall2JunctT") {
+    field(DESC, "Pallet junction temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),112)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall3JunctT") {
+    field(DESC, "Pallet junction temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),114)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall4JunctT") {
+    field(DESC, "Pallet junction temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),116)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall5JunctT") {
+    field(DESC, "Pallet junction temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),118)FLOAT32_BE")
+    field(EGU, "deg C")
+}
+
+record(ai, "$(PREFIX)-$(SSM_NUM):Pall6JunctT") {
+    field(DESC, "Pallet junction temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynFloat64")
+    field(INP, "@asyn($(PORT),120)FLOAT32_BE")
+    field(EGU, "deg C")
+}

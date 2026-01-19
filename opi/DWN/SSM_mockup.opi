@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <actions hook="false" hook_all="false" />
+  <auto_scale_widgets>
+    <auto_scale_widgets>false</auto_scale_widgets>
+    <min_width>-1</min_width>
+    <min_height>-1</min_height>
+  </auto_scale_widgets>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <background_color>
+    <color name="Main_background" red="222" green="222" blue="222" />
+  </background_color>
+  <boy_version>5.1.0</boy_version>
+  <foreground_color>
+    <color red="192" green="192" blue="192" />
+  </foreground_color>
+  <grid_space>5</grid_space>
+  <height>830</height>
+  <macros>
+    <include_parent_macros>true</include_parent_macros>
+  </macros>
+  <name></name>
+  <rules />
+  <scripts />
+  <show_close_button>true</show_close_button>
+  <show_edit_range>true</show_edit_range>
+  <show_grid>true</show_grid>
+  <show_ruler>true</show_ruler>
+  <snap_to_geometry>true</snap_to_geometry>
+  <widget_type>Display</widget_type>
+  <width>1750</width>
+  <wuid>-656b47f9:1710b967791:-7e7e</wuid>
+  <x>-1</x>
+  <y>-1</y>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <background_color>
+      <color name="Container_background" red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <group_name></group_name>
+    <height>669</height>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <name>Linking Container</name>
+    <opi_file>SSM_arm.opi</opi_file>
+    <resize_behaviour>2</resize_behaviour>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip></tooltip>
+    <visible>true</visible>
+    <widget_type>Linking Container</widget_type>
+    <width>248</width>
+    <wuid>-656b47f9:1710b967791:-6b39</wuid>
+    <x>10</x>
+    <y>19</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <background_color>
+      <color name="Container_background" red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <group_name></group_name>
+    <height>108</height>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <name>Linking Container_1</name>
+    <opi_file>SSM_Trigger_commands.opi</opi_file>
+    <resize_behaviour>2</resize_behaviour>
+    <rules>
+      <rule name="startRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </rule>
+      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value>SSM_Trigger_commands.opi</value>
+        </exp>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="EmbeddedJs" checkConnect="true" sfe="false" seoe="false">
+        <scriptName>EmbeddedScript</scriptName>
+        <scriptText><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
+
+var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
+
+var N_SSM = PVUtil.getLong(pvArray[0]);
+
+macroInput.put("SSM_NUM", N_SSM);
+widgetController.setPropertyValue("macros", macroInput);]]></scriptText>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </path>
+    </scripts>
+    <tooltip></tooltip>
+    <visible>true</visible>
+    <widget_type>Linking Container</widget_type>
+    <width>339</width>
+    <wuid>-53f9f68d:1710bd74d29:-77a3</wuid>
+    <x>10</x>
+    <y>705</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <background_color>
+      <color name="Container_background" red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <group_name></group_name>
+    <height>669</height>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <name>Linking Container_2</name>
+    <opi_file>SSM_Mask_state.opi</opi_file>
+    <resize_behaviour>1</resize_behaviour>
+    <rules>
+      <rule name="startRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </rule>
+      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value>SSM_Mask_state.opi</value>
+        </exp>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="EmbeddedJs" checkConnect="true" sfe="false" seoe="false">
+        <scriptName>EmbeddedScript</scriptName>
+        <scriptText><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
+
+var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
+
+var N_SSM = PVUtil.getLong(pvArray[0]);
+
+macroInput.put("SSM_NUM", N_SSM);
+widgetController.setPropertyValue("macros", macroInput);]]></scriptText>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </path>
+    </scripts>
+    <tooltip></tooltip>
+    <visible>true</visible>
+    <widget_type>Linking Container</widget_type>
+    <width>1463</width>
+    <wuid>-53f9f68d:1710bd74d29:-7797</wuid>
+    <x>265</x>
+    <y>19</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <background_color>
+      <color name="Container_background" red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <group_name></group_name>
+    <height>108</height>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+    </macros>
+    <name>Linking Container_3</name>
+    <opi_file>SSM_Graphs_commands.opi</opi_file>
+    <resize_behaviour>2</resize_behaviour>
+    <rules>
+      <rule name="startRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </rule>
+      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value>SSM_Graphs_commands.opi</value>
+        </exp>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="EmbeddedJs" checkConnect="true" sfe="false" seoe="false">
+        <scriptName>EmbeddedScript</scriptName>
+        <scriptText><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
+
+var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
+
+var N_SSM = PVUtil.getLong(pvArray[0]);
+
+macroInput.put("SSM_NUM", N_SSM);
+widgetController.setPropertyValue("macros", macroInput);]]></scriptText>
+        <pv trig="true">loc://$(DID)_DDM_Num_$(CAB_NUM)</pv>
+      </path>
+    </scripts>
+    <tooltip></tooltip>
+    <visible>true</visible>
+    <widget_type>Linking Container</widget_type>
+    <width>441</width>
+    <wuid>-1ed0ecab:186e9958f3e:-5736</wuid>
+    <x>370</x>
+    <y>705</y>
+  </widget>
+</display>

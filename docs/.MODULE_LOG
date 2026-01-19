@@ -1,0 +1,28 @@
+>>
+Script is used     : e3TemplateGenerator.bash
+Script Path        : /home/exzombie/epics/e3/e3-tools/e3TemplateGenerator
+Script Version     : 1.0.8
+Script Run Time    : 2020jan29-1422-07CET
+User               : exzombie
+e3-tools Hash      : 
+>>
+>> git diff 
+
+>>
+>> git diff --cached
+
+>>
+>> git diff HEAD
+
+
+>>
+>> Your sources are located in e3-myrrha_ssa.
+>> 
+EPICS_MODULE_NAME  : myrrha_ssa
+E3_MODULE_SRC_PATH : myrrha_ssa
+E3_TARGET_URL      : https://placeholder.url
+>> 
+e3 module name     : e3-myrrha_ssa
+e3 target url full : https://placeholder.url/e3-myrrha_ssa.git
+>> 
+e3 module is located in siteMods

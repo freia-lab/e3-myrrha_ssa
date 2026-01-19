@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <actions hook="false" hook_all="false" />
+  <auto_scale_widgets>
+    <auto_scale_widgets>false</auto_scale_widgets>
+    <min_width>-1</min_width>
+    <min_height>-1</min_height>
+  </auto_scale_widgets>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <background_color>
+    <color red="240" green="240" blue="240" />
+  </background_color>
+  <boy_version>5.1.0</boy_version>
+  <foreground_color>
+    <color red="192" green="192" blue="192" />
+  </foreground_color>
+  <grid_space>6</grid_space>
+  <height>100</height>
+  <macros>
+    <include_parent_macros>true</include_parent_macros>
+  </macros>
+  <name>Poly list</name>
+  <rules />
+  <scripts />
+  <show_close_button>true</show_close_button>
+  <show_edit_range>true</show_edit_range>
+  <show_grid>true</show_grid>
+  <show_ruler>true</show_ruler>
+  <snap_to_geometry>true</snap_to_geometry>
+  <widget_type>Display</widget_type>
+  <width>350</width>
+  <wuid>-ebd8b:171ac89080e:-4650</wuid>
+  <x>-1</x>
+  <y>-1</y>
+  <widget typeId="org.csstudio.opibuilder.widgets.MenuButton" version="1.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>1</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 1</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>2</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 2</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>3</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 3</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>4</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 4</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>5</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 5</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>6</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 6</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>7</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 7</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>8</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 8</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>9</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 9</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>10</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 10</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>11</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 11</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>12</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 12</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>13</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 13</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>14</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 14</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>15</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 15</description>
+      </action>
+      <action type="WRITE_PV">
+        <pv_name>loc://$(DID)_DDM_Num</pv_name>
+        <value>16</value>
+        <timeout>1</timeout>
+        <confirm_message></confirm_message>
+        <description>SSM 16</description>
+      </action>
+    </actions>
+    <actions_from_pv>false</actions_from_pv>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>6</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="DejaVu Sans" height="14" style="1" pixels="false">Header 2</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>40</height>
+    <label>Pick SSM     </label>
+    <name>Menu Button</name>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="EmbeddedPy" checkConnect="true" sfe="false" seoe="false">
+        <scriptName>EmbeddedScript</scriptName>
+        <scriptText><![CDATA[from org.csstudio.opibuilder.scriptUtil import PVUtil
+from org.csstudio.opibuilder.widgetActions import ActionsInput
+
+num_ssm = PVUtil.getLong(pvs[0])
+actions = widget.getPropertyValue('actions').getActionsList()
+new_actions = ActionsInput()
+for i in range(num_ssm):
+    new_actions.addAction(actions[i])
+widget.setPropertyValue('actions', new_actions)
+]]></scriptText>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv>
+      </path>
+    </scripts>
+    <show_down_arrow>false</show_down_arrow>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Menu Button</widget_type>
+    <width>150</width>
+    <wuid>-ebd8b:171ac89080e:-4630</wuid>
+    <x>0</x>
+    <y>36</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.polygon" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <alpha>255</alpha>
+    <anti_alias>true</anti_alias>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="0" green="0" blue="0" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="0" blue="0" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <fill_level>0.0</fill_level>
+    <font>
+      <opifont.name fontName="DejaVu Sans" height="12" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="255" green="0" blue="0" />
+    </foreground_color>
+    <height>17</height>
+    <horizontal_fill>true</horizontal_fill>
+    <line_color>
+      <color red="128" green="0" blue="255" />
+    </line_color>
+    <line_style>0</line_style>
+    <line_width>0</line_width>
+    <name>Polygon</name>
+    <points>
+      <point x="114" y="47" />
+      <point x="128" y="63" />
+      <point x="143" y="47" />
+      <point x="128" y="47" />
+      <point x="128" y="47" />
+      <point x="128" y="47" />
+    </points>
+    <pv_name></pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>true</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Polygon</widget_type>
+    <width>30</width>
+    <wuid>-5b3c8eb:172e0cd7429:4c64</wuid>
+    <x>114</x>
+    <y>47</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.spinner" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>true</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <buttons_on_left>false</buttons_on_left>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="DejaVu Sans" height="16" style="1" pixels="false">Header 1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format>0</format>
+    <height>35</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <horizontal_buttons_layout>false</horizontal_buttons_layout>
+    <limits_from_pv>true</limits_from_pv>
+    <maximum>32.0</maximum>
+    <minimum>1.0</minimum>
+    <name>Spinner</name>
+    <page_increment>10.0</page_increment>
+    <precision>2</precision>
+    <precision_from_pv>false</precision_from_pv>
+    <pv_name>loc://$(DID)_DDM_Num(1)</pv_name>
+    <pv_value />
+    <rules>
+      <rule name="Rule" prop_id="maximum" out_exp="true">
+        <exp bool_exp="true">
+          <value>pv0</value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <show_text>true</show_text>
+    <step_increment>1.0</step_increment>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Spinner</widget_type>
+    <width>80</width>
+    <wuid>4adba0c0:17328772f34:-2037</wuid>
+    <x>162</x>
+    <y>38</y>
+  </widget>
+</display>

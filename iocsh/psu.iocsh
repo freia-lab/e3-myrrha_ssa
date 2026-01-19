@@ -1,0 +1,12 @@
+##############################################################################
+####                            PSU iocsh                                  ###
+##############################################################################
+#- PREFIX_PSU    - Prefix used for record names
+#- PREFIX_CGD    - Prefix used for CGS records
+#- PSU_NUM       - The number of the PSU
+#-#############################################################################
+
+dbLoadRecords("psu_cmd.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM)")
+dbLoadRecords("psu_mod.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM),MOD_NUM=1")
+dbLoadRecords("psu_mod.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM),MOD_NUM=2")
+dbLoadRecords("psu_mod.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM),MOD_NUM=3")

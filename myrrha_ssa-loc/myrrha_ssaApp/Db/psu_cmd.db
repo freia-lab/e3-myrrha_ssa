@@ -1,0 +1,4 @@
+# Commands for a PSU.
+
+alias("$(PREFIX_CGD):iPSUOnReq-$(PSU_NUM)", "$(PREFIX)-$(PSU_NUM):On-Cmd")
+alias("$(PREFIX_CGD):iPSUOffReq-$(PSU_NUM)", "$(PREFIX)-$(PSU_NUM):Off-Cmd")

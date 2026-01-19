@@ -1,0 +1,80 @@
+# Buffer download control. It uses an asynPortDriver to communicate with
+# the SSM.
+
+record(bi, "$(PREFIX)-$(SSM_NUM):iBfrDwnldTrigStat") {
+    field(DESC, "Buffer trigger status, obtained via TCP")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,0x1)BfrDwnldTrigStat")
+    field(PINI, 1)
+    field(ZNAM, "Unarmed")
+    field(ONAM, "Armed")
+}
+
+record(bo, "$(PREFIX)-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd") {
+    field(DESC, "Arm the buffer download trigger")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,0x1)BfrDwnldTrigEnable")
+    field(FLNK, "$(PREFIX)-$(SSM_NUM):iBfrDwnldTrigStat")
+    field(VAL, 0)
+}
+
+record(bo, "$(PREFIX)-$(SSM_NUM):BfrDwnldTrigForce-Cmd") {
+    field(DESC, "Force buffer download")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,0x1)BfrDwnldTrigForce")
+    field(FLNK, "$(PREFIX)-$(SSM_NUM):iBfrDwnldTrigStat")
+    field(VAL, 0)
+}
+
+record(waveform, "$(PREFIX)-$(SSM_NUM):BfrData") {
+    field(DESC, "Raw diagnostic buffer data")
+    field(DTYP, "asynInt8ArrayIn")
+    field(INP, "@asyn($(BFR_PORT),0)BfrData")
+    field(SCAN, "I/O Intr")
+    field(FTVL, UCHAR)
+    field(NELM, $(BUFFER_BYTES=1573600))
+}
+
+record(calcout, "$(PREFIX)-$(SSM_NUM):iStartBfrDwnld") {
+    field(DESC, "Start download when trigger goes off")
+    field(CALC, "A")
+    field(OCAL, "1")
+
+    # We cannot catch TrigStat changing state when the trigger goes off
+    # immediately after arming. Instead, we use change of MemBankInd.
+    field(OOPT, "On Change")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):MemBankInd CP MSS")
+    field(OUT, "$(PREFIX)-$(SSM_NUM):iTrigBfrDwnld-Cmd.PROC")
+}
+
+record(bo, "$(PREFIX)-$(SSM_NUM):iTrigBfrDwnld-Cmd") {
+    field(DESC, "Executes the download when processed")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,0x1)BfrDwnldTrig")
+    field(VAL, 0)
+}
+
+record(bi, "$(PREFIX)-$(SSM_NUM):BfrDwnldInd") {
+    field(DESC, "Indicates that download is in progress")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,0x1)BfrDwnldInd")
+    field(ZNAM, "Inactive")
+    field(ONAM, "In progress")
+    field(PINI, "YES")
+}
+
+record(bo, "$(PREFIX)-$(SSM_NUM):TrigMaskRead-Cmd") {
+    field(DESC, "Reads the trigger mask from the SSM")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT), 0, 0x1) MaskReadTrig")
+    field(VAL, 0)
+}
+
+record(bo, "$(PREFIX)-$(SSM_NUM):TrigMaskWrite-Cmd") {
+    field(DESC, "Writes the trigger mask to the SSM")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,0x1)MaskWriteTrig")
+    field(FLNK, "$(PREFIX)-$(SSM_NUM):TrigMaskRead-Cmd")
+    field(VAL, 0)
+}

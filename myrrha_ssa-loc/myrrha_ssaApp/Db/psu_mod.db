@@ -1,0 +1,34 @@
+# Status of a PSU module.
+
+alias("$(PREFIX_CGD):iPSU$(PSU_NUM)Mod$(MOD_NUM)Volt", "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Volt")
+alias("$(PREFIX_CGD):iPSU$(PSU_NUM)Mod$(MOD_NUM)Curr", "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Curr")
+alias("$(PREFIX_CGD):iPSU$(PSU_NUM)Mod$(MOD_NUM)T", "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)T")
+alias("$(PREFIX_CGD):iPSU$(PSU_NUM)Mod$(MOD_NUM)Stat", "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Stat")
+
+record(bi, "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)ACStat") {
+    field(DESC, "Status of AC power")
+    field(INP, "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Stat.B0 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)DCStat") {
+    field(DESC, "Status of DC power")
+    field(INP, "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Stat.B1 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "OK")
+}
+
+record(bi, "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Fault") {
+    field(DESC, "Fault status summary")
+    field(INP, "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Stat.B2 CP MSS")
+    field(ZNAM, "OK")
+    field(ONAM, "Fault detected")
+}
+
+record(bi, "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Enbl") {
+    field(DESC, "Module on/off status")
+    field(INP, "$(PREFIX)-$(PSU_NUM):Mod$(MOD_NUM)Stat.B3 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}

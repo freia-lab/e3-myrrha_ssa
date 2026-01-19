@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <actions hook="false" hook_all="false" />
+  <auto_scale_widgets>
+    <auto_scale_widgets>false</auto_scale_widgets>
+    <min_width>-1</min_width>
+    <min_height>-1</min_height>
+  </auto_scale_widgets>
+  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
+  <background_color>
+    <color red="240" green="240" blue="240" />
+  </background_color>
+  <boy_version>5.1.0</boy_version>
+  <foreground_color>
+    <color red="192" green="192" blue="192" />
+  </foreground_color>
+  <grid_space>5</grid_space>
+  <height>60</height>
+  <macros>
+    <include_parent_macros>true</include_parent_macros>
+    <DISCIPLINE>RFS</DISCIPLINE>
+  </macros>
+  <name></name>
+  <rules />
+  <scripts />
+  <show_close_button>true</show_close_button>
+  <show_edit_range>true</show_edit_range>
+  <show_grid>true</show_grid>
+  <show_ruler>true</show_ruler>
+  <snap_to_geometry>true</snap_to_geometry>
+  <widget_type>Display</widget_type>
+  <width>1140</width>
+  <wuid>-66889b6:172083e3bcb:-7734</wuid>
+  <x>-1</x>
+  <y>-1</y>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="true">
+      <action type="WRITE_PV">
+        <pv_name>$(pv_name)</pv_name>
+        <value>A</value>
+        <timeout>10</timeout>
+        <confirm_message></confirm_message>
+        <description></description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>30</height>
+    <image></image>
+    <name>Action Button_1</name>
+    <push_action_index>0</push_action_index>
+    <pv_name>loc://$(DID)_SSA_Char</pv_name>
+    <pv_value />
+    <rules>
+      <rule name="Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; 1">
+          <value>false</value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="EmbeddedPy" checkConnect="true" sfe="true" seoe="false">
+        <scriptName>EmbeddedScript</scriptName>
+        <scriptText><![CDATA[from org.csstudio.opibuilder.scriptUtil import PVUtil
+
+screen_num = PVUtil.getString(pvs[1])
+pvs[2].setValue(screen_num)
+]]></scriptText>
+        <pv trig="true">$(pv_name)</pv>
+        <pv trig="false">=4</pv>
+        <pv trig="false">loc://$(DID)_Screen</pv>
+      </path>
+    </scripts>
+    <style>0</style>
+    <text>A</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>40</width>
+    <wuid>-66889b6:172083e3bcb:-770c</wuid>
+    <x>10</x>
+    <y>32</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="14" style="1" pixels="false">Header 2</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>36</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_1</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Amplifier</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>190</width>
+    <wrap_words>false</wrap_words>
+    <wuid>-66889b6:172083e3bcb:-7709</wuid>
+    <x>10</x>
+    <y>-5</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="14" style="1" pixels="false">Header 2</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>36</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_2</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>RF Out:</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>86</width>
+    <wrap_words>false</wrap_words>
+    <wuid>4e4d54d:1728fc7f6d9:-27d1</wuid>
+    <x>430</x>
+    <y>26</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <auto_size>false</auto_size>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>true</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="14" style="1" pixels="false">Header 2</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format_type>0</format_type>
+    <height>31</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <name>Text Update_4</name>
+    <precision>0</precision>
+    <precision_from_pv>true</precision_from_pv>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:FwdPwr</pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <show_units>true</show_units>
+    <text>######</text>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Text Update</widget_type>
+    <width>100</width>
+    <wrap_words>false</wrap_words>
+    <wuid>4e4d54d:1728fc7f6d9:-27c8</wuid>
+    <x>1015</x>
+    <y>28</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.LED" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <bit>-1</bit>
+    <border_alarm_sensitive>true</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <bulb_border>3</bulb_border>
+    <bulb_border_color>
+      <color red="150" green="150" blue="150" />
+    </bulb_border_color>
+    <data_type>0</data_type>
+    <effect_3d>false</effect_3d>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <height>26</height>
+    <name>LED_4</name>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>true</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="../scripts/general_status.py" checkConnect="true" sfe="false" seoe="false">
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtIntlk1</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtIntlk2</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:WaterFlowInRange</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:WaterFlowStat</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:Leak</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:DoorFrontStat</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:DoorRearStat</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:LoadWaterFlowStat</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:RFLineTStat</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT1Warn</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT2Warn</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:IntTWarn</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT1Err</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT2Err</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:IntTErr</pv>
+      </path>
+    </scripts>
+    <show_boolean_label>false</show_boolean_label>
+    <square_led>true</square_led>
+    <state_color_0>
+      <color name="LED_OK" red="105" green="190" blue="40" />
+    </state_color_0>
+    <state_color_1>
+      <color name="LED_WARNING" red="255" green="128" blue="64" />
+    </state_color_1>
+    <state_color_2>
+      <color name="LED_ERROR" red="237" green="28" blue="36" />
+    </state_color_2>
+    <state_color_fallback>
+      <color name="LED_OFF" red="77" green="82" blue="85" />
+    </state_color_fallback>
+    <state_count>3</state_count>
+    <state_label_0>S01</state_label_0>
+    <state_label_1>S02</state_label_1>
+    <state_label_2>S03</state_label_2>
+    <state_label_fallback>ERR</state_label_fallback>
+    <state_value_0>0.0</state_value_0>
+    <state_value_1>1.0</state_value_1>
+    <state_value_2>2.0</state_value_2>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>LED</widget_type>
+    <width>50</width>
+    <wuid>-6b7e51cb:173249a7058:-5a55</wuid>
+    <x>233</x>
+    <y>31</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.LED" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <bit>-1</bit>
+    <border_alarm_sensitive>true</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <bulb_border>3</bulb_border>
+    <bulb_border_color>
+      <color red="150" green="150" blue="150" />
+    </bulb_border_color>
+    <data_type>0</data_type>
+    <effect_3d>false</effect_3d>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <height>26</height>
+    <name>LED_5</name>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules>
+      <rule name="Rule" prop_id="pv_value" out_exp="true">
+        <exp bool_exp="pv0==1">
+          <value>3</value>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <value>2</value>
+        </exp>
+        <exp bool_exp="pv2==1">
+          <value>1</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>0</value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:AmpAlarmSumm</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:AmpWarnSumm</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:SomePallRunning</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>true</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <show_boolean_label>false</show_boolean_label>
+    <square_led>true</square_led>
+    <state_color_0>
+      <color name="LED_OK" red="105" green="190" blue="40" />
+    </state_color_0>
+    <state_color_1>
+      <color name="LED_RUNNING" red="247" green="211" blue="0" />
+    </state_color_1>
+    <state_color_2>
+      <color name="LED_WARNING" red="255" green="128" blue="64" />
+    </state_color_2>
+    <state_color_3>
+      <color name="LED_ERROR" red="237" green="28" blue="36" />
+    </state_color_3>
+    <state_color_fallback>
+      <color name="LED_OFF" red="77" green="82" blue="85" />
+    </state_color_fallback>
+    <state_count>4</state_count>
+    <state_label_0>S01</state_label_0>
+    <state_label_1>S02</state_label_1>
+    <state_label_2>S03</state_label_2>
+    <state_label_3>S04</state_label_3>
+    <state_label_fallback>ERR</state_label_fallback>
+    <state_value_0>0.0</state_value_0>
+    <state_value_1>1.0</state_value_1>
+    <state_value_2>2.0</state_value_2>
+    <state_value_3>3.0</state_value_3>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>LED</widget_type>
+    <width>50</width>
+    <wuid>-6b7e51cb:173249a7058:-5a4d</wuid>
+    <x>299</x>
+    <y>31</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.LED" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <bit>-1</bit>
+    <border_alarm_sensitive>true</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <bulb_border>3</bulb_border>
+    <bulb_border_color>
+      <color red="150" green="150" blue="150" />
+    </bulb_border_color>
+    <data_type>0</data_type>
+    <effect_3d>false</effect_3d>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <height>26</height>
+    <name>LED_6</name>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules>
+      <rule name="Rule" prop_id="pv_value" out_exp="true">
+        <exp bool_exp="pv0!=0">
+          <value>2</value>
+        </exp>
+        <exp bool_exp="pv1==0">
+          <value>1</value>
+        </exp>
+        <exp bool_exp="pv1!=0">
+          <value>0</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>0</value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:PSUFaultSumm</pv>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:SomePSUOn</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>true</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <show_boolean_label>false</show_boolean_label>
+    <square_led>true</square_led>
+    <state_color_0>
+      <color name="LED_OK" red="105" green="190" blue="40" />
+    </state_color_0>
+    <state_color_1>
+      <color name="LED_RUNNING" red="247" green="211" blue="0" />
+    </state_color_1>
+    <state_color_2>
+      <color name="LED_ERROR" red="237" green="28" blue="36" />
+    </state_color_2>
+    <state_color_3>
+      <color red="0" green="0" blue="255" />
+    </state_color_3>
+    <state_color_fallback>
+      <color name="LED_OFF" red="77" green="82" blue="85" />
+    </state_color_fallback>
+    <state_count>4</state_count>
+    <state_label_0>S01</state_label_0>
+    <state_label_1>S02</state_label_1>
+    <state_label_2>S03</state_label_2>
+    <state_label_3>S04</state_label_3>
+    <state_label_fallback>ERR</state_label_fallback>
+    <state_value_0>0.0</state_value_0>
+    <state_value_1>1.0</state_value_1>
+    <state_value_2>2.0</state_value_2>
+    <state_value_3>3.0</state_value_3>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>LED</widget_type>
+    <width>50</width>
+    <wuid>-6b7e51cb:173249a7058:-5a48</wuid>
+    <x>360</x>
+    <y>31</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>General</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>80</width>
+    <wrap_words>false</wrap_words>
+    <wuid>-6b7e51cb:173249a7058:-5a44</wuid>
+    <x>218</x>
+    <y>9</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_4</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>SSM</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>44</width>
+    <wrap_words>false</wrap_words>
+    <wuid>-6b7e51cb:173249a7058:-5a3a</wuid>
+    <x>302</x>
+    <y>9</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_5</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>PSU</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>44</width>
+    <wrap_words>false</wrap_words>
+    <wuid>-6b7e51cb:173249a7058:-5a30</wuid>
+    <x>363</x>
+    <y>9</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="true">
+      <action type="WRITE_PV">
+        <pv_name>$(pv_name)</pv_name>
+        <value>B</value>
+        <timeout>10</timeout>
+        <confirm_message></confirm_message>
+        <description></description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>30</height>
+    <image></image>
+    <name>Action Button_1</name>
+    <push_action_index>0</push_action_index>
+    <pv_name>loc://$(DID)_SSA_Char</pv_name>
+    <pv_value />
+    <rules>
+      <rule name="Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; 2">
+          <value>false</value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="EmbeddedPy" checkConnect="true" sfe="true" seoe="false">
+        <scriptName>EmbeddedScript</scriptName>
+        <scriptText><![CDATA[from org.csstudio.opibuilder.scriptUtil import PVUtil
+
+screen_num = PVUtil.getString(pvs[1])
+pvs[2].setValue(screen_num)
+]]></scriptText>
+        <pv trig="true">$(pv_name)</pv>
+        <pv trig="false">=4</pv>
+        <pv trig="false">loc://$(DID)_Screen</pv>
+      </path>
+    </scripts>
+    <style>0</style>
+    <text>B</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>40</width>
+    <wuid>-23d904ed:173255c03dc:453</wuid>
+    <x>60</x>
+    <y>32</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="true">
+      <action type="WRITE_PV">
+        <pv_name>$(pv_name)</pv_name>
+        <value>C</value>
+        <timeout>10</timeout>
+        <confirm_message></confirm_message>
+        <description></description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>30</height>
+    <image></image>
+    <name>Action Button_2</name>
+    <push_action_index>0</push_action_index>
+    <pv_name>loc://$(DID)_SSA_Char</pv_name>
+    <pv_value />
+    <rules>
+      <rule name="Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; 3">
+          <value>false</value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="EmbeddedPy" checkConnect="true" sfe="true" seoe="false">
+        <scriptName>EmbeddedScript</scriptName>
+        <scriptText><![CDATA[from org.csstudio.opibuilder.scriptUtil import PVUtil
+
+screen_num = PVUtil.getString(pvs[1])
+pvs[2].setValue(screen_num)
+]]></scriptText>
+        <pv trig="true">$(pv_name)</pv>
+        <pv trig="false">=4</pv>
+        <pv trig="false">loc://$(DID)_Screen</pv>
+      </path>
+    </scripts>
+    <style>0</style>
+    <text>C</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>40</width>
+    <wuid>-23d904ed:173255c03dc:458</wuid>
+    <x>110</x>
+    <y>32</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="true">
+      <action type="WRITE_PV">
+        <pv_name>$(pv_name)</pv_name>
+        <value>D</value>
+        <timeout>10</timeout>
+        <confirm_message></confirm_message>
+        <description></description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>30</height>
+    <image></image>
+    <name>Action Button_3</name>
+    <push_action_index>0</push_action_index>
+    <pv_name>loc://$(DID)_SSA_Char</pv_name>
+    <pv_value />
+    <rules>
+      <rule name="Rule" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; 4">
+          <value>false</value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts>
+      <path pathString="EmbeddedPy" checkConnect="true" sfe="true" seoe="false">
+        <scriptName>EmbeddedScript</scriptName>
+        <scriptText><![CDATA[from org.csstudio.opibuilder.scriptUtil import PVUtil
+
+screen_num = PVUtil.getString(pvs[1])
+pvs[2].setValue(screen_num)
+]]></scriptText>
+        <pv trig="true">$(pv_name)</pv>
+        <pv trig="false">=4</pv>
+        <pv trig="false">loc://$(DID)_Screen</pv>
+      </path>
+    </scripts>
+    <style>0</style>
+    <text>D</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>40</width>
+    <wuid>-23d904ed:173255c03dc:45d</wuid>
+    <x>160</x>
+    <y>32</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_10</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Total</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>56</width>
+    <wrap_words>false</wrap_words>
+    <wuid>4adba0c0:17328772f34:-5fcc</wuid>
+    <x>1015</x>
+    <y>3</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <background_color>
+      <color name="Main_background" red="222" green="222" blue="222" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>0</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <group_name></group_name>
+    <height>56</height>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+      <AMP_CHAR>A</AMP_CHAR>
+      <AMP_NUM>1</AMP_NUM>
+    </macros>
+    <name>Linking Container</name>
+    <opi_file>TopBar-amp.opi</opi_file>
+    <resize_behaviour>2</resize_behaviour>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv1 &gt; pv0">
+          <value></value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv>
+        <pv trig="true">=$(AMP_NUM)</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip></tooltip>
+    <visible>true</visible>
+    <widget_type>Linking Container</widget_type>
+    <width>101</width>
+    <wuid>-19652eec:17334232981:-59e2</wuid>
+    <x>540</x>
+    <y>3</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <background_color>
+      <color name="Main_background" red="222" green="222" blue="222" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>0</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <group_name></group_name>
+    <height>56</height>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+      <AMP_CHAR>B</AMP_CHAR>
+      <AMP_NUM>2</AMP_NUM>
+    </macros>
+    <name>Linking Container_1</name>
+    <opi_file>TopBar-amp.opi</opi_file>
+    <resize_behaviour>2</resize_behaviour>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv1 &gt; pv0">
+          <value></value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv>
+        <pv trig="true">=$(AMP_NUM)</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip></tooltip>
+    <visible>true</visible>
+    <widget_type>Linking Container</widget_type>
+    <width>101</width>
+    <wuid>-19652eec:17334232981:-5934</wuid>
+    <x>650</x>
+    <y>3</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <background_color>
+      <color name="Main_background" red="222" green="222" blue="222" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>0</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <group_name></group_name>
+    <height>56</height>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+      <AMP_CHAR>C</AMP_CHAR>
+      <AMP_NUM>3</AMP_NUM>
+    </macros>
+    <name>Linking Container_2</name>
+    <opi_file>TopBar-amp.opi</opi_file>
+    <resize_behaviour>2</resize_behaviour>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv1 &gt; pv0">
+          <value></value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv>
+        <pv trig="true">=$(AMP_NUM)</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip></tooltip>
+    <visible>true</visible>
+    <widget_type>Linking Container</widget_type>
+    <width>101</width>
+    <wuid>-19652eec:17334232981:-5927</wuid>
+    <x>760</x>
+    <y>3</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <background_color>
+      <color name="Main_background" red="222" green="222" blue="222" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>0</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="192" green="192" blue="192" />
+    </foreground_color>
+    <group_name></group_name>
+    <height>56</height>
+    <macros>
+      <include_parent_macros>true</include_parent_macros>
+      <AMP_CHAR>D</AMP_CHAR>
+      <AMP_NUM>4</AMP_NUM>
+    </macros>
+    <name>Linking Container_3</name>
+    <opi_file>TopBar-amp.opi</opi_file>
+    <resize_behaviour>2</resize_behaviour>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv1 &gt; pv0">
+          <value></value>
+        </exp>
+        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv>
+        <pv trig="true">=$(AMP_NUM)</pv>
+      </rule>
+    </rules>
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip></tooltip>
+    <visible>true</visible>
+    <widget_type>Linking Container</widget_type>
+    <width>101</width>
+    <wuid>-19652eec:17334232981:-591a</wuid>
+    <x>870</x>
+    <y>3</y>
+  </widget>
+</display>
