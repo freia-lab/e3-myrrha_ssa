@@ -1,10 +1,12 @@
 ##############################################################################
-####                            Amplifier iocsh                            ###
+####                        SSA Amplifier iocsh                            ###
 ##############################################################################
 #- PREFIX_AMP    - Prefix used for record names
-#- PREFIX_CGD    - Prefix used for CGS records
+#- PREFIX_CGD    - Prefix used for CGD records
 #- AMP_CHAR      - The letter of the amplifier
+#- NUM_SSM       - The number of SSMs in this amplifier
+#- AMP_SSM       - The list of SSMs in this amplifier, separated by commas
 #-#############################################################################
 
-dbLoadRecords("amp.db", "PREFIX=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR)")
+dbLoadRecords("amp.db", "PREFIX=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR),NUM_SSM=$(NUM_SSM),AMP_SSM=$(AMP_SSM)")
 dbLoadRecords("amp_cmd.db", "PREFIX=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR)")

@@ -2,6 +2,10 @@
 # @type STRING
 # Prefix used for record names
 
+# @field PREFIX_CGD
+# @type STRING
+# Prefix used for CGD records
+
 # @field IP_ADDR_BASE
 # @type STRING
 # The start of the IP address, e.g. 10.100
@@ -18,4 +22,4 @@
 # @type STRING
 # Modbus polling rate in milliseconds
 
-loadIocsh("ssm.iocsh", "PREFIX_SSM=$(PREFIX_SSM),IP_ADDR_BASE=$(IP_ADDR_BASE),CAB_NUM=$(CAB_NUM),SSM_NUM=$(SSM_NUM),POLL_MS=$(POLL_MS)")
+loadIocsh("ssm.iocsh", "PREFIX_SSM=$(PREFIX_SSM),PREFIX_CGD=$(PREFIX_CGD),IP_ADDR_BASE=$(IP_ADDR_BASE),CAB_NUM=$(CAB_NUM),SSM_NUM=$(SSM_NUM),POLL_MS=$(POLL_MS)")

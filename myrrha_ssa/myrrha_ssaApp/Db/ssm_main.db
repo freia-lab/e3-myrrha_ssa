@@ -103,6 +103,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall1FwdPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),14)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -111,6 +112,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall2FwdPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),16)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -119,6 +121,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall3FwdPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),18)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -127,6 +130,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall4FwdPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),20)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -135,6 +139,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall5FwdPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),22)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -143,6 +148,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall6FwdPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),24)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -151,6 +157,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall1RflPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),26)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -159,6 +166,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall2RflPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),28)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -167,6 +175,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall3RflPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),30)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -175,6 +184,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall4RflPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),32)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -183,6 +193,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall5RflPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),34)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -191,6 +202,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall6RflPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),36)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -199,6 +211,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):CombFwdPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),38)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -207,6 +220,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):CombRflPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),40)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -215,6 +229,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Load6kWFwdPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),42)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -223,6 +238,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Load6kWRflPwr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),44)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "W")
 }
 
@@ -231,6 +247,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall1Curr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),46)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "A")
 }
 
@@ -239,6 +256,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall2Curr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),48)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "A")
 }
 
@@ -247,6 +265,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall3Curr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),50)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "A")
 }
 
@@ -255,6 +274,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall4Curr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),52)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "A")
 }
 
@@ -263,6 +283,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall5Curr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),54)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "A")
 }
 
@@ -271,6 +292,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall6Curr") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),56)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "A")
 }
 
@@ -321,6 +343,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall1Volt") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),64)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "V")
 }
 
@@ -329,6 +352,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall2Volt") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),66)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "V")
 }
 
@@ -337,6 +361,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall3Volt") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),68)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "V")
 }
 
@@ -345,6 +370,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall4Volt") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),70)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "V")
 }
 
@@ -353,6 +379,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall5Volt") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),72)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "V")
 }
 
@@ -361,6 +388,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall6Volt") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),74)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "V")
 }
 
@@ -369,6 +397,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):WaterInT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),76)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -377,6 +406,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):WaterOutT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),78)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -385,6 +415,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):AirInT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),80)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -393,6 +424,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):AirOutT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),82)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -401,6 +433,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Load1T") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),84)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -409,6 +442,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Load2T") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),86)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -417,6 +451,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):IOBoardT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),88)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -425,6 +460,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Ref10kT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),90)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -433,6 +469,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):ADCT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),92)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -441,6 +478,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):CPUT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),94)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -449,6 +487,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall12T") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),96)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -457,6 +496,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall34T") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),98)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -465,6 +505,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall56T") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),100)FLOAT32_BE")
+    field(PREC, "2")
     field(EGU, "deg C")
 }
 
@@ -505,6 +546,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):PSUFeedback") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),106)FLOAT32_BE")
+    field(PREC, "3")
     field(EGU, "V")
 }
 
@@ -513,6 +555,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):ADCRefVolt") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),108)FLOAT32_BE")
+    field(PREC, "3")
     field(EGU, "V")
 }
 
@@ -521,6 +564,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall1JunctT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),110)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "deg C")
 }
 
@@ -529,6 +573,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall2JunctT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),112)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "deg C")
 }
 
@@ -537,6 +582,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall3JunctT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),114)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "deg C")
 }
 
@@ -545,6 +591,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall4JunctT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),116)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "deg C")
 }
 
@@ -553,6 +600,7 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall5JunctT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),118)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "deg C")
 }
 
@@ -561,5 +609,6 @@ record(ai, "$(PREFIX)-$(SSM_NUM):Pall6JunctT") {
     field(SCAN, "I/O Intr")
     field(DTYP, "asynFloat64")
     field(INP, "@asyn($(PORT),120)FLOAT32_BE")
+    field(PREC, "1")
     field(EGU, "deg C")
 }

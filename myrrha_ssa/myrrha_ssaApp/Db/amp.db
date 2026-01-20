@@ -1,0 +1,156 @@
+# Status of an amplifier.
+
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Stat", "$(PREFIX)-$(AMP_CHAR):Stat")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)NrRunning", "$(PREFIX)-$(AMP_CHAR):NrRunning")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Alarms", "$(PREFIX)-$(AMP_CHAR):Alarms")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Warnings", "$(PREFIX)-$(AMP_CHAR):Warnings")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)FwdPwr", "$(PREFIX)-$(AMP_CHAR):FwdPwr")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)RflPwr", "$(PREFIX)-$(AMP_CHAR):RflPwr")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Vswr", "$(PREFIX)-$(AMP_CHAR):Vswr")
+alias("$(PREFIX_CGD):iAmp$(AMP_CHAR)Eff", "$(PREFIX)-$(AMP_CHAR):Eff")
+
+record(longin, "$(PREFIX)-$(AMP_CHAR):NrSSM") {
+    field(DESC, "Number of SSMs in this amplifier")
+    field(INP, "$(NUM_SSM)")
+    field(PINI, "YES")
+}
+
+record(waveform, "$(PREFIX)-$(AMP_CHAR):SSMList") {
+    field(DESC, "SSMs installed in this amplifier")
+    field(NELM, "$(NUM_SSM)")
+    field(FTVL, "CHAR")
+    field(INP, "[$(AMP_SSM),]")
+    field(PINI, "YES")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):CommStat") {
+    field(DESC, "Communication status of all SSMs")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B0 CP MSS")
+    field(ZNAM, "Comm error")
+    field(ONAM, "OK")
+}
+
+record(bo, "$(PREFIX)-$(AMP_CHAR):iCommStatPush") {
+    field(DESC, "Communication status of all SSMs")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(AMP_CHAR):CommStat CP MSS")
+    field(OUT, "$(PREFIX_CGD):iAllCommStatCalc.$(AMP_CHAR) PP MSS")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):AllPallRunning") {
+    field(DESC, "Whether all pallets are running")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B1 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX)-$(AMP_CHAR):iAllPallRunningPush") {
+    field(DESC, "Whether all pallets are running")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(AMP_CHAR):AllPallRunning CP MSS")
+    field(OUT, "$(PREFIX_CGD):iAllPallRunningCalc.$(AMP_CHAR) PP MSS")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):SomePallRunning") {
+    field(DESC, "Whether any pallets are running")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B2 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX)-$(AMP_CHAR):iSomePallRunningPush") {
+    field(DESC, "Whether any pallets are running")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(AMP_CHAR):SomePallRunning CP MSS")
+    field(OUT, "$(PREFIX_CGD):iSomePallRunningCalc.$(AMP_CHAR) PP MSS")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):PSUVoltStat") {
+    field(DESC, "PSU voltage over 90% of setpoint")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B3 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bo, "$(PREFIX)-$(AMP_CHAR):iPSUVoltStatPush") {
+    field(DESC, "PSU voltage over 90% of setpoint")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(AMP_CHAR):PSUVoltStat CP MSS")
+    field(OUT, "$(PREFIX_CGD):iPSUVoltStatCalc.$(AMP_CHAR) PP MSS")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):RFDriverPSUStat") {
+    field(DESC, "Status of RF driver's PSU")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B4 CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):RFDriverStat") {
+    field(DESC, "RF driver on/off status")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):Stat.B5 CP MSS")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(longout, "$(PREFIX)-$(AMP_CHAR):iNrRunningPush") {
+    field(DESC, "Amplifier $(AMP_CHAR) number of pallet running")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(AMP_CHAR):NrRunning CP MSS")
+    field(OUT, "$(PREFIX_CGD):iNrPallRunningCalc.$(AMP_CHAR) PP MSS")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):WarnSumm") {
+    field(DESC, "Summary warning indicator")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):iWarnSummCalc NPP MSS")
+    field(ZNAM, "OK")
+    field(ONAM, "Warning")
+}
+
+record(calc, "$(PREFIX)-$(AMP_CHAR):iWarnSummCalc") {
+    field(DESC, "Summary warning indicator")
+    field(FLNK, "$(PREFIX)-$(AMP_CHAR):WarnSumm")
+    # Unmask only $(NUM_SSM) bits and map to bool
+    field(CALC, "!!( ~A & ~((~A >> $(NUM_SSM)) << $(NUM_SSM)) )")
+    field(INPA, "$(PREFIX)-$(AMP_CHAR):Warnings CP MSS")
+}
+
+record(bo, "$(PREFIX)-$(AMP_CHAR):iWarnSummPush") {
+    field(DESC, "Summary warning indicator")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(AMP_CHAR):WarnSumm CP MSS")
+    field(OUT, "$(PREFIX_CGD):iAmpWarnSummCalc.$(AMP_CHAR) PP MSS")
+    field(ZNAM, "OK")
+    field(ONAM, "Warning")
+}
+
+record(bi, "$(PREFIX)-$(AMP_CHAR):AlarmSumm") {
+    field(DESC, "Summary alarm indicator")
+    field(INP, "$(PREFIX)-$(AMP_CHAR):iAlarmSummCalc NPP MSS")
+    field(ZNAM, "OK")
+    field(ONAM, "Alarm")
+}
+
+record(calc, "$(PREFIX)-$(AMP_CHAR):iAlarmSummCalc") {
+    field(DESC, "Summary alarm indicator")
+    field(FLNK, "$(PREFIX)-$(AMP_CHAR):AlarmSumm")
+    # Unmask only $(NUM_SSM) bits and map to bool
+    field(CALC, "!!( ~A & ~((~A >> $(NUM_SSM)) << $(NUM_SSM)) )")
+    field(INPA, "$(PREFIX)-$(AMP_CHAR):Alarms CP MSS")
+}
+
+record(bo, "$(PREFIX)-$(AMP_CHAR):iAlarmSummPush") {
+    field(DESC, "Summary alarm indicator")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(AMP_CHAR):AlarmSumm CP MSS")
+    field(OUT, "$(PREFIX_CGD):iAmpAlarmSummCalc.$(AMP_CHAR) PP MSS")
+    field(ZNAM, "OK")
+    field(ONAM, "Alarm")
+}
+
+record(ao, "$(PREFIX)-$(AMP_CHAR):iFwdPwrPush") {
+    field(DESC, "Amplifier $(AMP_CHAR) fwd output power")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(AMP_CHAR):FwdPwr CP MSS")
+    field(OUT, "$(PREFIX_CGD):FwdPwr.$(AMP_CHAR) PP MSS")
+}

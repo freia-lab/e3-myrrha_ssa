@@ -1,0 +1,101 @@
+# Status of a PSU.
+
+alias("$(PREFIX_CGD):iPSU$(PSU_NUM)Volt", "$(PREFIX)-$(PSU_NUM):Volt")
+
+record(bi, "$(PREFIX)-$(PSU_NUM):FaultSumm") {
+    field(DESC, "Fault summary for all PSU modules")
+    field(INP, "$(PREFIX)-$(PSU_NUM):iFaultSummCalc CP MSS")
+    field(ZNAM, "OK")
+    field(ONAM, "Fault")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX)-$(PSU_NUM):iFaultSummCalc") {
+    field(DESC, "Fault summary for all PSU modules")
+    field(CALC, "!A || !B || !C")
+    field(INPA, "$(PREFIX)-$(PSU_NUM):Mod1Fault CP MSS")
+    field(INPB, "$(PREFIX)-$(PSU_NUM):Mod2Fault CP MSS")
+    field(INPC, "$(PREFIX)-$(PSU_NUM):Mod3Fault CP MSS")
+}
+
+# The following records are used to define the input links of the global PSU
+# fault summary.
+
+record(calc, "$(PREFIX)-$(PSU_NUM):iPSUPushLetter") {
+    field(DESC, "Input link letter for this PSU")
+    field(CALC, "0xA + $(PSU_NUM) - 1")
+}
+
+record(printf, "$(PREFIX)-$(PSU_NUM):iFaultSummPushDest") {
+    field(DESC, "Destination for the PSU fault summary")
+    field(FMT, "$(PREFIX_CGD):iPSUFaultSummCalc.INP%X CA")
+    field(INP0, "$(PREFIX)-$(PSU_NUM):iPSUPushLetter PP")
+    field(OUT, "$(PREFIX)-$(PSU_NUM):iFaultSummPush.OUT CA")
+    field(PINI, "RUNNING")
+}
+
+record(stringin, "$(PREFIX)-$(PSU_NUM):iFaultSummPushLink") {
+    field(DESC, "The input link of PSU fault summary")
+    field(INP, ["$(PREFIX)-$(PSU_NUM):FaultSumm CP MSS"])
+}
+
+record(stringout, "$(PREFIX)-$(PSU_NUM):iFaultSummPush") {
+    field(DESC, "Push the link of PSU fault summary")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(PSU_NUM):iFaultSummPushLink PP")
+    field(SCAN, "1 second")  # must process after a delay, no nicer way
+    field(FLNK, "$(PREFIX)-$(PSU_NUM):iFaultSummPushDsbl")
+}
+
+record(stringout, "$(PREFIX)-$(PSU_NUM):iFaultSummPushDsbl") {
+    field(OMSL, "closed_loop")
+    field(DOL, ["Passive"])
+    field(OUT, "$(PREFIX)-$(PSU_NUM):iFaultSummPush.SCAN")
+}
+
+# The following records determine whether the PSU is on ...
+
+record(bi, "$(PREFIX)-$(PSU_NUM):SomeOn") {
+    field(DESC, "Whether any modules are on")
+    field(INP, "$(PREFIX)-$(PSU_NUM):iSomeOnCalc CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX)-$(PSU_NUM):iSomeOnCalc") {
+    field(DESC, "Whether any modules are on")
+    field(CALC, "A || B || C")
+    field(INPA, "$(PREFIX)-$(PSU_NUM):Mod1Enbl CP MSS")
+    field(INPB, "$(PREFIX)-$(PSU_NUM):Mod2Enbl CP MSS")
+    field(INPC, "$(PREFIX)-$(PSU_NUM):Mod3Enbl CP MSS")
+}
+
+# ... and push it to the global status record.
+
+record(printf, "$(PREFIX)-$(PSU_NUM):iSomeOnPushDest") {
+    field(DESC, "Destination for the PSU on/off summary")
+    field(FMT, "$(PREFIX_CGD):iSomePSUOnCalc.INP%X CA")
+    field(INP0, "$(PREFIX)-$(PSU_NUM):iPSUPushLetter PP")
+    field(OUT, "$(PREFIX)-$(PSU_NUM):iSomeOnPush.OUT CA")
+    field(PINI, "RUNNING")
+}
+
+record(stringin, "$(PREFIX)-$(PSU_NUM):iSomeOnPushLink") {
+    field(DESC, "The input link of PSU on/off summary")
+    field(INP, ["$(PREFIX)-$(PSU_NUM):SomeOn CP MSS"])
+}
+
+record(stringout, "$(PREFIX)-$(PSU_NUM):iSomeOnPush") {
+    field(DESC, "Push the link of PSU on/off summary")
+    field(OMSL, "closed_loop")
+    field(DOL, "$(PREFIX)-$(PSU_NUM):iSomeOnPushLink PP")
+    field(SCAN, "1 second")  # must process after a delay, no nicer way
+    field(FLNK, "$(PREFIX)-$(PSU_NUM):iSomeOnPushDsbl")
+}
+
+record(stringout, "$(PREFIX)-$(PSU_NUM):iSomeOnPushDsbl") {
+    field(OMSL, "closed_loop")
+    field(DOL, ["Passive"])
+    field(OUT, "$(PREFIX)-$(PSU_NUM):iSomeOnPush.SCAN")
+}

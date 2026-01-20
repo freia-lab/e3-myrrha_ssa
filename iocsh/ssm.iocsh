@@ -16,7 +16,8 @@ epicsEnvSet(SSM_ADDR, "$(SSM_ADDR=$(IP_ADDR_BASE).$(CAB_NUM).$(SSM_NUM))")
 
 epicsEnvSet(BASE_ADDR, 1000)
 epicsEnvSet(FRAME_LEN, 121)
-epicsEnvSet(AUX_BASE_ADDR, 1124)
+#epicsEnvSet(AUX_BASE_ADDR, 1124) version from SCK (1022 in version from IJCLab)
+epicsEnvSet(AUX_BASE_ADDR, 1122)
 epicsEnvSet(AUX_FRAME_LEN, 58)
 
 

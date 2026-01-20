@@ -1,1379 +1,1946 @@
 # bi and bo records referencing bits of buffer download trigger mask.
 # They are congruent with SSM status bits.
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)SSMStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)SSMStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):LimSummTrig-Sts") {
     field(DESC, "Limit status summary")
-    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)SSMStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):LimSummTrig-Sel") {
     field(DESC, "Limit status summary")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)SSMStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):WarnSummTrig-Sts") {
     field(DESC, "Warning status summary")
-    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)SSMStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):WarnSummTrig-Sel") {
     field(DESC, "Warning status summary")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)SSMStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):CommStatTrig-Sts") {
     field(DESC, "Communication status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)SSMStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):CommStatTrig-Sel") {
     field(DESC, "Communication status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)SSMStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):ModeTrig-Sts") {
     field(DESC, "Operational mode")
-    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)SSMStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):ModeTrig-Sel") {
     field(DESC, "Operational mode")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)SSMStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):MajorFltTrig-Sts") {
     field(DESC, "Major issue indicator")
-    field(INP, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sts.BF CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32768)SSMStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):MajorFltTrig-Sel") {
     field(DESC, "Major issue indicator")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):SSMStatTrigMask-Sel.BF PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32768)SSMStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)PallStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)PallStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall1OnTrig-Sts") {
     field(DESC, "Pallet on/off status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall1OnTrig-Sel") {
     field(DESC, "Pallet on/off status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall2OnTrig-Sts") {
     field(DESC, "Pallet on/off status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall2OnTrig-Sel") {
     field(DESC, "Pallet on/off status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall3OnTrig-Sts") {
     field(DESC, "Pallet on/off status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall3OnTrig-Sel") {
     field(DESC, "Pallet on/off status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall4OnTrig-Sts") {
     field(DESC, "Pallet on/off status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall4OnTrig-Sel") {
     field(DESC, "Pallet on/off status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall5OnTrig-Sts") {
     field(DESC, "Pallet on/off status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.B4 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall5OnTrig-Sel") {
     field(DESC, "Pallet on/off status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.B4 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall6OnTrig-Sts") {
     field(DESC, "Pallet on/off status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.B5 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall6OnTrig-Sel") {
     field(DESC, "Pallet on/off status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.B5 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall1SanityTrig-Sts") {
     field(DESC, "Pallet sanity status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.B8 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,256)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall1SanityTrig-Sel") {
     field(DESC, "Pallet sanity status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.B8 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,256)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall2SanityTrig-Sts") {
     field(DESC, "Pallet sanity status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.B9 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,512)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall2SanityTrig-Sel") {
     field(DESC, "Pallet sanity status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.B9 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,512)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall3SanityTrig-Sts") {
     field(DESC, "Pallet sanity status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.BA CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1024)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall3SanityTrig-Sel") {
     field(DESC, "Pallet sanity status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.BA PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1024)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall4SanityTrig-Sts") {
     field(DESC, "Pallet sanity status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.BB CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2048)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall4SanityTrig-Sel") {
     field(DESC, "Pallet sanity status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.BB PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2048)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall5SanityTrig-Sts") {
     field(DESC, "Pallet sanity status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.BC CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4096)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall5SanityTrig-Sel") {
     field(DESC, "Pallet sanity status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.BC PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4096)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall6SanityTrig-Sts") {
     field(DESC, "Pallet sanity status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sts.BD CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8192)PallStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall6SanityTrig-Sel") {
     field(DESC, "Pallet sanity status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PallStatTrigMask-Sel.BD PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8192)PallStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)RstStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)RstStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall1RstNeededTrig-Sts") {
     field(DESC, "Pallet reset required indicator")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)RstStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall1RstNeededTrig-Sel") {
     field(DESC, "Pallet reset required indicator")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)RstStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall2RstNeededTrig-Sts") {
     field(DESC, "Pallet reset required indicator")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)RstStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall2RstNeededTrig-Sel") {
     field(DESC, "Pallet reset required indicator")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)RstStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall3RstNeededTrig-Sts") {
     field(DESC, "Pallet reset required indicator")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)RstStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall3RstNeededTrig-Sel") {
     field(DESC, "Pallet reset required indicator")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)RstStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall4RstNeededTrig-Sts") {
     field(DESC, "Pallet reset required indicator")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)RstStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall4RstNeededTrig-Sel") {
     field(DESC, "Pallet reset required indicator")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)RstStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall5RstNeededTrig-Sts") {
     field(DESC, "Pallet reset required indicator")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts.B4 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16)RstStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall5RstNeededTrig-Sel") {
     field(DESC, "Pallet reset required indicator")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel.B4 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16)RstStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall6RstNeededTrig-Sts") {
     field(DESC, "Pallet reset required indicator")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts.B5 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32)RstStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall6RstNeededTrig-Sel") {
     field(DESC, "Pallet reset required indicator")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel.B5 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32)RstStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefRstNeededTrig-Sts") {
     field(DESC, "Reference reset required indicator")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sts.B8 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,256)RstStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefRstNeededTrig-Sel") {
     field(DESC, "Reference reset required indicator")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RstStatTrigMask-Sel.B8 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,256)RstStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)PwrStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)PwrStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall1VswrStatTrig-Sts") {
     field(DESC, "Pallet VSWR status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall1VswrStatTrig-Sel") {
     field(DESC, "Pallet VSWR status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall2VswrStatTrig-Sts") {
     field(DESC, "Pallet VSWR status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall2VswrStatTrig-Sel") {
     field(DESC, "Pallet VSWR status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall3VswrStatTrig-Sts") {
     field(DESC, "Pallet VSWR status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall3VswrStatTrig-Sel") {
     field(DESC, "Pallet VSWR status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall4VswrStatTrig-Sts") {
     field(DESC, "Pallet VSWR status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall4VswrStatTrig-Sel") {
     field(DESC, "Pallet VSWR status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall5VswrStatTrig-Sts") {
     field(DESC, "Pallet VSWR status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B4 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall5VswrStatTrig-Sel") {
     field(DESC, "Pallet VSWR status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B4 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall6VswrStatTrig-Sts") {
     field(DESC, "Pallet VSWR status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B5 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall6VswrStatTrig-Sel") {
     field(DESC, "Pallet VSWR status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B5 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):CombVswrStatTrig-Sts") {
     field(DESC, "Combiner VSWR status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B6 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,64)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):CombVswrStatTrig-Sel") {
     field(DESC, "Combiner VSWR status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B6 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,64)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):LoadVswrStatTrig-Sts") {
     field(DESC, "Load VSWR status")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B7 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,128)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):LoadVswrStatTrig-Sel") {
     field(DESC, "Load VSWR status")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B7 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,128)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall1PwrDisLimTrig-Sts") {
     field(DESC, "Power dissipation over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B8 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,256)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall1PwrDisLimTrig-Sel") {
     field(DESC, "Power dissipation over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B8 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,256)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall2PwrDisLimTrig-Sts") {
     field(DESC, "Power dissipation over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.B9 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,512)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall2PwrDisLimTrig-Sel") {
     field(DESC, "Power dissipation over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.B9 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,512)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall3PwrDisLimTrig-Sts") {
     field(DESC, "Power dissipation over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.BA CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1024)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall3PwrDisLimTrig-Sel") {
     field(DESC, "Power dissipation over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.BA PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1024)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall4PwrDisLimTrig-Sts") {
     field(DESC, "Power dissipation over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.BB CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2048)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall4PwrDisLimTrig-Sel") {
     field(DESC, "Power dissipation over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.BB PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2048)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall5PwrDisLimTrig-Sts") {
     field(DESC, "Power dissipation over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.BC CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4096)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall5PwrDisLimTrig-Sel") {
     field(DESC, "Power dissipation over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.BC PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4096)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall6PwrDisLimTrig-Sts") {
     field(DESC, "Power dissipation over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.BD CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8192)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall6PwrDisLimTrig-Sel") {
     field(DESC, "Power dissipation over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.BD PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8192)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):PwrWarnTrig-Sts") {
     field(DESC, "Power output warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.BE CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16384)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):PwrWarnTrig-Sel") {
     field(DESC, "Power output warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.BE PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16384)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):PwrLimTrig-Sts") {
     field(DESC, "Power output over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sts.BF CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32768)PwrStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):PwrLimTrig-Sel") {
     field(DESC, "Power output over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):PwrStatTrigMask-Sel.BF PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32768)PwrStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)VoltLimStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)VoltLimStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall1VoltLimTrig-Sts") {
     field(DESC, "Pallet voltage over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)VoltLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall1VoltLimTrig-Sel") {
     field(DESC, "Pallet voltage over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)VoltLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall2VoltLimTrig-Sts") {
     field(DESC, "Pallet voltage over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)VoltLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall2VoltLimTrig-Sel") {
     field(DESC, "Pallet voltage over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)VoltLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall3VoltLimTrig-Sts") {
     field(DESC, "Pallet voltage over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)VoltLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall3VoltLimTrig-Sel") {
     field(DESC, "Pallet voltage over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)VoltLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall4VoltLimTrig-Sts") {
     field(DESC, "Pallet voltage over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)VoltLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall4VoltLimTrig-Sel") {
     field(DESC, "Pallet voltage over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)VoltLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall5VoltLimTrig-Sts") {
     field(DESC, "Pallet voltage over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sts.B4 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16)VoltLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall5VoltLimTrig-Sel") {
     field(DESC, "Pallet voltage over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sel.B4 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16)VoltLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall6VoltLimTrig-Sts") {
     field(DESC, "Pallet voltage over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sts.B5 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32)VoltLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall6VoltLimTrig-Sel") {
     field(DESC, "Pallet voltage over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):VoltLimStatTrigMask-Sel.B5 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32)VoltLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)CurrLimStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)CurrLimStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall1CurrLimTrig-Sts") {
     field(DESC, "Pallet current over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)CurrLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall1CurrLimTrig-Sel") {
     field(DESC, "Pallet current over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)CurrLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall2CurrLimTrig-Sts") {
     field(DESC, "Pallet current over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)CurrLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall2CurrLimTrig-Sel") {
     field(DESC, "Pallet current over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)CurrLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall3CurrLimTrig-Sts") {
     field(DESC, "Pallet current over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)CurrLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall3CurrLimTrig-Sel") {
     field(DESC, "Pallet current over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)CurrLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall4CurrLimTrig-Sts") {
     field(DESC, "Pallet current over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)CurrLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall4CurrLimTrig-Sel") {
     field(DESC, "Pallet current over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)CurrLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall5CurrLimTrig-Sts") {
     field(DESC, "Pallet current over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sts.B4 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16)CurrLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall5CurrLimTrig-Sel") {
     field(DESC, "Pallet current over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sel.B4 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16)CurrLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall6CurrLimTrig-Sts") {
     field(DESC, "Pallet current over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sts.B5 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32)CurrLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall6CurrLimTrig-Sel") {
     field(DESC, "Pallet current over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):CurrLimStatTrigMask-Sel.B5 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32)CurrLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)TWarnStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)TWarnStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):WaterInTWarnTrig-Sts") {
     field(DESC, "Water inlet temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):WaterInTWarnTrig-Sel") {
     field(DESC, "Water inlet temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):WaterOutTWarnTrig-Sts") {
     field(DESC, "Water outlet temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):WaterOutTWarnTrig-Sel") {
     field(DESC, "Water outlet temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):AirInTWarnTrig-Sts") {
     field(DESC, "Air inlet temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):AirInTWarnTrig-Sel") {
     field(DESC, "Air inlet temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):AirOutTWarnTrig-Sts") {
     field(DESC, "Air outlet temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):AirOutTWarnTrig-Sel") {
     field(DESC, "Air outlet temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Load1TWarnTrig-Sts") {
     field(DESC, "Load temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B4 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Load1TWarnTrig-Sel") {
     field(DESC, "Load temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B4 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Load2TWarnTrig-Sts") {
     field(DESC, "Load temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B5 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Load2TWarnTrig-Sel") {
     field(DESC, "Load temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B5 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):IOBoardTWarnTrig-Sts") {
     field(DESC, "IO Board temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B6 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,64)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):IOBoardTWarnTrig-Sel") {
     field(DESC, "IO Board temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B6 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,64)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Ref10kTWarnTrig-Sts") {
     field(DESC, "10k reference temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B7 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,128)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Ref10kTWarnTrig-Sel") {
     field(DESC, "10k reference temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B7 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,128)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):ADCTWarnTrig-Sts") {
     field(DESC, "ADC temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B8 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,256)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):ADCTWarnTrig-Sel") {
     field(DESC, "ADC temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B8 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,256)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall12TWarnTrig-Sts") {
     field(DESC, "Pallet temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.B9 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,512)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall12TWarnTrig-Sel") {
     field(DESC, "Pallet temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.B9 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,512)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall34TWarnTrig-Sts") {
     field(DESC, "Pallet temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.BA CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1024)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall34TWarnTrig-Sel") {
     field(DESC, "Pallet temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.BA PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1024)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall56TWarnTrig-Sts") {
     field(DESC, "Pallet temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.BB CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2048)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall56TWarnTrig-Sel") {
     field(DESC, "Pallet temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.BB PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2048)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):CPUTWarnTrig-Sts") {
     field(DESC, "Processor temperature warning")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sts.BC CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4096)TWarnStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):CPUTWarnTrig-Sel") {
     field(DESC, "Processor temperature warning")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TWarnStatTrigMask-Sel.BC PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4096)TWarnStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)TLimStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)TLimStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):WaterInTLimTrig-Sts") {
     field(DESC, "Water inlet temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):WaterInTLimTrig-Sel") {
     field(DESC, "Water inlet temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):WaterOutTLimTrig-Sts") {
     field(DESC, "Water outlet temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):WaterOutTLimTrig-Sel") {
     field(DESC, "Water outlet temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):AirInTLimTrig-Sts") {
     field(DESC, "Air inlet temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):AirInTLimTrig-Sel") {
     field(DESC, "Air inlet temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):AirOutTLimTrig-Sts") {
     field(DESC, "Air outlet temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):AirOutTLimTrig-Sel") {
     field(DESC, "Air outlet temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Load1TLimTrig-Sts") {
     field(DESC, "Load temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B4 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Load1TLimTrig-Sel") {
     field(DESC, "Load temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B4 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Load2TLimTrig-Sts") {
     field(DESC, "Load temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B5 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Load2TLimTrig-Sel") {
     field(DESC, "Load temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B5 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):IOBoardTLimTrig-Sts") {
     field(DESC, "IO Board temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B6 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,64)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):IOBoardTLimTrig-Sel") {
     field(DESC, "IO Board temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B6 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,64)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Ref10kTLimTrig-Sts") {
     field(DESC, "10k reference temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B7 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,128)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Ref10kTLimTrig-Sel") {
     field(DESC, "10k reference temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B7 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,128)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):ADCTLimTrig-Sts") {
     field(DESC, "ADC temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B8 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,256)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):ADCTLimTrig-Sel") {
     field(DESC, "ADC temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B8 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,256)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall12TLimTrig-Sts") {
     field(DESC, "Pallet temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.B9 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,512)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall12TLimTrig-Sel") {
     field(DESC, "Pallet temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.B9 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,512)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall34TLimTrig-Sts") {
     field(DESC, "Pallet temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.BA CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1024)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall34TLimTrig-Sel") {
     field(DESC, "Pallet temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.BA PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1024)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):Pall56TLimTrig-Sts") {
     field(DESC, "Pallet temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.BB CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2048)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):Pall56TLimTrig-Sel") {
     field(DESC, "Pallet temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.BB PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2048)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):CPUTLimTrig-Sts") {
     field(DESC, "Processor temperature over limit")
-    field(INP, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sts.BC CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4096)TLimStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):CPUTLimTrig-Sel") {
     field(DESC, "Processor temperature over limit")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):TLimStatTrigMask-Sel.BC PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4096)TLimStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
-record(mbbiDirect, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts") {
+record(longin, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts") {
     field(DESC, "SSM status trigger mask state")
     field(SCAN, "I/O Intr")
     field(DTYP, "asynUInt32Digital")
     field(INP, "@asynMask($(BFR_PORT),0,0xffff)RefStat")
+    field(PINI, "YES")
 }
 
-record(mbboDirect, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel") {
-    field(DESC, "SSM status trigger mask setting")
+record(longout, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel") {
+    field(DESC, "SSM status trigger mask state")
     field(DTYP, "asynUInt32Digital")
     field(OUT, "@asynMask($(BFR_PORT),0,0xffff)RefStat")
+    field(PINI, "YES")
+    info(asyn:READBACK, "1")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatPSUTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.B0 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatPSUTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.B0 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStat12VTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.B1 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStat12VTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.B1 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatRefTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.B2 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatRefTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.B2 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatGndTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.B3 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatGndTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.B3 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatADCTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.B4 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,16)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatADCTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.B4 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,16)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStat12VFanTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.B5 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,32)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStat12VFanTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.B5 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,32)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan1Trig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.B8 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,256)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatFan1Trig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.B8 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,256)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan2Trig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.B9 CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,512)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatFan2Trig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.B9 PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,512)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan3Trig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.BA CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,1024)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatFan3Trig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.BA PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,1024)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan1PSUTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.BB CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,2048)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatFan1PSUTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.BB PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,2048)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan2PSUTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.BC CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,4096)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatFan2PSUTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.BC PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,4096)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan3PSUTrig-Sts") {
     field(DESC, "Debugging information")
-    field(INP, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sts.BD CP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(INP, "@asynMask($(BFR_PORT),0,8192)RefStat")
+    field(SCAN, "I/O Intr")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }
 
 record(bo, "$(PREFIX)-$(SSM_NUM):RefStatFan3PSUTrig-Sel") {
     field(DESC, "Debugging information")
-    field(OUT, "$(PREFIX)-$(SSM_NUM):RefStatTrigMask-Sel.BD PP MSS")
+    field(DTYP, "asynUInt32Digital")
+    field(OUT, "@asynMask($(BFR_PORT),0,8192)RefStat")
+    info(asyn:READBACK, "1")
+    field(PINI, "YES")
     field(ZNAM, "Disabled")
     field(ONAM, "Enabled")
 }

@@ -1,0 +1,210 @@
+# Miscellaneous cabinet records.
+
+record(longin, "$(PREFIX):NrInstalledPSU") {
+    field(DESC, "Number of installed PSUs")
+    field(INP, "$(NUM_PSU)")
+    field(PINI, "YES")
+}
+
+record(longin, "$(PREFIX):NrInstalledSSM") {
+    field(DESC, "Number of installed SSMs")
+    field(INP, "$(NUM_SSM)")
+    field(PINI, "YES")
+}
+
+record(longin, "$(PREFIX):NrInstalledAmp") {
+    field(DESC, "Number of installed amplifiers")
+    field(INP, "$(NUM_AMP)")
+    field(PINI, "YES")
+}
+
+record(calcout, "$(PREFIX):iKeepAliveCalc") {
+    field(DESC, "Maintains the keepalive register")
+    field(SCAN, ".2 second")
+    field(CALC, "VAL + 1")
+    field(OUT, "$(PREFIX):KeepAlive PP")
+}
+
+record(mbbo, "$(PREFIX):RemoteCtrlEnbl") {
+    field(DESC, "Enable or disable EPICS control")
+    field(DTYP, "Raw Soft Channel")
+    field(ZRST, "Local control")
+    field(ZRVL, 0xAAAA)
+    field(ONST, "Remote control")
+    field(ONVL, 0xBBBB)
+    field(OUT, "$(PREFIX):iRemoteCtrl PP")
+    field(FLNK, "$(PREFIX):iRemoteCtrlClr")
+}
+
+record(seq, "$(PREFIX):iRemoteCtrlClr") {
+    field(DESC, "Clear remote control register")
+    field(DLY0, "$(CMD_ZERO_DELAY=0.1)")
+    field(DOL0, "0")
+    field(LNK0, "$(PREFIX):iRemoteCtrl PP")
+}
+
+alias("$(PREFIX):iPSUOnReq-All", "$(PREFIX):PSUOn-Cmd")
+alias("$(PREFIX):iPSUOffReq-All", "$(PREFIX):PSUOff-Cmd")
+
+record(bi, "$(PREFIX):PSUVoltStat") {
+    field(DESC, "Amplifiers' voltage over 90% of setpoint")
+    field(INP, "$(PREFIX):iPSUVoltStatCalc CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iPSUVoltStatCalc") {
+    field(DESC, "Amplifiers' voltage over 90% of setpoint")
+    field(CALC, "A && B && C && D")
+    # Inputs written to by individual amps, if present
+    field(INPA, 1)
+    field(INPB, 1)
+    field(INPC, 1)
+    field(INPD, 1)
+}
+
+record(bi, "$(PREFIX):AllPallRunning") {
+    field(DESC, "Whether all pallets are running")
+    field(INP, "$(PREFIX):iAllPallRunningCalc CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iAllPallRunningCalc") {
+    field(DESC, "Whether all pallets are running")
+    field(CALC, "A && B && C && D")
+    # Inputs written to by individual amps, if present
+    field(INPA, 1)
+    field(INPB, 1)
+    field(INPC, 1)
+    field(INPD, 1)
+}
+
+record(bi, "$(PREFIX):SomePallRunning") {
+    field(DESC, "Whether any pallets are running")
+    field(INP, "$(PREFIX):iSomePallRunningCalc CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iSomePallRunningCalc") {
+    field(DESC, "Whether any pallets are running")
+    field(CALC, "A || B || C || D")
+    # Inputs written to by individual amps, if present
+    field(INPA, 0)
+    field(INPB, 0)
+    field(INPC, 0)
+    field(INPD, 0)
+}
+
+record(longin, "$(PREFIX):NrPallRunning") {
+    field(DESC, "Total number of pallets running")
+    field(INP, "$(PREFIX):iNrPallRunningCalc CP MSS")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iNrPallRunningCalc") {
+    field(DESC, "Total number of pallets running")
+    field(CALC, "A + B + C + D")
+    # Inputs written to by individual amps, if present
+    field(INPA, 0)
+    field(INPB, 0)
+    field(INPC, 0)
+    field(INPD, 0)
+}
+
+record(bi, "$(PREFIX):AllCommStat") {
+    field(DESC, "Communication status of all SSMs")
+    field(INP, "$(PREFIX):iAllCommStatCalc CP MSS")
+    field(ZNAM, "Comm error")
+    field(ONAM, "OK")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iAllCommStatCalc") {
+    field(DESC, "Communication status of all SSMs")
+    field(CALC, "A && B && C && D")
+    # Inputs written to by individual amps, if present
+    field(INPA, 1)
+    field(INPB, 1)
+    field(INPC, 1)
+    field(INPD, 1)
+}
+
+record(bi, "$(PREFIX):PSUFaultSumm") {
+    field(DESC, "Fault summary for all PSUs")
+    field(INP, "$(PREFIX):iPSUFaultSummCalc CP MSS")
+    field(ZNAM, "OK")
+    field(ONAM, "Fault")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iPSUFaultSummCalc") {
+    field(DESC, "Fault summary for all PSUs")
+    field(CALC, "A || B || C || D || E || F || G || H || I")
+    # Input links defined by individual PSUs, if present
+}
+
+record(bi, "$(PREFIX):SomePSUOn") {
+    field(DESC, "Whether any PSU is on")
+    field(INP, "$(PREFIX):iSomePSUOnCalc CP MSS")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iSomePSUOnCalc") {
+    field(DESC, "Whather any PSU is on")
+    field(CALC, "A || B || C || D || E || F || G || H || I")
+    # Input links defined by individual PSUs, if present
+}
+
+record(bi, "$(PREFIX):AmpWarnSumm") {
+    field(DESC, "Warning summary of all amplifiers")
+    field(INP, "$(PREFIX):iAmpWarnSummCalc CP MSS")
+    field(ZNAM, "Warning")
+    field(ONAM, "OK")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iAmpWarnSummCalc") {
+    field(DESC, "Warning summary of all amplifiers")
+    field(CALC, "A || B || C || D")
+    # Inputs written to by individual amps, if present
+    field(INPA, 0)
+    field(INPB, 0)
+    field(INPC, 0)
+    field(INPD, 0)
+}
+
+record(bi, "$(PREFIX):AmpAlarmSumm") {
+    field(DESC, "Alarm summary of all amplifiers")
+    field(INP, "$(PREFIX):iAmpAlarmSummCalc CP MSS")
+    field(ZNAM, "Alarm")
+    field(ONAM, "OK")
+    field(PINI, "YES")
+}
+
+record(calc, "$(PREFIX):iAmpAlarmSummCalc") {
+    field(DESC, "Alarm summary of all amplifiers")
+    field(CALC, "A || B || C || D")
+    # Inputs written to by individual amps, if present
+    field(INPA, 0)
+    field(INPB, 0)
+    field(INPC, 0)
+    field(INPD, 0)
+}
+
+record(calc, "$(PREFIX):FwdPwr") {
+    field(DESC, "Total forward power")
+    field(CALC, "A + B + C + D")
+    field(EGU, "W")
+    # Inputs written to by individual amps, if present
+    field(INPA, 0)
+    field(INPB, 0)
+    field(INPC, 0)
+    field(INPD, 0)
+}

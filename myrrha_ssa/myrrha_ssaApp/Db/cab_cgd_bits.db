@@ -1,59 +1,59 @@
 # Bits of the CGD status registers.
 
-record(bi, "$(PREFIX):EStop") {
-    field(DESC, "Emergency button state")
-    field(INP, "$(PREFIX):GeneralStat1.B0 CP MSS")
-    field(ZNAM, "Not pushed")
-    field(ONAM, "Pushed")
-}
-
 record(bi, "$(PREFIX):ExtIntlk1") {
     field(DESC, "External interlock 1 state")
-    field(INP, "$(PREFIX):GeneralStat1.B1 CP MSS")
-    field(ZNAM, "No interlock")
-    field(ONAM, "Interlock active")
+    field(INP, "$(PREFIX):GeneralStat1.B0 CP MSS")
+    field(ZNAM, "Interlock active")
+    field(ONAM, "No interlock")
 }
 
 record(bi, "$(PREFIX):ExtIntlk2") {
     field(DESC, "External interlock 2 state")
-    field(INP, "$(PREFIX):GeneralStat1.B2 CP MSS")
-    field(ZNAM, "No interlock")
-    field(ONAM, "Interlock active")
+    field(INP, "$(PREFIX):GeneralStat1.B1 CP MSS")
+    field(ZNAM, "Interlock active")
+    field(ONAM, "No interlock")
 }
 
 record(bi, "$(PREFIX):WaterFlowInRange") {
     field(DESC, "Water flow rate measurement")
-    field(INP, "$(PREFIX):GeneralStat1.B3 CP MSS")
+    field(INP, "$(PREFIX):GeneralStat1.B2 CP MSS")
     field(ZNAM, "Not in range")
     field(ONAM, "In range")
 }
 
 record(bi, "$(PREFIX):WaterFlowStat") {
     field(DESC, "Water flow on/off sensor")
-    field(INP, "$(PREFIX):GeneralStat1.B4 CP MSS")
+    field(INP, "$(PREFIX):GeneralStat1.B3 CP MSS")
     field(ZNAM, "No flow")
     field(ONAM, "Flow OK")
 }
 
 record(bi, "$(PREFIX):Leak") {
     field(DESC, "Leak detection status")
-    field(INP, "$(PREFIX):GeneralStat1.B5 CP MSS")
+    field(INP, "$(PREFIX):GeneralStat1.B4 CP MSS")
     field(ZNAM, "Leak detected")
     field(ONAM, "No leak")
 }
 
 record(bi, "$(PREFIX):DoorFrontStat") {
     field(DESC, "Front door state")
-    field(INP, "$(PREFIX):GeneralStat1.B6 CP MSS")
+    field(INP, "$(PREFIX):GeneralStat1.B5 CP MSS")
     field(ZNAM, "Open")
     field(ONAM, "Closed")
 }
 
 record(bi, "$(PREFIX):DoorRearStat") {
     field(DESC, "Rear door state")
-    field(INP, "$(PREFIX):GeneralStat1.B7 CP MSS")
+    field(INP, "$(PREFIX):GeneralStat1.B6 CP MSS")
     field(ZNAM, "Open")
     field(ONAM, "Closed")
+}
+
+record(bi, "$(PREFIX):LoadWaterFlowStat") {
+    field(DESC, "Emergency button state")
+    field(INP, "$(PREFIX):GeneralStat1.B7 CP MSS")
+    field(ZNAM, "No flow")
+    field(ONAM, "Flow OK")
 }
 
 record(bi, "$(PREFIX):LocalCtrlStat") {

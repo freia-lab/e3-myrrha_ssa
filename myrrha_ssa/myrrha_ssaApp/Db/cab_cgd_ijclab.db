@@ -1,0 +1,1654 @@
+# Cabinet general data registers read via EtherCAT.
+# The ecat2 module does not support mbbiDirect records, so data
+# is read by a longin and forwarded to a soft mbbiDirect.
+
+# This file reads all the data served via EtherCAT. Records that
+# do not actually represent CGD, but a subdevice, are marked
+# as internal. For devices that are actually present, an alias
+# is made from a separate, per-device database file that is loaded
+# as needed.
+
+record(longin, "$(PREFIX):iGeneralStat1Raw") {
+    field(DESC, "General status 1 (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e0.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):GeneralStat1")}
+
+record(mbbiDirect, "$(PREFIX):GeneralStat1") {
+    field(DESC, "General status 1")
+    field(INP, "$(PREFIX):iGeneralStat1Raw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iGeneralStat2Raw") {
+    field(DESC, "General status 2 (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e1.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):GeneralStat2")}
+
+record(mbbiDirect, "$(PREFIX):GeneralStat2") {
+    field(DESC, "General status 2")
+    field(INP, "$(PREFIX):iGeneralStat2Raw NPP MSS")
+}
+
+record(ai, "$(PREFIX):FanRoofPwm") {
+    field(DESC, "Fan roof pwm setpoint")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e2.Tuint16")
+    field(TSE, -1)
+    field(EGU, "%")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(longin, "$(PREFIX):FanRoofS") {
+    field(DESC, "Fan roof speed")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e4.Tuint16")
+    field(TSE, -1)
+    field(EGU, "rpm")
+}
+
+record(ai, "$(PREFIX):FanLeftPwm") {
+    field(DESC, "Fan left pwm setpoint")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e6.Tuint16")
+    field(TSE, -1)
+    field(EGU, "%")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(longin, "$(PREFIX):FanLeft1S") {
+    field(DESC, "Fan left 1 speed")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e8.Tuint16")
+    field(TSE, -1)
+    field(EGU, "rpm")
+}
+
+record(longin, "$(PREFIX):FanLeft2S") {
+    field(DESC, "Fan left 2 speed")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e10.Tuint16")
+    field(TSE, -1)
+    field(EGU, "rpm")
+}
+
+record(ai, "$(PREFIX):FanRightPwm") {
+    field(DESC, "Fan right pwm setpoint")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e12.Tuint16")
+    field(TSE, -1)
+    field(EGU, "%")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(longin, "$(PREFIX):FanRight1S") {
+    field(DESC, "Fan right 1 speed")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e14.Tuint16")
+    field(TSE, -1)
+    field(EGU, "rpm")
+}
+
+record(longin, "$(PREFIX):FanRight2S") {
+    field(DESC, "Fan right 2 speed")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e16.Tuint16")
+    field(TSE, -1)
+    field(EGU, "rpm")
+}
+
+record(ai, "$(PREFIX):IntT") {
+    field(DESC, "Internal temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e18.Tuint16")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):ExtT1") {
+    field(DESC, "External temperature 1")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e20.Tuint16")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):ExtT2") {
+    field(DESC, "External temperature 2")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e22.Tuint16")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):WaterFlow") {
+    field(DESC, "Water flow")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e24.Tuint16")
+    field(TSE, -1)
+    field(EGU, "L/min")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(longin, "$(PREFIX):LiveCnt") {
+    field(DESC, "Live counter")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e26.Tuint16")
+    field(TSE, -1)
+}
+
+record(longin, "$(PREFIX):iAmpAStatRaw") {
+    field(DESC, "Amplifier A status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e28.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpAStat")}
+
+record(mbbiDirect, "$(PREFIX):iAmpAStat") {
+    field(DESC, "Amplifier A status")
+    field(INP, "$(PREFIX):iAmpAStatRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpANrRunning") {
+    field(DESC, "Amplifier A number of pallet running")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e29.Tbyte")
+    field(TSE, -1)
+}
+
+record(longin, "$(PREFIX):iAmpAAlarmsRaw") {
+    field(DESC, "Amplifier A alarm on module (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e30.Tuint16")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpAAlarms")}
+
+record(mbbiDirect, "$(PREFIX):iAmpAAlarms") {
+    field(DESC, "Amplifier A alarm on module")
+    field(INP, "$(PREFIX):iAmpAAlarmsRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpAWarningsRaw") {
+    field(DESC, "Amplifier A warning on module (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e32.Tuint16")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpAWarnings")}
+
+record(mbbiDirect, "$(PREFIX):iAmpAWarnings") {
+    field(DESC, "Amplifier A warning on module")
+    field(INP, "$(PREFIX):iAmpAWarningsRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpAFwdPwr") {
+    field(DESC, "Amplifier A fwd output power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e34.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(longin, "$(PREFIX):iAmpARflPwr") {
+    field(DESC, "Amplifier A rfl output power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e38.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX):iAmpAVswr") {
+    field(DESC, "Amplifier A VSWR")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e42.Tuint16")
+    field(TSE, -1)
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iAmpAEff") {
+    field(DESC, "Amplifier A efficiency")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e44.Tuint16")
+    field(TSE, -1)
+    field(EGU, "%")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(longin, "$(PREFIX):iAmpBStatRaw") {
+    field(DESC, "Amplifier B status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e46.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpBStat")}
+
+record(mbbiDirect, "$(PREFIX):iAmpBStat") {
+    field(DESC, "Amplifier B status")
+    field(INP, "$(PREFIX):iAmpBStatRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpBNrRunning") {
+    field(DESC, "Amplifier B number of pallet running")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e47.Tbyte")
+    field(TSE, -1)
+}
+
+record(longin, "$(PREFIX):iAmpBAlarmsRaw") {
+    field(DESC, "Amplifier B alarm on module (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e48.Tuint16")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpBAlarms")}
+
+record(mbbiDirect, "$(PREFIX):iAmpBAlarms") {
+    field(DESC, "Amplifier B alarm on module")
+    field(INP, "$(PREFIX):iAmpBAlarmsRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpBWarningsRaw") {
+    field(DESC, "Amplifier B warning on module (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e50.Tuint16")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpBWarnings")}
+
+record(mbbiDirect, "$(PREFIX):iAmpBWarnings") {
+    field(DESC, "Amplifier B warning on module")
+    field(INP, "$(PREFIX):iAmpBWarningsRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpBFwdPwr") {
+    field(DESC, "Amplifier B fwd output power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e52.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(longin, "$(PREFIX):iAmpBRflPwr") {
+    field(DESC, "Amplifier B rfl output power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e56.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX):iAmpBVswr") {
+    field(DESC, "Amplifier B VSWR")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e60.Tuint16")
+    field(TSE, -1)
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iAmpBEff") {
+    field(DESC, "Amplifier B efficiency")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e62.Tuint16")
+    field(TSE, -1)
+    field(EGU, "%")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(longin, "$(PREFIX):iAmpCStatRaw") {
+    field(DESC, "Amplifier C status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e64.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpCStat")}
+
+record(mbbiDirect, "$(PREFIX):iAmpCStat") {
+    field(DESC, "Amplifier C status")
+    field(INP, "$(PREFIX):iAmpCStatRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpCNrRunning") {
+    field(DESC, "Amplifier C number of pallet running")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e65.Tbyte")
+    field(TSE, -1)
+}
+
+record(longin, "$(PREFIX):iAmpCAlarmsRaw") {
+    field(DESC, "Amplifier C alarm on module (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e66.Tuint16")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpCAlarms")}
+
+record(mbbiDirect, "$(PREFIX):iAmpCAlarms") {
+    field(DESC, "Amplifier C alarm on module")
+    field(INP, "$(PREFIX):iAmpCAlarmsRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpCWarningsRaw") {
+    field(DESC, "Amplifier C warning on module (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e68.Tuint16")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpCWarnings")}
+
+record(mbbiDirect, "$(PREFIX):iAmpCWarnings") {
+    field(DESC, "Amplifier C warning on module")
+    field(INP, "$(PREFIX):iAmpCWarningsRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpCFwdPwr") {
+    field(DESC, "Amplifier C fwd output power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e70.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(longin, "$(PREFIX):iAmpCRflPwr") {
+    field(DESC, "Amplifier C rfl output power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e74.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX):iAmpCVswr") {
+    field(DESC, "Amplifier C VSWR")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e78.Tuint16")
+    field(TSE, -1)
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iAmpCEff") {
+    field(DESC, "Amplifier C efficiency")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e80.Tuint16")
+    field(TSE, -1)
+    field(EGU, "%")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(longin, "$(PREFIX):iAmpDStatRaw") {
+    field(DESC, "Amplifier D status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e82.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpDStat")}
+
+record(mbbiDirect, "$(PREFIX):iAmpDStat") {
+    field(DESC, "Amplifier D status")
+    field(INP, "$(PREFIX):iAmpDStatRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpDNrRunning") {
+    field(DESC, "Amplifier D number of pallet running")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e83.Tbyte")
+    field(TSE, -1)
+}
+
+record(longin, "$(PREFIX):iAmpDAlarmsRaw") {
+    field(DESC, "Amplifier D alarm on module (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e84.Tuint16")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpDAlarms")}
+
+record(mbbiDirect, "$(PREFIX):iAmpDAlarms") {
+    field(DESC, "Amplifier D alarm on module")
+    field(INP, "$(PREFIX):iAmpDAlarmsRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpDWarningsRaw") {
+    field(DESC, "Amplifier D warning on module (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e86.Tuint16")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iAmpDWarnings")}
+
+record(mbbiDirect, "$(PREFIX):iAmpDWarnings") {
+    field(DESC, "Amplifier D warning on module")
+    field(INP, "$(PREFIX):iAmpDWarningsRaw NPP MSS")
+}
+
+record(longin, "$(PREFIX):iAmpDFwdPwr") {
+    field(DESC, "Amplifier D fwd output power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e88.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(longin, "$(PREFIX):iAmpDRflPwr") {
+    field(DESC, "Amplifier D rfl output power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e92.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(ai, "$(PREFIX):iAmpDVswr") {
+    field(DESC, "Amplifier D VSWR")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e96.Tuint16")
+    field(TSE, -1)
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iAmpDEff") {
+    field(DESC, "Amplifier D efficiency")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e98.Tuint16")
+    field(TSE, -1)
+    field(EGU, "%")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(longin, "$(PREFIX):DummyFwdPwr") {
+    field(DESC, "Dummy load fwd power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e100.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+record(longin, "$(PREFIX):DummyRflPwr") {
+    field(DESC, "Dummy load rfl power")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e104.Tuint32")
+    field(TSE, -1)
+    field(EGU, "W")
+}
+
+
+
+
+
+
+record(ai, "$(PREFIX):iPSU1Volt") {
+    field(DESC, "PSU 1 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e100.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU1Mod1Curr") {
+    field(DESC, "PSU 1 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e102.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU1Mod1T") {
+    field(DESC, "PSU 1 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e104.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU1Mod1StatRaw") {
+    field(DESC, "PSU 1 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e105.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU1Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU1Mod1Stat") {
+    field(DESC, "PSU 1 module 1 status")
+    field(INP, "$(PREFIX):iPSU1Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU1Mod2Curr") {
+    field(DESC, "PSU 1 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e106.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU1Mod2T") {
+    field(DESC, "PSU 1 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e108.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU1Mod2StatRaw") {
+    field(DESC, "PSU 1 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e109.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU1Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU1Mod2Stat") {
+    field(DESC, "PSU 1 module 2 status")
+    field(INP, "$(PREFIX):iPSU1Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU1Mod3Curr") {
+    field(DESC, "PSU 1 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e110.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU1Mod3T") {
+    field(DESC, "PSU 1 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e112.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU1Mod3StatRaw") {
+    field(DESC, "PSU 1 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e113.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU1Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU1Mod3Stat") {
+    field(DESC, "PSU 1 module 3 status")
+    field(INP, "$(PREFIX):iPSU1Mod3StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU2Volt") {
+    field(DESC, "PSU 2 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e114.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU2Mod1Curr") {
+    field(DESC, "PSU 2 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e116.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU2Mod1T") {
+    field(DESC, "PSU 2 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e118.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU2Mod1StatRaw") {
+    field(DESC, "PSU 2 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e119.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU2Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU2Mod1Stat") {
+    field(DESC, "PSU 2 module 1 status")
+    field(INP, "$(PREFIX):iPSU2Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU2Mod2Curr") {
+    field(DESC, "PSU 2 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e120.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU2Mod2T") {
+    field(DESC, "PSU 2 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e122.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU2Mod2StatRaw") {
+    field(DESC, "PSU 2 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e123.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU2Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU2Mod2Stat") {
+    field(DESC, "PSU 2 module 2 status")
+    field(INP, "$(PREFIX):iPSU2Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU2Mod3Curr") {
+    field(DESC, "PSU 2 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e124.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU2Mod3T") {
+    field(DESC, "PSU 2 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e126.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU2Mod3StatRaw") {
+    field(DESC, "PSU 2 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e127.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU2Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU2Mod3Stat") {
+    field(DESC, "PSU 2 module 3 status")
+    field(INP, "$(PREFIX):iPSU2Mod3StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU3Volt") {
+    field(DESC, "PSU 3 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e128.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU3Mod1Curr") {
+    field(DESC, "PSU 3 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e130.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU3Mod1T") {
+    field(DESC, "PSU 3 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e132.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU3Mod1StatRaw") {
+    field(DESC, "PSU 3 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e133.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU3Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU3Mod1Stat") {
+    field(DESC, "PSU 3 module 1 status")
+    field(INP, "$(PREFIX):iPSU3Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU3Mod2Curr") {
+    field(DESC, "PSU 3 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e134.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU3Mod2T") {
+    field(DESC, "PSU 3 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e136.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU3Mod2StatRaw") {
+    field(DESC, "PSU 3 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e137.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU3Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU3Mod2Stat") {
+    field(DESC, "PSU 3 module 2 status")
+    field(INP, "$(PREFIX):iPSU3Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU3Mod3Curr") {
+    field(DESC, "PSU 3 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e138.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU3Mod3T") {
+    field(DESC, "PSU 3 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e140.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU3Mod3StatRaw") {
+    field(DESC, "PSU 3 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e141.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU3Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU3Mod3Stat") {
+    field(DESC, "PSU 3 module 3 status")
+    field(INP, "$(PREFIX):iPSU3Mod3StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU4Volt") {
+    field(DESC, "PSU 4 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e142.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU4Mod1Curr") {
+    field(DESC, "PSU 4 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e144.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU4Mod1T") {
+    field(DESC, "PSU 4 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e146.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU4Mod1StatRaw") {
+    field(DESC, "PSU 4 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e147.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU4Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU4Mod1Stat") {
+    field(DESC, "PSU 4 module 1 status")
+    field(INP, "$(PREFIX):iPSU4Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU4Mod2Curr") {
+    field(DESC, "PSU 4 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e148.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU4Mod2T") {
+    field(DESC, "PSU 4 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e150.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU4Mod2StatRaw") {
+    field(DESC, "PSU 4 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e151.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU4Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU4Mod2Stat") {
+    field(DESC, "PSU 4 module 2 status")
+    field(INP, "$(PREFIX):iPSU4Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU4Mod3Curr") {
+    field(DESC, "PSU 4 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e152.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU4Mod3T") {
+    field(DESC, "PSU 4 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e154.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU4Mod3StatRaw") {
+    field(DESC, "PSU 4 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e155.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU4Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU4Mod3Stat") {
+    field(DESC, "PSU 4 module 3 status")
+    field(INP, "$(PREFIX):iPSU4Mod3StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU5Volt") {
+    field(DESC, "PSU 5 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e156.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU5Mod1Curr") {
+    field(DESC, "PSU 5 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e158.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU5Mod1T") {
+    field(DESC, "PSU 5 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e160.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU5Mod1StatRaw") {
+    field(DESC, "PSU 5 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e161.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU5Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU5Mod1Stat") {
+    field(DESC, "PSU 5 module 1 status")
+    field(INP, "$(PREFIX):iPSU5Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU5Mod2Curr") {
+    field(DESC, "PSU 5 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e162.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU5Mod2T") {
+    field(DESC, "PSU 5 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e164.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU5Mod2StatRaw") {
+    field(DESC, "PSU 5 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e165.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU5Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU5Mod2Stat") {
+    field(DESC, "PSU 5 module 2 status")
+    field(INP, "$(PREFIX):iPSU5Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU5Mod3Curr") {
+    field(DESC, "PSU 5 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e166.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU5Mod3T") {
+    field(DESC, "PSU 5 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e168.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU5Mod3StatRaw") {
+    field(DESC, "PSU 5 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e169.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU5Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU5Mod3Stat") {
+    field(DESC, "PSU 5 module 3 status")
+    field(INP, "$(PREFIX):iPSU5Mod3StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU6Volt") {
+    field(DESC, "PSU 6 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e170.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU6Mod1Curr") {
+    field(DESC, "PSU 6 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e172.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU6Mod1T") {
+    field(DESC, "PSU 6 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e174.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU6Mod1StatRaw") {
+    field(DESC, "PSU 6 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e175.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU6Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU6Mod1Stat") {
+    field(DESC, "PSU 6 module 1 status")
+    field(INP, "$(PREFIX):iPSU6Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU6Mod2Curr") {
+    field(DESC, "PSU 6 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e176.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU6Mod2T") {
+    field(DESC, "PSU 6 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e178.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU6Mod2StatRaw") {
+    field(DESC, "PSU 6 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e179.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU6Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU6Mod2Stat") {
+    field(DESC, "PSU 6 module 2 status")
+    field(INP, "$(PREFIX):iPSU6Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU6Mod3Curr") {
+    field(DESC, "PSU 6 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e180.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU6Mod3T") {
+    field(DESC, "PSU 6 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e182.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU6Mod3StatRaw") {
+    field(DESC, "PSU 6 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e183.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU6Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU6Mod3Stat") {
+    field(DESC, "PSU 6 module 3 status")
+    field(INP, "$(PREFIX):iPSU6Mod3StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU7Volt") {
+    field(DESC, "PSU 7 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e184.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU7Mod1Curr") {
+    field(DESC, "PSU 7 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e186.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU7Mod1T") {
+    field(DESC, "PSU 7 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e188.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU7Mod1StatRaw") {
+    field(DESC, "PSU 7 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e189.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU7Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU7Mod1Stat") {
+    field(DESC, "PSU 7 module 1 status")
+    field(INP, "$(PREFIX):iPSU7Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU7Mod2Curr") {
+    field(DESC, "PSU 7 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e190.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU7Mod2T") {
+    field(DESC, "PSU 7 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e0.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU7Mod2StatRaw") {
+    field(DESC, "PSU 7 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e1.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU7Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU7Mod2Stat") {
+    field(DESC, "PSU 7 module 2 status")
+    field(INP, "$(PREFIX):iPSU7Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU7Mod3Curr") {
+    field(DESC, "PSU 7 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e2.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU7Mod3T") {
+    field(DESC, "PSU 7 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e4.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU7Mod3StatRaw") {
+    field(DESC, "PSU 7 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e5.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU7Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU7Mod3Stat") {
+    field(DESC, "PSU 7 module 3 status")
+    field(INP, "$(PREFIX):iPSU7Mod3StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU8Volt") {
+    field(DESC, "PSU 8 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e6.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU8Mod1Curr") {
+    field(DESC, "PSU 8 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e8.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU8Mod1T") {
+    field(DESC, "PSU 8 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e10.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU8Mod1StatRaw") {
+    field(DESC, "PSU 8 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e11.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU8Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU8Mod1Stat") {
+    field(DESC, "PSU 8 module 1 status")
+    field(INP, "$(PREFIX):iPSU8Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU8Mod2Curr") {
+    field(DESC, "PSU 8 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e12.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU8Mod2T") {
+    field(DESC, "PSU 8 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e14.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU8Mod2StatRaw") {
+    field(DESC, "PSU 8 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e15.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU8Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU8Mod2Stat") {
+    field(DESC, "PSU 8 module 2 status")
+    field(INP, "$(PREFIX):iPSU8Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU8Mod3Curr") {
+    field(DESC, "PSU 8 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e16.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU8Mod3T") {
+    field(DESC, "PSU 8 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e18.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU8Mod3StatRaw") {
+    field(DESC, "PSU 8 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e19.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU8Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU8Mod3Stat") {
+    field(DESC, "PSU 8 module 3 status")
+    field(INP, "$(PREFIX):iPSU8Mod3StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU9Volt") {
+    field(DESC, "PSU 9 voltage")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e20.Tuint16")
+    field(TSE, -1)
+    field(EGU, "V")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.001")
+    field(PREC, "3")
+}
+
+record(ai, "$(PREFIX):iPSU9Mod1Curr") {
+    field(DESC, "PSU 9 module 1 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e22.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU9Mod1T") {
+    field(DESC, "PSU 9 module 1 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e24.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU9Mod1StatRaw") {
+    field(DESC, "PSU 9 module 1 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e25.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU9Mod1Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU9Mod1Stat") {
+    field(DESC, "PSU 9 module 1 status")
+    field(INP, "$(PREFIX):iPSU9Mod1StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU9Mod2Curr") {
+    field(DESC, "PSU 9 module 2 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e26.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU9Mod2T") {
+    field(DESC, "PSU 9 module 2 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e28.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU9Mod2StatRaw") {
+    field(DESC, "PSU 9 module 2 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e29.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU9Mod2Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU9Mod2Stat") {
+    field(DESC, "PSU 9 module 2 status")
+    field(INP, "$(PREFIX):iPSU9Mod2StatRaw NPP MSS")
+}
+
+record(ai, "$(PREFIX):iPSU9Mod3Curr") {
+    field(DESC, "PSU 9 module 3 current")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e30.Tuint16")
+    field(TSE, -1)
+    field(EGU, "A")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.01")
+    field(PREC, "2")
+}
+
+record(ai, "$(PREFIX):iPSU9Mod3T") {
+    field(DESC, "PSU 9 module 3 temperature")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e32.Tbyte")
+    field(TSE, -1)
+    field(EGU, "degC")
+    field(LINR, "SLOPE")
+    field(ESLO, "1.0")
+    field(PREC, "0")
+}
+
+record(longin, "$(PREFIX):iPSU9Mod3StatRaw") {
+    field(DESC, "PSU 9 module 3 status (raw)")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "ecat2")
+    field(INP, "@s$(SLAVE_ID).sm$(SYNC_MAN).p1.e33.Tbyte")
+    field(TSE, -1)
+    field(FLNK, "$(PREFIX):iPSU9Mod3Stat")}
+
+record(mbbiDirect, "$(PREFIX):iPSU9Mod3Stat") {
+    field(DESC, "PSU 9 module 3 status")
+    field(INP, "$(PREFIX):iPSU9Mod3StatRaw NPP MSS")
+}

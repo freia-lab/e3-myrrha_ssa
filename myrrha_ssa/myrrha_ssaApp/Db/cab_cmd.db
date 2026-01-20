@@ -1,0 +1,610 @@
+# SSA command registers written via EtherCAT.
+# The ecat2 module does not support mbboDirect records, so data
+# is forwarded from a soft mbboDirect and written by a longout.
+# The mbboDirect records are intended to be driven by the# corresponding bo records, which should have the HIGH field set:# commands only trigger on 0->1 transitions, bits must be reset.
+
+record(mbboDirect, "$(PREFIX):iPSUOnReq") {
+    field(DESC, "Power supply on request register")
+    field(OUT, "$(PREFIX):iPSUOnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iPSUOnReqRaw") {
+    field(DESC, "Power supply on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e0.Tuint16")
+}
+
+record(mbboDirect, "$(PREFIX):iPSUOffReq") {
+    field(DESC, "Power supply off request register")
+    field(OUT, "$(PREFIX):iPSUOffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iPSUOffReqRaw") {
+    field(DESC, "Power supply off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e2.Tuint16")
+}
+
+record(mbboDirect, "$(PREFIX):iAmpOnOffReq") {
+    field(DESC, "Amplifier on/off request register")
+    field(OUT, "$(PREFIX):iAmpOnOffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iAmpOnOffReqRaw") {
+    field(DESC, "Amplifier on/off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e4.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iRFOnOffReq") {
+    field(DESC, "RF on/off request register")
+    field(OUT, "$(PREFIX):iRFOnOffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iRFOnOffReqRaw") {
+    field(DESC, "RF on/off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e5.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM1OnReq") {
+    field(DESC, "SSM 1 on request register")
+    field(OUT, "$(PREFIX):iSSM1OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM1OnReqRaw") {
+    field(DESC, "SSM 1 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e6.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM2OnReq") {
+    field(DESC, "SSM 2 on request register")
+    field(OUT, "$(PREFIX):iSSM2OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM2OnReqRaw") {
+    field(DESC, "SSM 2 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e7.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM3OnReq") {
+    field(DESC, "SSM 3 on request register")
+    field(OUT, "$(PREFIX):iSSM3OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM3OnReqRaw") {
+    field(DESC, "SSM 3 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e8.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM4OnReq") {
+    field(DESC, "SSM 4 on request register")
+    field(OUT, "$(PREFIX):iSSM4OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM4OnReqRaw") {
+    field(DESC, "SSM 4 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e9.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM5OnReq") {
+    field(DESC, "SSM 5 on request register")
+    field(OUT, "$(PREFIX):iSSM5OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM5OnReqRaw") {
+    field(DESC, "SSM 5 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e10.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM6OnReq") {
+    field(DESC, "SSM 6 on request register")
+    field(OUT, "$(PREFIX):iSSM6OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM6OnReqRaw") {
+    field(DESC, "SSM 6 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e11.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM7OnReq") {
+    field(DESC, "SSM 7 on request register")
+    field(OUT, "$(PREFIX):iSSM7OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM7OnReqRaw") {
+    field(DESC, "SSM 7 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e12.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM8OnReq") {
+    field(DESC, "SSM 8 on request register")
+    field(OUT, "$(PREFIX):iSSM8OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM8OnReqRaw") {
+    field(DESC, "SSM 8 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e13.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM9OnReq") {
+    field(DESC, "SSM 9 on request register")
+    field(OUT, "$(PREFIX):iSSM9OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM9OnReqRaw") {
+    field(DESC, "SSM 9 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e14.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM10OnReq") {
+    field(DESC, "SSM 10 on request register")
+    field(OUT, "$(PREFIX):iSSM10OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM10OnReqRaw") {
+    field(DESC, "SSM 10 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e15.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM11OnReq") {
+    field(DESC, "SSM 11 on request register")
+    field(OUT, "$(PREFIX):iSSM11OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM11OnReqRaw") {
+    field(DESC, "SSM 11 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e16.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM12OnReq") {
+    field(DESC, "SSM 12 on request register")
+    field(OUT, "$(PREFIX):iSSM12OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM12OnReqRaw") {
+    field(DESC, "SSM 12 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e17.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM13OnReq") {
+    field(DESC, "SSM 13 on request register")
+    field(OUT, "$(PREFIX):iSSM13OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM13OnReqRaw") {
+    field(DESC, "SSM 13 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e18.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM14OnReq") {
+    field(DESC, "SSM 14 on request register")
+    field(OUT, "$(PREFIX):iSSM14OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM14OnReqRaw") {
+    field(DESC, "SSM 14 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e19.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM15OnReq") {
+    field(DESC, "SSM 15 on request register")
+    field(OUT, "$(PREFIX):iSSM15OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM15OnReqRaw") {
+    field(DESC, "SSM 15 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e20.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM16OnReq") {
+    field(DESC, "SSM 16 on request register")
+    field(OUT, "$(PREFIX):iSSM16OnReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM16OnReqRaw") {
+    field(DESC, "SSM 16 on request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e21.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM1OffReq") {
+    field(DESC, "SSM 1 off request register")
+    field(OUT, "$(PREFIX):iSSM1OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM1OffReqRaw") {
+    field(DESC, "SSM 1 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e22.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM2OffReq") {
+    field(DESC, "SSM 2 off request register")
+    field(OUT, "$(PREFIX):iSSM2OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM2OffReqRaw") {
+    field(DESC, "SSM 2 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e23.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM3OffReq") {
+    field(DESC, "SSM 3 off request register")
+    field(OUT, "$(PREFIX):iSSM3OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM3OffReqRaw") {
+    field(DESC, "SSM 3 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e24.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM4OffReq") {
+    field(DESC, "SSM 4 off request register")
+    field(OUT, "$(PREFIX):iSSM4OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM4OffReqRaw") {
+    field(DESC, "SSM 4 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e25.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM5OffReq") {
+    field(DESC, "SSM 5 off request register")
+    field(OUT, "$(PREFIX):iSSM5OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM5OffReqRaw") {
+    field(DESC, "SSM 5 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e26.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM6OffReq") {
+    field(DESC, "SSM 6 off request register")
+    field(OUT, "$(PREFIX):iSSM6OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM6OffReqRaw") {
+    field(DESC, "SSM 6 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e27.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM7OffReq") {
+    field(DESC, "SSM 7 off request register")
+    field(OUT, "$(PREFIX):iSSM7OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM7OffReqRaw") {
+    field(DESC, "SSM 7 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e28.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM8OffReq") {
+    field(DESC, "SSM 8 off request register")
+    field(OUT, "$(PREFIX):iSSM8OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM8OffReqRaw") {
+    field(DESC, "SSM 8 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e29.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM9OffReq") {
+    field(DESC, "SSM 9 off request register")
+    field(OUT, "$(PREFIX):iSSM9OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM9OffReqRaw") {
+    field(DESC, "SSM 9 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e30.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM10OffReq") {
+    field(DESC, "SSM 10 off request register")
+    field(OUT, "$(PREFIX):iSSM10OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM10OffReqRaw") {
+    field(DESC, "SSM 10 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e31.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM11OffReq") {
+    field(DESC, "SSM 11 off request register")
+    field(OUT, "$(PREFIX):iSSM11OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM11OffReqRaw") {
+    field(DESC, "SSM 11 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e32.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM12OffReq") {
+    field(DESC, "SSM 12 off request register")
+    field(OUT, "$(PREFIX):iSSM12OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM12OffReqRaw") {
+    field(DESC, "SSM 12 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e33.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM13OffReq") {
+    field(DESC, "SSM 13 off request register")
+    field(OUT, "$(PREFIX):iSSM13OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM13OffReqRaw") {
+    field(DESC, "SSM 13 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e34.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM14OffReq") {
+    field(DESC, "SSM 14 off request register")
+    field(OUT, "$(PREFIX):iSSM14OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM14OffReqRaw") {
+    field(DESC, "SSM 14 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e35.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM15OffReq") {
+    field(DESC, "SSM 15 off request register")
+    field(OUT, "$(PREFIX):iSSM15OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM15OffReqRaw") {
+    field(DESC, "SSM 15 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e36.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM16OffReq") {
+    field(DESC, "SSM 16 off request register")
+    field(OUT, "$(PREFIX):iSSM16OffReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM16OffReqRaw") {
+    field(DESC, "SSM 16 off request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e37.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM1RstReq") {
+    field(DESC, "SSM 1 reset request register")
+    field(OUT, "$(PREFIX):iSSM1RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM1RstReqRaw") {
+    field(DESC, "SSM 1 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e38.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM2RstReq") {
+    field(DESC, "SSM 2 reset request register")
+    field(OUT, "$(PREFIX):iSSM2RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM2RstReqRaw") {
+    field(DESC, "SSM 2 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e39.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM3RstReq") {
+    field(DESC, "SSM 3 reset request register")
+    field(OUT, "$(PREFIX):iSSM3RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM3RstReqRaw") {
+    field(DESC, "SSM 3 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e40.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM4RstReq") {
+    field(DESC, "SSM 4 reset request register")
+    field(OUT, "$(PREFIX):iSSM4RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM4RstReqRaw") {
+    field(DESC, "SSM 4 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e41.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM5RstReq") {
+    field(DESC, "SSM 5 reset request register")
+    field(OUT, "$(PREFIX):iSSM5RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM5RstReqRaw") {
+    field(DESC, "SSM 5 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e42.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM6RstReq") {
+    field(DESC, "SSM 6 reset request register")
+    field(OUT, "$(PREFIX):iSSM6RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM6RstReqRaw") {
+    field(DESC, "SSM 6 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e43.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM7RstReq") {
+    field(DESC, "SSM 7 reset request register")
+    field(OUT, "$(PREFIX):iSSM7RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM7RstReqRaw") {
+    field(DESC, "SSM 7 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e44.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM8RstReq") {
+    field(DESC, "SSM 8 reset request register")
+    field(OUT, "$(PREFIX):iSSM8RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM8RstReqRaw") {
+    field(DESC, "SSM 8 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e45.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM9RstReq") {
+    field(DESC, "SSM 9 reset request register")
+    field(OUT, "$(PREFIX):iSSM9RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM9RstReqRaw") {
+    field(DESC, "SSM 9 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e46.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM10RstReq") {
+    field(DESC, "SSM 10 reset request register")
+    field(OUT, "$(PREFIX):iSSM10RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM10RstReqRaw") {
+    field(DESC, "SSM 10 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e47.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM11RstReq") {
+    field(DESC, "SSM 11 reset request register")
+    field(OUT, "$(PREFIX):iSSM11RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM11RstReqRaw") {
+    field(DESC, "SSM 11 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e48.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM12RstReq") {
+    field(DESC, "SSM 12 reset request register")
+    field(OUT, "$(PREFIX):iSSM12RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM12RstReqRaw") {
+    field(DESC, "SSM 12 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e49.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM13RstReq") {
+    field(DESC, "SSM 13 reset request register")
+    field(OUT, "$(PREFIX):iSSM13RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM13RstReqRaw") {
+    field(DESC, "SSM 13 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e50.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM14RstReq") {
+    field(DESC, "SSM 14 reset request register")
+    field(OUT, "$(PREFIX):iSSM14RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM14RstReqRaw") {
+    field(DESC, "SSM 14 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e51.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM15RstReq") {
+    field(DESC, "SSM 15 reset request register")
+    field(OUT, "$(PREFIX):iSSM15RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM15RstReqRaw") {
+    field(DESC, "SSM 15 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e52.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSM16RstReq") {
+    field(DESC, "SSM 16 reset request register")
+    field(OUT, "$(PREFIX):iSSM16RstReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSM16RstReqRaw") {
+    field(DESC, "SSM 16 reset request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e53.Tbyte")
+}
+
+record(mbboDirect, "$(PREFIX):iSSMSanityReq") {
+    field(DESC, "SSM sanity request register")
+    field(OUT, "$(PREFIX):iSSMSanityReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSMSanityReqRaw") {
+    field(DESC, "SSM sanity request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e54.Tuint16")
+}
+
+record(mbboDirect, "$(PREFIX):iSSMFlowReq") {
+    field(DESC, "SSM flow request register")
+    field(OUT, "$(PREFIX):iSSMFlowReqRaw PP")
+}
+
+record(longout, "$(PREFIX):iSSMFlowReqRaw") {
+    field(DESC, "SSM flow request register (raw)")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e56.Tuint16")
+}
+
+record(longout, "$(PREFIX):KeepAlive") {
+    field(DESC, "Keepalive to be updated within 1s")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e58.Tuint16")
+}
+
+record(longout, "$(PREFIX):iRemoteCtrl") {
+    field(DESC, "Remote control")
+    field(DTYP, "ecat2")
+    field(OUT, "@s$(SLAVE_ID).sm$(SYNC_MAN).p0.e60.Tuint16")
+}

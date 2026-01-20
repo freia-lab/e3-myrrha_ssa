@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-20 17:21:24 by konrad-->
+<display version="2.0.0">
+  <macros>
+    <DISCIPLINE>RFS</DISCIPLINE>
+    <CAB_NUM>190</CAB_NUM>
+  </macros>
+  <width>1920</width>
+  <height>1080</height>
+  <background_color>
+    <color name="Main_background" red="222" green="222" blue="222">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>CAB NUM: 190</text>
+    <x>11</x>
+    <y>22</y>
+    <width>194</width>
+    <height>36</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>loc://$(DID)_Screen(0)</pv_name>
+    <text>General</text>
+    <x>220</x>
+    <y>20</y>
+    <width>80</width>
+    <height>40</height>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_5</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>loc://$(DID)_Screen</pv_name>
+    <text>SSM</text>
+    <x>310</x>
+    <y>20</y>
+    <width>80</width>
+    <height>40</height>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_6</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>loc://$(DID)_Screen</pv_name>
+        <value>3</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>loc://$(DID)_Screen</pv_name>
+    <text>Buffer</text>
+    <x>490</x>
+    <y>20</y>
+    <width>80</width>
+    <height>40</height>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_7</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>loc://$(DID)_Screen</pv_name>
+        <value>2</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>loc://$(DID)_Screen</pv_name>
+    <text>PSU</text>
+    <x>400</x>
+    <y>20</y>
+    <width>80</width>
+    <height>40</height>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container</name>
+    <macros>
+      <DISCIPLINE>RFS</DISCIPLINE>
+    </macros>
+    <file>GENERAL/SSM_General.opi</file>
+    <y>65</y>
+    <width>1740</width>
+    <height>830</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[from org.csstudio.opibuilder.scriptUtil import PVUtil, DataUtil
+
+
+opi_files = [
+    'GENERAL/SSM_General.opi',
+    'SSM/SSM_main.opi',
+    'PSU/SSA_PSU.opi',
+    'DWN/SSM_mockup.opi',
+    'SSA/SSA_Main.opi'
+]
+
+macroInput = DataUtil.createMacrosInput(True)
+
+cab_num = PVUtil.getLong(pvs[0])
+amp_char = PVUtil.getString(pvs[1])
+screen_num = PVUtil.getLong(pvs[2])
+
+macroInput.put("CAB_NUM", str(cab_num))
+macroInput.put("AMP_CHAR", amp_char)
+widgetController.setPropertyValue("macros", macroInput)
+
+widget.setPropertyValue('opi_file', '')
+widget.setPropertyValue('opi_file', opi_files[screen_num])
+]]></text>
+        <pv_name>loc://$(DID)_Cab_num</pv_name>
+        <pv_name trigger="false">loc://$(DID)_SSA_Char("A")</pv_name>
+        <pv_name>loc://$(DID)_Screen</pv_name>
+      </script>
+    </scripts>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <macros>
+      <DISCIPLINE>RFS</DISCIPLINE>
+    </macros>
+    <file>GENERAL/SSA-Main-TopBar.opi</file>
+    <x>595</x>
+    <width>1145</width>
+    <height>66</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="startRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <pv_name>loc://$(DID)_Cab_num</pv_name>
+      </rule>
+      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value>GENERAL/SSA-Main-TopBar.opi</value>
+        </exp>
+        <pv_name>loc://$(DID)_Cab_num</pv_name>
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedJs">
+        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
+
+var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
+
+var cab_num = PVUtil.getLong(pvArray[0]);
+
+macroInput.put("CAB_NUM", cab_num);
+widgetController.setPropertyValue("macros", macroInput);
+]]></text>
+        <pv_name>loc://$(DID)_Cab_num</pv_name>
+      </script>
+    </scripts>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

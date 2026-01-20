@@ -434,7 +434,7 @@ asynStatus BfrDwnldDriver::readBuffer() {
 
     int paramIndex;
     findParam("BfrData", &paramIndex);
-    doCallbacksInt8Array(bufferData.data(), bufferData.size(), paramIndex, 0);
+    doCallbacksInt8Array(reinterpret_cast<epicsInt8*>(bufferData.data()), bufferData.size(), paramIndex, 0);
     return status;
 }
 

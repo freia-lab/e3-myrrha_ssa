@@ -1,0 +1,40 @@
+# Conversion of timestamp into a 64-bit integer. Modbus does not support
+# those, so it is read as an array and converted into correct endianness.
+
+record(aSub, "$(PREFIX)-$(SSM_NUM):iDatetimeSub") {
+    field(DESC, "Subroutine for converting Date Time")
+    field(SNAM, "toEpochNs")
+
+    field(INPA, "$(PREFIX)-$(SSM_NUM):iDatetimeRaw CP MSS")
+    field(FTA, "ULONG")
+    field(NOA, 2)
+    field(NEA, 2)
+
+    field(OUTA, "$(PREFIX)-$(SSM_NUM):Datetime PP MSS")
+    field(FTVA, "UINT64")
+    field(NOVA, 1)
+}
+
+record(int64in, "$(PREFIX)-$(SSM_NUM):Datetime") {
+    field(DESC, "Datetime stamp seconds")
+    field(EGU, "s")
+}
+
+record(aSub, "$(PREFIX)-$(SSM_NUM):iTimestampSub") {
+    field(DESC, "Subroutine for converting timestamp")
+    field(SNAM, "toEpochNs")
+
+    field(INPA, "$(PREFIX)-$(SSM_NUM):iTimestampRaw CP MSS")
+    field(FTA, "ULONG")
+    field(NOA, 2)
+    field(NEA, 2)
+
+    field(OUTA, "$(PREFIX)-$(SSM_NUM):Timestamp PP MSS")
+    field(FTVA, "UINT64")
+    field(NOVA, 1)
+}
+
+record(int64in, "$(PREFIX)-$(SSM_NUM):Timestamp") {
+    field(DESC, "Time stamp micoseconds")
+    field(EGU, "ns")
+}

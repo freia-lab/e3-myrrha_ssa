@@ -7,2022 +7,2428 @@
 
 record(bo, "$(PREFIX):iPSUOnReq-All") {
     field(DESC, "PSU All on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-1") {
     field(DESC, "PSU 1 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-2") {
     field(DESC, "PSU 2 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-3") {
     field(DESC, "PSU 3 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-4") {
     field(DESC, "PSU 4 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-5") {
     field(DESC, "PSU 5 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-6") {
     field(DESC, "PSU 6 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-7") {
     field(DESC, "PSU 7 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B7 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-8") {
     field(DESC, "PSU 8 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B8 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOnReq-9") {
     field(DESC, "PSU 9 on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOnReq.B9 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-All") {
     field(DESC, "PSU All off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-1") {
     field(DESC, "PSU 1 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-2") {
     field(DESC, "PSU 2 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-3") {
     field(DESC, "PSU 3 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-4") {
     field(DESC, "PSU 4 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-5") {
     field(DESC, "PSU 5 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-6") {
     field(DESC, "PSU 6 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-7") {
     field(DESC, "PSU 7 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B7 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-8") {
     field(DESC, "PSU 8 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B8 PP")
 }
 
 record(bo, "$(PREFIX):iPSUOffReq-9") {
     field(DESC, "PSU 9 off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iPSUOffReq.B9 PP")
 }
 
 record(bo, "$(PREFIX):iAmpAOnReq") {
     field(DESC, "Amp A on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iAmpOnOffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iAmpBOnReq") {
     field(DESC, "Amp B on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iAmpOnOffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iAmpCOnReq") {
     field(DESC, "Amp C on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iAmpOnOffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iAmpDOnReq") {
     field(DESC, "Amp D on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iAmpOnOffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iAmpAOffReq") {
     field(DESC, "Amp A off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iAmpOnOffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iAmpBOffReq") {
     field(DESC, "Amp B off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iAmpOnOffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iAmpCOffReq") {
     field(DESC, "Amp C off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iAmpOnOffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iAmpDOffReq") {
     field(DESC, "Amp D off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iAmpOnOffReq.B7 PP")
 }
 
 record(bo, "$(PREFIX):iRFAOnReq") {
     field(DESC, "RF A on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iRFOnOffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iRFBOnReq") {
     field(DESC, "RF B on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iRFOnOffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iRFCOnReq") {
     field(DESC, "RF C on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iRFOnOffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iRFDOnReq") {
     field(DESC, "RF D on request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iRFOnOffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iRFAOffReq") {
     field(DESC, "RF A off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iRFOnOffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iRFBOffReq") {
     field(DESC, "RF B off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iRFOnOffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iRFCOffReq") {
     field(DESC, "RF C off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iRFOnOffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iRFDOffReq") {
     field(DESC, "RF D off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iRFOnOffReq.B7 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OnReq-PallAll") {
     field(DESC, "SSM 1 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OnReq-Pall1") {
     field(DESC, "SSM 1 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OnReq-Pall2") {
     field(DESC, "SSM 1 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OnReq-Pall3") {
     field(DESC, "SSM 1 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OnReq-Pall4") {
     field(DESC, "SSM 1 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OnReq-Pall5") {
     field(DESC, "SSM 1 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OnReq-Pall6") {
     field(DESC, "SSM 1 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OnReq-PallAll") {
     field(DESC, "SSM 2 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OnReq-Pall1") {
     field(DESC, "SSM 2 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OnReq-Pall2") {
     field(DESC, "SSM 2 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OnReq-Pall3") {
     field(DESC, "SSM 2 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OnReq-Pall4") {
     field(DESC, "SSM 2 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OnReq-Pall5") {
     field(DESC, "SSM 2 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OnReq-Pall6") {
     field(DESC, "SSM 2 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OnReq-PallAll") {
     field(DESC, "SSM 3 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OnReq-Pall1") {
     field(DESC, "SSM 3 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OnReq-Pall2") {
     field(DESC, "SSM 3 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OnReq-Pall3") {
     field(DESC, "SSM 3 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OnReq-Pall4") {
     field(DESC, "SSM 3 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OnReq-Pall5") {
     field(DESC, "SSM 3 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OnReq-Pall6") {
     field(DESC, "SSM 3 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OnReq-PallAll") {
     field(DESC, "SSM 4 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OnReq-Pall1") {
     field(DESC, "SSM 4 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OnReq-Pall2") {
     field(DESC, "SSM 4 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OnReq-Pall3") {
     field(DESC, "SSM 4 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OnReq-Pall4") {
     field(DESC, "SSM 4 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OnReq-Pall5") {
     field(DESC, "SSM 4 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OnReq-Pall6") {
     field(DESC, "SSM 4 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OnReq-PallAll") {
     field(DESC, "SSM 5 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OnReq-Pall1") {
     field(DESC, "SSM 5 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OnReq-Pall2") {
     field(DESC, "SSM 5 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OnReq-Pall3") {
     field(DESC, "SSM 5 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OnReq-Pall4") {
     field(DESC, "SSM 5 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OnReq-Pall5") {
     field(DESC, "SSM 5 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OnReq-Pall6") {
     field(DESC, "SSM 5 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OnReq-PallAll") {
     field(DESC, "SSM 6 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OnReq-Pall1") {
     field(DESC, "SSM 6 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OnReq-Pall2") {
     field(DESC, "SSM 6 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OnReq-Pall3") {
     field(DESC, "SSM 6 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OnReq-Pall4") {
     field(DESC, "SSM 6 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OnReq-Pall5") {
     field(DESC, "SSM 6 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OnReq-Pall6") {
     field(DESC, "SSM 6 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OnReq-PallAll") {
     field(DESC, "SSM 7 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OnReq-Pall1") {
     field(DESC, "SSM 7 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OnReq-Pall2") {
     field(DESC, "SSM 7 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OnReq-Pall3") {
     field(DESC, "SSM 7 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OnReq-Pall4") {
     field(DESC, "SSM 7 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OnReq-Pall5") {
     field(DESC, "SSM 7 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OnReq-Pall6") {
     field(DESC, "SSM 7 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OnReq-PallAll") {
     field(DESC, "SSM 8 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OnReq-Pall1") {
     field(DESC, "SSM 8 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OnReq-Pall2") {
     field(DESC, "SSM 8 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OnReq-Pall3") {
     field(DESC, "SSM 8 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OnReq-Pall4") {
     field(DESC, "SSM 8 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OnReq-Pall5") {
     field(DESC, "SSM 8 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OnReq-Pall6") {
     field(DESC, "SSM 8 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OnReq-PallAll") {
     field(DESC, "SSM 9 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OnReq-Pall1") {
     field(DESC, "SSM 9 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OnReq-Pall2") {
     field(DESC, "SSM 9 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OnReq-Pall3") {
     field(DESC, "SSM 9 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OnReq-Pall4") {
     field(DESC, "SSM 9 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OnReq-Pall5") {
     field(DESC, "SSM 9 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OnReq-Pall6") {
     field(DESC, "SSM 9 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OnReq-PallAll") {
     field(DESC, "SSM 10 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OnReq-Pall1") {
     field(DESC, "SSM 10 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OnReq-Pall2") {
     field(DESC, "SSM 10 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OnReq-Pall3") {
     field(DESC, "SSM 10 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OnReq-Pall4") {
     field(DESC, "SSM 10 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OnReq-Pall5") {
     field(DESC, "SSM 10 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OnReq-Pall6") {
     field(DESC, "SSM 10 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OnReq-PallAll") {
     field(DESC, "SSM 11 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OnReq-Pall1") {
     field(DESC, "SSM 11 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OnReq-Pall2") {
     field(DESC, "SSM 11 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OnReq-Pall3") {
     field(DESC, "SSM 11 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OnReq-Pall4") {
     field(DESC, "SSM 11 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OnReq-Pall5") {
     field(DESC, "SSM 11 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OnReq-Pall6") {
     field(DESC, "SSM 11 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OnReq-PallAll") {
     field(DESC, "SSM 12 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OnReq-Pall1") {
     field(DESC, "SSM 12 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OnReq-Pall2") {
     field(DESC, "SSM 12 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OnReq-Pall3") {
     field(DESC, "SSM 12 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OnReq-Pall4") {
     field(DESC, "SSM 12 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OnReq-Pall5") {
     field(DESC, "SSM 12 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OnReq-Pall6") {
     field(DESC, "SSM 12 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OnReq-PallAll") {
     field(DESC, "SSM 13 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OnReq-Pall1") {
     field(DESC, "SSM 13 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OnReq-Pall2") {
     field(DESC, "SSM 13 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OnReq-Pall3") {
     field(DESC, "SSM 13 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OnReq-Pall4") {
     field(DESC, "SSM 13 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OnReq-Pall5") {
     field(DESC, "SSM 13 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OnReq-Pall6") {
     field(DESC, "SSM 13 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OnReq-PallAll") {
     field(DESC, "SSM 14 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OnReq-Pall1") {
     field(DESC, "SSM 14 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OnReq-Pall2") {
     field(DESC, "SSM 14 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OnReq-Pall3") {
     field(DESC, "SSM 14 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OnReq-Pall4") {
     field(DESC, "SSM 14 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OnReq-Pall5") {
     field(DESC, "SSM 14 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OnReq-Pall6") {
     field(DESC, "SSM 14 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OnReq-PallAll") {
     field(DESC, "SSM 15 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OnReq-Pall1") {
     field(DESC, "SSM 15 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OnReq-Pall2") {
     field(DESC, "SSM 15 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OnReq-Pall3") {
     field(DESC, "SSM 15 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OnReq-Pall4") {
     field(DESC, "SSM 15 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OnReq-Pall5") {
     field(DESC, "SSM 15 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OnReq-Pall6") {
     field(DESC, "SSM 15 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OnReq-PallAll") {
     field(DESC, "SSM 16 Pallet All On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OnReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OnReq-Pall1") {
     field(DESC, "SSM 16 Pallet 1 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OnReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OnReq-Pall2") {
     field(DESC, "SSM 16 Pallet 2 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OnReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OnReq-Pall3") {
     field(DESC, "SSM 16 Pallet 3 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OnReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OnReq-Pall4") {
     field(DESC, "SSM 16 Pallet 4 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OnReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OnReq-Pall5") {
     field(DESC, "SSM 16 Pallet 5 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OnReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OnReq-Pall6") {
     field(DESC, "SSM 16 Pallet 6 On request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OnReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OffReq-PallAll") {
     field(DESC, "SSM 1 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OffReq-Pall1") {
     field(DESC, "SSM 1 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OffReq-Pall2") {
     field(DESC, "SSM 1 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OffReq-Pall3") {
     field(DESC, "SSM 1 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OffReq-Pall4") {
     field(DESC, "SSM 1 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OffReq-Pall5") {
     field(DESC, "SSM 1 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1OffReq-Pall6") {
     field(DESC, "SSM 1 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OffReq-PallAll") {
     field(DESC, "SSM 2 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OffReq-Pall1") {
     field(DESC, "SSM 2 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OffReq-Pall2") {
     field(DESC, "SSM 2 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OffReq-Pall3") {
     field(DESC, "SSM 2 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OffReq-Pall4") {
     field(DESC, "SSM 2 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OffReq-Pall5") {
     field(DESC, "SSM 2 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2OffReq-Pall6") {
     field(DESC, "SSM 2 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OffReq-PallAll") {
     field(DESC, "SSM 3 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OffReq-Pall1") {
     field(DESC, "SSM 3 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OffReq-Pall2") {
     field(DESC, "SSM 3 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OffReq-Pall3") {
     field(DESC, "SSM 3 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OffReq-Pall4") {
     field(DESC, "SSM 3 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OffReq-Pall5") {
     field(DESC, "SSM 3 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3OffReq-Pall6") {
     field(DESC, "SSM 3 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OffReq-PallAll") {
     field(DESC, "SSM 4 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OffReq-Pall1") {
     field(DESC, "SSM 4 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OffReq-Pall2") {
     field(DESC, "SSM 4 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OffReq-Pall3") {
     field(DESC, "SSM 4 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OffReq-Pall4") {
     field(DESC, "SSM 4 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OffReq-Pall5") {
     field(DESC, "SSM 4 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4OffReq-Pall6") {
     field(DESC, "SSM 4 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OffReq-PallAll") {
     field(DESC, "SSM 5 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OffReq-Pall1") {
     field(DESC, "SSM 5 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OffReq-Pall2") {
     field(DESC, "SSM 5 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OffReq-Pall3") {
     field(DESC, "SSM 5 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OffReq-Pall4") {
     field(DESC, "SSM 5 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OffReq-Pall5") {
     field(DESC, "SSM 5 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5OffReq-Pall6") {
     field(DESC, "SSM 5 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OffReq-PallAll") {
     field(DESC, "SSM 6 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OffReq-Pall1") {
     field(DESC, "SSM 6 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OffReq-Pall2") {
     field(DESC, "SSM 6 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OffReq-Pall3") {
     field(DESC, "SSM 6 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OffReq-Pall4") {
     field(DESC, "SSM 6 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OffReq-Pall5") {
     field(DESC, "SSM 6 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6OffReq-Pall6") {
     field(DESC, "SSM 6 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OffReq-PallAll") {
     field(DESC, "SSM 7 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OffReq-Pall1") {
     field(DESC, "SSM 7 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OffReq-Pall2") {
     field(DESC, "SSM 7 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OffReq-Pall3") {
     field(DESC, "SSM 7 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OffReq-Pall4") {
     field(DESC, "SSM 7 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OffReq-Pall5") {
     field(DESC, "SSM 7 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7OffReq-Pall6") {
     field(DESC, "SSM 7 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OffReq-PallAll") {
     field(DESC, "SSM 8 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OffReq-Pall1") {
     field(DESC, "SSM 8 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OffReq-Pall2") {
     field(DESC, "SSM 8 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OffReq-Pall3") {
     field(DESC, "SSM 8 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OffReq-Pall4") {
     field(DESC, "SSM 8 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OffReq-Pall5") {
     field(DESC, "SSM 8 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8OffReq-Pall6") {
     field(DESC, "SSM 8 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OffReq-PallAll") {
     field(DESC, "SSM 9 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OffReq-Pall1") {
     field(DESC, "SSM 9 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OffReq-Pall2") {
     field(DESC, "SSM 9 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OffReq-Pall3") {
     field(DESC, "SSM 9 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OffReq-Pall4") {
     field(DESC, "SSM 9 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OffReq-Pall5") {
     field(DESC, "SSM 9 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9OffReq-Pall6") {
     field(DESC, "SSM 9 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OffReq-PallAll") {
     field(DESC, "SSM 10 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OffReq-Pall1") {
     field(DESC, "SSM 10 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OffReq-Pall2") {
     field(DESC, "SSM 10 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OffReq-Pall3") {
     field(DESC, "SSM 10 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OffReq-Pall4") {
     field(DESC, "SSM 10 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OffReq-Pall5") {
     field(DESC, "SSM 10 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10OffReq-Pall6") {
     field(DESC, "SSM 10 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OffReq-PallAll") {
     field(DESC, "SSM 11 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OffReq-Pall1") {
     field(DESC, "SSM 11 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OffReq-Pall2") {
     field(DESC, "SSM 11 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OffReq-Pall3") {
     field(DESC, "SSM 11 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OffReq-Pall4") {
     field(DESC, "SSM 11 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OffReq-Pall5") {
     field(DESC, "SSM 11 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11OffReq-Pall6") {
     field(DESC, "SSM 11 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OffReq-PallAll") {
     field(DESC, "SSM 12 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OffReq-Pall1") {
     field(DESC, "SSM 12 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OffReq-Pall2") {
     field(DESC, "SSM 12 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OffReq-Pall3") {
     field(DESC, "SSM 12 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OffReq-Pall4") {
     field(DESC, "SSM 12 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OffReq-Pall5") {
     field(DESC, "SSM 12 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12OffReq-Pall6") {
     field(DESC, "SSM 12 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OffReq-PallAll") {
     field(DESC, "SSM 13 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OffReq-Pall1") {
     field(DESC, "SSM 13 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OffReq-Pall2") {
     field(DESC, "SSM 13 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OffReq-Pall3") {
     field(DESC, "SSM 13 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OffReq-Pall4") {
     field(DESC, "SSM 13 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OffReq-Pall5") {
     field(DESC, "SSM 13 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13OffReq-Pall6") {
     field(DESC, "SSM 13 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OffReq-PallAll") {
     field(DESC, "SSM 14 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OffReq-Pall1") {
     field(DESC, "SSM 14 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OffReq-Pall2") {
     field(DESC, "SSM 14 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OffReq-Pall3") {
     field(DESC, "SSM 14 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OffReq-Pall4") {
     field(DESC, "SSM 14 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OffReq-Pall5") {
     field(DESC, "SSM 14 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14OffReq-Pall6") {
     field(DESC, "SSM 14 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OffReq-PallAll") {
     field(DESC, "SSM 15 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OffReq-Pall1") {
     field(DESC, "SSM 15 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OffReq-Pall2") {
     field(DESC, "SSM 15 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OffReq-Pall3") {
     field(DESC, "SSM 15 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OffReq-Pall4") {
     field(DESC, "SSM 15 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OffReq-Pall5") {
     field(DESC, "SSM 15 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15OffReq-Pall6") {
     field(DESC, "SSM 15 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OffReq-PallAll") {
     field(DESC, "SSM 16 Pallet All Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OffReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OffReq-Pall1") {
     field(DESC, "SSM 16 Pallet 1 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OffReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OffReq-Pall2") {
     field(DESC, "SSM 16 Pallet 2 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OffReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OffReq-Pall3") {
     field(DESC, "SSM 16 Pallet 3 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OffReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OffReq-Pall4") {
     field(DESC, "SSM 16 Pallet 4 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OffReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OffReq-Pall5") {
     field(DESC, "SSM 16 Pallet 5 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OffReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16OffReq-Pall6") {
     field(DESC, "SSM 16 Pallet 6 Off request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16OffReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1RstReq-PallAll") {
     field(DESC, "SSM 1 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1RstReq-Pall1") {
     field(DESC, "SSM 1 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1RstReq-Pall2") {
     field(DESC, "SSM 1 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1RstReq-Pall3") {
     field(DESC, "SSM 1 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1RstReq-Pall4") {
     field(DESC, "SSM 1 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1RstReq-Pall5") {
     field(DESC, "SSM 1 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM1RstReq-Pall6") {
     field(DESC, "SSM 1 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM1RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2RstReq-PallAll") {
     field(DESC, "SSM 2 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2RstReq-Pall1") {
     field(DESC, "SSM 2 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2RstReq-Pall2") {
     field(DESC, "SSM 2 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2RstReq-Pall3") {
     field(DESC, "SSM 2 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2RstReq-Pall4") {
     field(DESC, "SSM 2 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2RstReq-Pall5") {
     field(DESC, "SSM 2 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM2RstReq-Pall6") {
     field(DESC, "SSM 2 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM2RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3RstReq-PallAll") {
     field(DESC, "SSM 3 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3RstReq-Pall1") {
     field(DESC, "SSM 3 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3RstReq-Pall2") {
     field(DESC, "SSM 3 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3RstReq-Pall3") {
     field(DESC, "SSM 3 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3RstReq-Pall4") {
     field(DESC, "SSM 3 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3RstReq-Pall5") {
     field(DESC, "SSM 3 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM3RstReq-Pall6") {
     field(DESC, "SSM 3 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM3RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4RstReq-PallAll") {
     field(DESC, "SSM 4 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4RstReq-Pall1") {
     field(DESC, "SSM 4 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4RstReq-Pall2") {
     field(DESC, "SSM 4 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4RstReq-Pall3") {
     field(DESC, "SSM 4 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4RstReq-Pall4") {
     field(DESC, "SSM 4 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4RstReq-Pall5") {
     field(DESC, "SSM 4 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM4RstReq-Pall6") {
     field(DESC, "SSM 4 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM4RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5RstReq-PallAll") {
     field(DESC, "SSM 5 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5RstReq-Pall1") {
     field(DESC, "SSM 5 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5RstReq-Pall2") {
     field(DESC, "SSM 5 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5RstReq-Pall3") {
     field(DESC, "SSM 5 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5RstReq-Pall4") {
     field(DESC, "SSM 5 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5RstReq-Pall5") {
     field(DESC, "SSM 5 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM5RstReq-Pall6") {
     field(DESC, "SSM 5 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM5RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6RstReq-PallAll") {
     field(DESC, "SSM 6 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6RstReq-Pall1") {
     field(DESC, "SSM 6 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6RstReq-Pall2") {
     field(DESC, "SSM 6 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6RstReq-Pall3") {
     field(DESC, "SSM 6 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6RstReq-Pall4") {
     field(DESC, "SSM 6 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6RstReq-Pall5") {
     field(DESC, "SSM 6 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM6RstReq-Pall6") {
     field(DESC, "SSM 6 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM6RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7RstReq-PallAll") {
     field(DESC, "SSM 7 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7RstReq-Pall1") {
     field(DESC, "SSM 7 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7RstReq-Pall2") {
     field(DESC, "SSM 7 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7RstReq-Pall3") {
     field(DESC, "SSM 7 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7RstReq-Pall4") {
     field(DESC, "SSM 7 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7RstReq-Pall5") {
     field(DESC, "SSM 7 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM7RstReq-Pall6") {
     field(DESC, "SSM 7 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM7RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8RstReq-PallAll") {
     field(DESC, "SSM 8 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8RstReq-Pall1") {
     field(DESC, "SSM 8 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8RstReq-Pall2") {
     field(DESC, "SSM 8 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8RstReq-Pall3") {
     field(DESC, "SSM 8 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8RstReq-Pall4") {
     field(DESC, "SSM 8 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8RstReq-Pall5") {
     field(DESC, "SSM 8 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM8RstReq-Pall6") {
     field(DESC, "SSM 8 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM8RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9RstReq-PallAll") {
     field(DESC, "SSM 9 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9RstReq-Pall1") {
     field(DESC, "SSM 9 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9RstReq-Pall2") {
     field(DESC, "SSM 9 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9RstReq-Pall3") {
     field(DESC, "SSM 9 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9RstReq-Pall4") {
     field(DESC, "SSM 9 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9RstReq-Pall5") {
     field(DESC, "SSM 9 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM9RstReq-Pall6") {
     field(DESC, "SSM 9 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM9RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10RstReq-PallAll") {
     field(DESC, "SSM 10 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10RstReq-Pall1") {
     field(DESC, "SSM 10 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10RstReq-Pall2") {
     field(DESC, "SSM 10 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10RstReq-Pall3") {
     field(DESC, "SSM 10 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10RstReq-Pall4") {
     field(DESC, "SSM 10 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10RstReq-Pall5") {
     field(DESC, "SSM 10 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM10RstReq-Pall6") {
     field(DESC, "SSM 10 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM10RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11RstReq-PallAll") {
     field(DESC, "SSM 11 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11RstReq-Pall1") {
     field(DESC, "SSM 11 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11RstReq-Pall2") {
     field(DESC, "SSM 11 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11RstReq-Pall3") {
     field(DESC, "SSM 11 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11RstReq-Pall4") {
     field(DESC, "SSM 11 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11RstReq-Pall5") {
     field(DESC, "SSM 11 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM11RstReq-Pall6") {
     field(DESC, "SSM 11 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM11RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12RstReq-PallAll") {
     field(DESC, "SSM 12 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12RstReq-Pall1") {
     field(DESC, "SSM 12 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12RstReq-Pall2") {
     field(DESC, "SSM 12 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12RstReq-Pall3") {
     field(DESC, "SSM 12 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12RstReq-Pall4") {
     field(DESC, "SSM 12 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12RstReq-Pall5") {
     field(DESC, "SSM 12 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM12RstReq-Pall6") {
     field(DESC, "SSM 12 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM12RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13RstReq-PallAll") {
     field(DESC, "SSM 13 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13RstReq-Pall1") {
     field(DESC, "SSM 13 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13RstReq-Pall2") {
     field(DESC, "SSM 13 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13RstReq-Pall3") {
     field(DESC, "SSM 13 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13RstReq-Pall4") {
     field(DESC, "SSM 13 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13RstReq-Pall5") {
     field(DESC, "SSM 13 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM13RstReq-Pall6") {
     field(DESC, "SSM 13 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM13RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14RstReq-PallAll") {
     field(DESC, "SSM 14 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14RstReq-Pall1") {
     field(DESC, "SSM 14 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14RstReq-Pall2") {
     field(DESC, "SSM 14 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14RstReq-Pall3") {
     field(DESC, "SSM 14 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14RstReq-Pall4") {
     field(DESC, "SSM 14 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14RstReq-Pall5") {
     field(DESC, "SSM 14 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM14RstReq-Pall6") {
     field(DESC, "SSM 14 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM14RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15RstReq-PallAll") {
     field(DESC, "SSM 15 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15RstReq-Pall1") {
     field(DESC, "SSM 15 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15RstReq-Pall2") {
     field(DESC, "SSM 15 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15RstReq-Pall3") {
     field(DESC, "SSM 15 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15RstReq-Pall4") {
     field(DESC, "SSM 15 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15RstReq-Pall5") {
     field(DESC, "SSM 15 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM15RstReq-Pall6") {
     field(DESC, "SSM 15 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM15RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16RstReq-PallAll") {
     field(DESC, "SSM 16 Pallet All Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16RstReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16RstReq-Pall1") {
     field(DESC, "SSM 16 Pallet 1 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16RstReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16RstReq-Pall2") {
     field(DESC, "SSM 16 Pallet 2 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16RstReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16RstReq-Pall3") {
     field(DESC, "SSM 16 Pallet 3 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16RstReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16RstReq-Pall4") {
     field(DESC, "SSM 16 Pallet 4 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16RstReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16RstReq-Pall5") {
     field(DESC, "SSM 16 Pallet 5 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16RstReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSM16RstReq-Pall6") {
     field(DESC, "SSM 16 Pallet 6 Reset request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSM16RstReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM1") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 1 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM2") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 2 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM3") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 3 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM4") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 4 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM5") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 5 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM6") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 6 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM7") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 7 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM8") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 8 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B7 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM9") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 9 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B8 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM10") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 10 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.B9 PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM11") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 11 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.BA PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM12") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 12 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.BB PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM13") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 13 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.BC PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM14") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 14 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.BD PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM15") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 15 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.BE PP")
 }
 
 record(bo, "$(PREFIX):iSSMSanityReq-SSM16") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 16 Sanity request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMSanityReq.BF PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM1") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 1 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B0 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM2") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 2 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B1 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM3") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 3 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B2 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM4") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 4 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B3 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM5") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 5 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B4 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM6") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 6 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B5 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM7") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 7 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B6 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM8") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 8 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B7 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM9") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 9 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B8 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM10") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 10 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.B9 PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM11") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 11 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.BA PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM12") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 12 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.BB PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM13") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 13 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.BC PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM14") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 14 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.BD PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM15") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 15 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.BE PP")
 }
 
 record(bo, "$(PREFIX):iSSMFlowReq-SSM16") {
-    field(DESC, "SSM {ssm} {typ} request")
+    field(DESC, "SSM 16 Flow request")
+    field(HIGH, "$(CMD_ZERO_DELAY=0.1)")
     field(OUT, "$(PREFIX):iSSMFlowReq.BF PP")
 }
+
+
 
 

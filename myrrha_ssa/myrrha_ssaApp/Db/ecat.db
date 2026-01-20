@@ -1,0 +1,28 @@
+# Status of the EtherCAT driver.
+
+record(bi, "$(PREFIX)-$(IOC_NUM):EtherCATMasterStat") {
+    field(DESC, "Status of the EtherCAT master")
+    field(DTYP, "ecat2")
+    field(SCAN, "I/O Intr")
+    field(INP, "@m0 STATUS_MASTER")
+    field(ONAM, "Ok")
+    field(ZNAM, "Failed")
+}
+
+record(bi, "$(PREFIX)-$(IOC_NUM):EtherCATLinkStat") {
+    field(DESC, "Status of the EtherCAT physical link")
+    field(DTYP, "ecat2")
+    field(SCAN, "I/O Intr")
+    field(INP, "@m0 STATUS_LINK")
+    field(ONAM, "Ok")
+    field(ZNAM, "Failed")
+}
+
+record(bi, "$(PREFIX)-$(IOC_NUM):EtherCATSlaveStat") {
+    field(DESC, "Aggregate status of all EtherCAT slaves")
+    field(DTYP, "ecat2")
+    field(SCAN, "I/O Intr")
+    field(INP, "@m0 STATUS_ALL_SLAVES")
+    field(ONAM, "All Ok")
+    field(ZNAM, "Failed")
+}

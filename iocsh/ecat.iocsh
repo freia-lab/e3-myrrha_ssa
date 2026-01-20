@@ -1,0 +1,12 @@
+##############################################################################
+####                        SSA EtherCAT iocsh                             ###
+##############################################################################
+#- PREFIX_ECAT   - Prefix used for record names
+#- ECAT_FREQ     - EtherCAT update frequency in Hz
+#- IOC_NUM       - The number of the IOC process in this cabinet
+#-#############################################################################
+
+ecat2configure(0, $(ECAT_FREQ), 0, 1)
+installLastResortEventProvider
+
+dbLoadRecords("ecat.db", "PREFIX=$(PREFIX_ECAT),IOC_NUM=$(IOC_NUM)")
