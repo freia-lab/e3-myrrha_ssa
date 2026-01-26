@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-23 15:08:19 by konrad-->
+<display version="2.0.0">
+  <macros>
+    <DISCIPLINE>RFS</DISCIPLINE>
+    <DEVICE>CGD</DEVICE>
+  </macros>
+  <width>1815</width>
+  <height>875</height>
+  <background_color>
+    <color name="Main_background" red="222" green="222" blue="222">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container</name>
+    <macros>
+      <NAME>Cabinet general status</NAME>
+    </macros>
+    <file>SSM_DC.opi</file>
+    <x>38</x>
+    <y>14</y>
+    <width>499</width>
+    <height>633</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_width>2</border_width>
+    <border_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <macros>
+      <NAME>Solid State amplifier Modules</NAME>
+    </macros>
+    <file>SSM_General_Modules.opi</file>
+    <x>632</x>
+    <y>14</y>
+    <width>499</width>
+    <height>341</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_width>2</border_width>
+    <border_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_3</name>
+    <macros>
+      <NAME>Fan speed</NAME>
+    </macros>
+    <file>SSM_General_Fan.opi</file>
+    <x>632</x>
+    <y>380</y>
+    <width>499</width>
+    <height>435</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_width>2</border_width>
+    <border_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_4</name>
+    <macros>
+      <NAME>RF output power</NAME>
+    </macros>
+    <file>SSM_General_RF_output.opi</file>
+    <x>1220</x>
+    <y>14</y>
+    <width>499</width>
+    <height>801</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_width>2</border_width>
+    <border_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </border_color>
+  </widget>
+</display>

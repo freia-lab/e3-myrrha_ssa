@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-23 15:11:14 by konrad-->
+<display version="2.0.0">
+  <width>1750</width>
+  <height>830</height>
+  <background_color>
+    <color name="Main_background" red="222" green="222" blue="222">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container</name>
+    <file>SSM_arm.opi</file>
+    <x>10</x>
+    <y>19</y>
+    <width>248</width>
+    <height>669</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <file>SSM_Trigger_commands.opi</file>
+    <x>10</x>
+    <y>705</y>
+    <width>339</width>
+    <height>108</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="startRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </rule>
+      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value>SSM_Trigger_commands.opi</value>
+        </exp>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedJs">
+        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
+
+var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
+
+var N_SSM = PVUtil.getLong(pvArray[0]);
+
+macroInput.put("SSM_NUM", N_SSM);
+widgetController.setPropertyValue("macros", macroInput);]]></text>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </script>
+    </scripts>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_2</name>
+    <file>SSM_Mask_state.opi</file>
+    <x>265</x>
+    <y>19</y>
+    <width>1460</width>
+    <height>666</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="startRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </rule>
+      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value>SSM_Mask_state.opi</value>
+        </exp>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedJs">
+        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
+
+var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
+
+var N_SSM = PVUtil.getLong(pvArray[0]);
+
+macroInput.put("SSM_NUM", N_SSM);
+widgetController.setPropertyValue("macros", macroInput);]]></text>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </script>
+    </scripts>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_3</name>
+    <file>SSM_Graphs_commands.opi</file>
+    <x>370</x>
+    <y>705</y>
+    <width>441</width>
+    <height>108</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="startRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value></value>
+        </exp>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </rule>
+      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="true">
+          <value>SSM_Graphs_commands.opi</value>
+        </exp>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedJs">
+        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
+
+var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
+
+var N_SSM = PVUtil.getLong(pvArray[0]);
+
+macroInput.put("SSM_NUM", N_SSM);
+widgetController.setPropertyValue("macros", macroInput);]]></text>
+        <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+      </script>
+    </scripts>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

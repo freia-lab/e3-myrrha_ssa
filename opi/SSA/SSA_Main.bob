@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-26 13:54:00 by konrad-->
+<display version="2.0.0">
+  <width>1815</width>
+  <height>875</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container</name>
+    <macros>
+      <DEVICE>Amp-$(AMP_CHAR)</DEVICE>
+    </macros>
+    <file>SSA_Command.opi</file>
+    <x>1340</x>
+    <y>421</y>
+    <width>422</width>
+    <height>400</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <macros>
+      <DEVICE>Amp-$(AMP_CHAR)</DEVICE>
+    </macros>
+    <file>SSA_Output.opi</file>
+    <x>1383</x>
+    <y>110</y>
+    <width>180</width>
+    <height>170</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Amplifier $(AMP_CHAR)</text>
+    <x>15</x>
+    <y>15</y>
+    <width>293</width>
+    <height>58</height>
+    <font>
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Grouping Container</name>
+    <macros>
+      <DEVICE>Amp-$(AMP_CHAR)</DEVICE>
+    </macros>
+    <x>40</x>
+    <y>79</y>
+    <width>1172</width>
+    <height>742</height>
+    <style>3</style>
+    <foreground_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <scripts>
+      <script file="../scripts/amplifier_ssm.py">
+        <pv_name>CAB-$(CAB_NUM):RFS-$(DEVICE):SSMList</pv_name>
+      </script>
+    </scripts>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_2</name>
+      <x>15</x>
+      <y>205</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_1</name>
+      <x>15</x>
+      <y>15</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_4</name>
+      <x>15</x>
+      <y>585</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_3</name>
+      <x>15</x>
+      <y>395</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_6</name>
+      <x>315</x>
+      <y>205</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_5</name>
+      <x>315</x>
+      <y>15</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_8</name>
+      <x>305</x>
+      <y>585</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_7</name>
+      <x>305</x>
+      <y>395</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_10</name>
+      <x>625</x>
+      <y>205</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_9</name>
+      <x>625</x>
+      <y>15</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_12</name>
+      <x>615</x>
+      <y>585</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_11</name>
+      <x>615</x>
+      <y>395</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_14</name>
+      <x>910</x>
+      <y>205</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_13</name>
+      <x>910</x>
+      <y>15</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_16</name>
+      <x>910</x>
+      <y>585</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>SSM_Container_15</name>
+      <x>910</x>
+      <y>395</y>
+      <width>242</width>
+      <height>141</height>
+      <resize>4</resize>
+      <transparent>true</transparent>
+      <actions>
+      </actions>
+      <border_color>
+        <color red="0" green="128" blue="255">
+        </color>
+      </border_color>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.gridLayout" version="1.0.0">
+      <fill_grids>false</fill_grids>
+      <grid_gap>40</grid_gap>
+      <name>Grid Layout</name>
+      <number_of_columns>4</number_of_columns>
+      <widget_type>Grid Layout</widget_type>
+      <wuid>4adba0c0:173284e2128:28a6</wuid>
+    </widget>
+  </widget>
+</display>
