@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 13:42:10 by konrad-->
+<display version="2.0.0">
+  <width>200</width>
+  <height>145</height>
+  <background_color>
+    <color red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>200</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Fan</text>
+    <x>6</x>
+    <width>162</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <x>162</x>
+    <y>2</y>
+    <width>26</width>
+    <height>26</height>
+    <off_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_WARNING" red="255" green="128" blue="64">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Rule" prop_id="pv_value" out_exp="true">
+        <exp bool_exp="pv0==0">
+          <expression>1</expression>
+        </exp>
+        <exp bool_exp="pv1==0">
+          <expression>1</expression>
+        </exp>
+        <exp bool_exp="pv2==0">
+          <expression>1</expression>
+        </exp>
+        <exp bool_exp="true">
+          <expression>0</expression>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatFan1</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatFan2</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatFan3</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>PWM</text>
+    <x>28</x>
+    <y>39</y>
+    <width>54</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):FanXPwm</pv_name>
+    <x>86</x>
+    <y>40</y>
+    <width>98</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Fan1S</pv_name>
+    <x>86</x>
+    <y>66</y>
+    <width>98</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Fan 1</text>
+    <x>28</x>
+    <y>65</y>
+    <width>54</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Fan 2</text>
+    <x>28</x>
+    <y>92</y>
+    <width>58</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Fan 3</text>
+    <x>28</x>
+    <y>117</y>
+    <width>58</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Fan2S</pv_name>
+    <x>86</x>
+    <y>93</y>
+    <width>98</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Fan3S</pv_name>
+    <x>86</x>
+    <y>118</y>
+    <width>98</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatFan1</pv_name>
+    <x>9</x>
+    <y>67</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_WARNING" red="255" green="128" blue="64">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatFan2</pv_name>
+    <x>9</x>
+    <y>94</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_WARNING" red="255" green="128" blue="64">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatFan3</pv_name>
+    <x>9</x>
+    <y>119</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_WARNING" red="255" green="128" blue="64">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+</display>

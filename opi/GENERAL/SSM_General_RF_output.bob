@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 16:14:15 by konrad-->
+<display version="2.0.0">
+  <width>500</width>
+  <height>804</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>500</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(NAME)</text>
+    <x>12</x>
+    <width>481</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions execute_as_one="true">
+      <action type="execute">
+        <script file="../scripts/off_all_rf.py">
+        </script>
+        <description>Execute Script</description>
+      </action>
+    </actions>
+    <text>All RF Off</text>
+    <x>324</x>
+    <y>42</y>
+    <width>120</width>
+    <height>38</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions execute_as_one="true">
+      <action type="execute">
+        <script file="../scripts/on_all_rf.py">
+        </script>
+        <description>Execute Script</description>
+      </action>
+    </actions>
+    <text>All RF On</text>
+    <x>42</x>
+    <y>42</y>
+    <width>120</width>
+    <height>38</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_2</name>
+    <macros>
+      <DESC>V psu &gt; 90 % psu setpoint</DESC>
+      <PV_NAME_LED>PSUVoltStat</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.bob</file>
+    <x>39</x>
+    <y>90</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_9</name>
+    <macros>
+      <DESC>Ext temp 1</DESC>
+      <PV_NAME>ExtT1</PV_NAME>
+      <PV_NAME_LED_LOW>ExtT1Warn</PV_NAME_LED_LOW>
+      <PV_NAME_LED_HIGH>ExtT1Err</PV_NAME_LED_HIGH>
+    </macros>
+    <file>SSM_General_status_dispLED3_2nd.bob</file>
+    <x>39</x>
+    <y>216</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_10</name>
+    <macros>
+      <DESC>All SSM is online</DESC>
+      <PV_NAME_LED>AllCommStat</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.bob</file>
+    <x>39</x>
+    <y>132</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_11</name>
+    <macros>
+      <DESC>RF line temperature OK</DESC>
+      <PV_NAME_LED>RFLineTStat</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.bob</file>
+    <x>39</x>
+    <y>174</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_12</name>
+    <macros>
+      <DESC>Ext temp 2 </DESC>
+      <PV_NAME>ExtT2</PV_NAME>
+      <PV_NAME_LED_LOW>ExtT2Warn</PV_NAME_LED_LOW>
+      <PV_NAME_LED_HIGH>ExtT2Err</PV_NAME_LED_HIGH>
+    </macros>
+    <file>SSM_General_status_dispLED3_2nd.bob</file>
+    <x>39</x>
+    <y>258</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_13</name>
+    <macros>
+      <DESC>Cabinet temp</DESC>
+      <PV_NAME>IntT</PV_NAME>
+      <PV_NAME_LED_LOW>IntTWarn</PV_NAME_LED_LOW>
+      <PV_NAME_LED_HIGH>IntTErr</PV_NAME_LED_HIGH>
+    </macros>
+    <file>SSM_General_status_dispLED3_2nd.bob</file>
+    <x>39</x>
+    <y>300</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rounded Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <x>21</x>
+    <y>420</y>
+    <width>457</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <corner_width>16</corner_width>
+    <corner_height>16</corner_height>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Amplifier specific flag</text>
+    <x>78</x>
+    <y>420</y>
+    <width>343</width>
+    <height>30</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rounded Rectangle_1</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <x>21</x>
+    <y>630</y>
+    <width>457</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </background_color>
+    <corner_width>16</corner_width>
+    <corner_height>16</corner_height>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>RF driver status</text>
+    <x>78</x>
+    <y>630</y>
+    <width>343</width>
+    <height>30</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>PSU
+ OK</text>
+    <x>33</x>
+    <y>449</y>
+    <width>85</width>
+    <height>43</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Issues</text>
+    <x>215</x>
+    <y>449</y>
+    <width>85</width>
+    <height>43</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_14</name>
+    <macros>
+      <AMP_CHAR>A</AMP_CHAR>
+      <AMP_NUM>1</AMP_NUM>
+    </macros>
+    <file>SSM_General_Flags.bob</file>
+    <x>39</x>
+    <y>491</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_15</name>
+    <macros>
+      <AMP_CHAR>B</AMP_CHAR>
+      <AMP_NUM>2</AMP_NUM>
+    </macros>
+    <x>39</x>
+    <y>522</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &lt;= pv1">
+          <value>SSM_General_Flags.opi</value>
+        </exp>
+        <pv_name>=$(AMP_NUM)</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_16</name>
+    <macros>
+      <AMP_CHAR>C</AMP_CHAR>
+      <AMP_NUM>3</AMP_NUM>
+    </macros>
+    <x>39</x>
+    <y>555</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &lt;= pv1">
+          <value>SSM_General_Flags.opi</value>
+        </exp>
+        <pv_name>=$(AMP_NUM)</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_17</name>
+    <macros>
+      <AMP_CHAR>D</AMP_CHAR>
+      <AMP_NUM>4</AMP_NUM>
+    </macros>
+    <x>39</x>
+    <y>588</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &lt;= pv1">
+          <value>SSM_General_Flags.opi</value>
+        </exp>
+        <pv_name>=$(AMP_NUM)</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_18</name>
+    <macros>
+      <AMP>Amplifier A</AMP>
+      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
+      <AMP_CHAR>A</AMP_CHAR>
+      <AMP_NUM>1</AMP_NUM>
+    </macros>
+    <file>SSM_General_Flag.bob</file>
+    <x>39</x>
+    <y>665</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_19</name>
+    <macros>
+      <AMP>Amplifier B</AMP>
+      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
+      <AMP_CHAR>B</AMP_CHAR>
+      <AMP_NUM>2</AMP_NUM>
+    </macros>
+    <x>39</x>
+    <y>696</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &lt;= pv1">
+          <value>SSM_General_Flag.opi</value>
+        </exp>
+        <pv_name>=$(AMP_NUM)</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_20</name>
+    <macros>
+      <AMP>Amplifier C</AMP>
+      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
+      <AMP_CHAR>C</AMP_CHAR>
+      <AMP_NUM>3</AMP_NUM>
+    </macros>
+    <x>39</x>
+    <y>729</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &lt;= pv1">
+          <value>SSM_General_Flag.opi</value>
+        </exp>
+        <pv_name>=$(AMP_NUM)</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_21</name>
+    <macros>
+      <AMP>Amplifier D</AMP>
+      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
+      <AMP_CHAR>D</AMP_CHAR>
+      <AMP_NUM>4</AMP_NUM>
+    </macros>
+    <x>39</x>
+    <y>762</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="OPI" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &lt;= pv1">
+          <value>SSM_General_Flag.opi</value>
+        </exp>
+        <pv_name>=$(AMP_NUM)</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Dummy fwd pwr</text>
+    <x>107</x>
+    <y>336</y>
+    <width>135</width>
+    <height>31</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):DummyFwdPwr</pv_name>
+    <x>277</x>
+    <y>343</y>
+    <width>104</width>
+    <height>18</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Dummy rfl pwr</text>
+    <x>107</x>
+    <y>372</y>
+    <width>135</width>
+    <height>31</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):DummyRflPwr</pv_name>
+    <x>277</x>
+    <y>379</y>
+    <width>104</width>
+    <height>18</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+</display>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 17:06:25 by konrad-->
+<display version="2.0.0">
+  <name>SSM $(SSM_NUM) : $(TITLE)</name>
+  <height>800</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <x>12</x>
+    <y>744</y>
+    <width>775</width>
+    <height>49</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color name="IO Line" red="0" green="32" blue="92">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="IO InputPV Bg" red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="stripchart" version="2.1.0">
+    <name>XY Graph Pallet</name>
+    <x>12</x>
+    <y>6</y>
+    <width>775</width>
+    <height>733</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <title_font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </title_font>
+    <show_legend>true</show_legend>
+    <actions>
+    </actions>
+    <y_axes>
+      <y_axis>
+        <title>Power (Watts)</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="25" green="25" blue="25">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>Pallet 1</name>
+        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX1)]</y_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="21" green="21" blue="196">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>2</point_type>
+        <point_size>1</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Pallet 2</name>
+        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX2)]</y_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="242" green="26" blue="26">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>2</point_type>
+        <point_size>1</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Pallet 3</name>
+        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX3)]</y_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="33" green="179" blue="33">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>2</point_type>
+        <point_size>1</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Pallet 4</name>
+        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX4)]</y_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>2</point_type>
+        <point_size>1</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Pallet 5</name>
+        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX5)]</y_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="128" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>2</point_type>
+        <point_size>1</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Pallet 6</name>
+        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX6)]</y_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="255" green="170" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>2</point_type>
+        <point_size>1</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>Forward</name>
+        <y_pv>IFCACQ1420:LLRF-FWD_PWR_CALC_W_PRINT</y_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="255" green="0" blue="240">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <point_type>0</point_type>
+        <point_size>4</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
+    <text>Arm SSM $(SSM_NUM)</text>
+    <x>24</x>
+    <y>756</y>
+    <width>106</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
+    <text>Download buffer SSM $(SSM_NUM)</text>
+    <x>232</x>
+    <y>756</y>
+    <width>171</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):TrigStat</pv_name>
+    <x>138</x>
+    <y>756</y>
+    <width>26</width>
+    <height>26</height>
+    <off_color>
+      <color name="LED_OFF" red="77" green="82" blue="85">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldInd</pv_name>
+    <x>414</x>
+    <y>756</y>
+    <width>26</width>
+    <height>26</height>
+    <off_color>
+      <color name="LED_OFF" red="77" green="82" blue="85">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Clear</name>
+    <actions>
+      <action type="execute">
+        <script file="../scripts/cleargraph.py">
+        </script>
+        <description>Execute Script</description>
+      </action>
+    </actions>
+    <text>Clear graph</text>
+    <x>672</x>
+    <y>756</y>
+    <width>106</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+</display>

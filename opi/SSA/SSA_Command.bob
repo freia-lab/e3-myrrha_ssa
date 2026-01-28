@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 11:23:49 by konrad-->
+<display version="2.0.0">
+  <width>420</width>
+  <height>400</height>
+  <background_color>
+    <color name="GRAY-TEXT" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>420</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Command</text>
+    <x>6</x>
+    <width>259</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):On-Cmd</pv_name>
+    <text>On</text>
+    <x>70</x>
+    <y>50</y>
+    <width>90</width>
+    <height>35</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):Off-Cmd</pv_name>
+    <text>Off</text>
+    <x>270</x>
+    <y>50</y>
+    <width>90</width>
+    <height>35</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RFOn-Cmd</pv_name>
+    <text>RF on</text>
+    <x>70</x>
+    <y>120</y>
+    <width>90</width>
+    <height>35</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RFOff-Cmd</pv_name>
+    <text>RF Off</text>
+    <x>270</x>
+    <y>120</y>
+    <width>90</width>
+    <height>35</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_12</name>
+    <macros>
+      <DESC>Pallets running</DESC>
+      <PV_NAME_LED_HIGH>SomePallRunning</PV_NAME_LED_HIGH>
+      <PV_NAME_LED_LOW>AllPallRunning</PV_NAME_LED_LOW>
+      <PV_NAME>NrRunning</PV_NAME>
+    </macros>
+    <file>../GENERAL/SSM_General_status_3LED_ErrSomeAll.bob</file>
+    <y>227</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_2</name>
+    <macros>
+      <DESC>V psu &gt; 90% psu setpoint</DESC>
+      <PV_NAME_LED>PSUVoltStat</PV_NAME_LED>
+    </macros>
+    <file>../GENERAL/SSM_General_status_led.bob</file>
+    <y>275</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_3</name>
+    <macros>
+      <DESC>RF driver PSU OK</DESC>
+      <PV_NAME_LED>RFDriverPSUStat</PV_NAME_LED>
+    </macros>
+    <file>../GENERAL/SSM_General_status_led.bob</file>
+    <y>315</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_4</name>
+    <macros>
+      <DESC>RF Driver ON</DESC>
+      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
+    </macros>
+    <file>../GENERAL/SSM_General_status_led.bob</file>
+    <y>355</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):CommStat</pv_name>
+    <x>8</x>
+    <y>192</y>
+    <width>26</width>
+    <height>26</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>SSA com running</text>
+    <x>66</x>
+    <y>190</y>
+    <width>331</width>
+    <height>31</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

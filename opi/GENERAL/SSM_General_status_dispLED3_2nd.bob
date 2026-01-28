@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 16:28:10 by konrad-->
+<display version="2.0.0">
+  <name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:$(PROPERTY)</name>
+  <width>400</width>
+  <height>30</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(DESC)</text>
+    <x>66</x>
+    <width>135</width>
+    <height>31</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME)</pv_name>
+    <x>236</x>
+    <y>7</y>
+    <width>104</width>
+    <height>18</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED_14</name>
+    <x>8</x>
+    <y>2</y>
+    <width>26</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Rule" prop_id="pv_value" out_exp="true">
+        <exp bool_exp="pv0==0">
+          <expression>2</expression>
+        </exp>
+        <exp bool_exp="pv1==0">
+          <expression>1</expression>
+        </exp>
+        <exp bool_exp="pv1==1">
+          <expression>0</expression>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME_LED_HIGH)</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME_LED_LOW)</pv_name>
+      </rule>
+    </rules>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="LED_OK" red="105" green="190" blue="40">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="LED_WARNING" red="255" green="128" blue="64">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="LED_ERROR" red="237" green="28" blue="36">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label>ERR</fallback_label>
+    <fallback_color>
+      <color name="LED_OFF" red="77" green="82" blue="85">
+      </color>
+    </fallback_color>
+  </widget>
+</display>

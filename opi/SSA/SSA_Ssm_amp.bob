@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 11:01:24 by konrad-->
+<display version="2.0.0">
+  <width>240</width>
+  <height>140</height>
+  <background_color>
+    <color name="GRAY-TEXT" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>241</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>SSM $(SSM_NUM)</text>
+    <x>6</x>
+    <width>235</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):CombFwdPwr</pv_name>
+    <x>67</x>
+    <y>53</y>
+    <width>78</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Pf</text>
+    <x>12</x>
+    <y>52</y>
+    <width>45</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):CombRflPwr</pv_name>
+    <x>67</x>
+    <y>103</y>
+    <width>78</width>
+    <height>18</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Pr</text>
+    <x>12</x>
+    <y>102</y>
+    <width>45</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>loc://SMM_status-$(SSM_NUM)</pv_name>
+    <x>158</x>
+    <y>54</y>
+    <width>66</width>
+    <height>66</height>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Rule" prop_id="pv_name" out_exp="true">
+        <exp bool_exp="pv0 == 0">
+          <expression>3</expression>
+        </exp>
+        <exp bool_exp="pv1 == 0">
+          <expression>3</expression>
+        </exp>
+        <exp bool_exp="pv2 == 0">
+          <expression>2</expression>
+        </exp>
+        <exp bool_exp="pv3 &amp; 0xff">
+          <expression>1</expression>
+        </exp>
+        <exp bool_exp="true">
+          <expression>0</expression>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):MajorFlt</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):LimSumm</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):WarnSumm</pv_name>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):PallStat</pv_name>
+      </rule>
+    </rules>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="LED_OK" red="105" green="190" blue="40">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="LED_RUNNING" red="247" green="211" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="LED_WARNING" red="255" green="128" blue="64">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>3</value>
+        <label></label>
+        <color>
+          <color name="LED_ERROR" red="237" green="28" blue="36">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label>ERR</fallback_label>
+    <fallback_color>
+      <color red="100" green="100" blue="100">
+      </color>
+    </fallback_color>
+  </widget>
+</display>

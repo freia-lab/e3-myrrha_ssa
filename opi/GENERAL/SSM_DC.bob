@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 16:10:34 by konrad-->
+<display version="2.0.0">
+  <width>500</width>
+  <height>650</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>500</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(NAME)</text>
+    <x>12</x>
+    <width>475</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):PSUOff-Cmd</pv_name>
+    <text>All off</text>
+    <x>340</x>
+    <y>75</y>
+    <width>120</width>
+    <height>38</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):PSUOn-Cmd</pv_name>
+    <text>All on</text>
+    <x>210</x>
+    <y>75</y>
+    <width>120</width>
+    <height>38</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <macros>
+      <DESC>External interlock 1</DESC>
+      <PV_NAME_LED>ExtIntlk1</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.opi</file>
+    <x>39</x>
+    <y>150</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_2</name>
+    <macros>
+      <DESC>External interlock 2</DESC>
+      <PV_NAME_LED>ExtIntlk2</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.opi</file>
+    <x>39</x>
+    <y>190</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_4</name>
+    <macros>
+      <DESC>Water flow OK</DESC>
+      <PV_NAME_LED>WaterFlowStat</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.opi</file>
+    <x>39</x>
+    <y>270</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_5</name>
+    <macros>
+      <DESC>Leak detection OK</DESC>
+      <PV_NAME_LED>Leak</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.opi</file>
+    <x>39</x>
+    <y>350</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_8</name>
+    <macros>
+      <DESC>Rear door closed</DESC>
+      <PV_NAME_LED>DoorRearStat</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.opi</file>
+    <x>39</x>
+    <y>430</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_9</name>
+    <macros>
+      <DESC>Water flow</DESC>
+      <PV_NAME_LED>WaterFlowInRange</PV_NAME_LED>
+      <PV_NAME>WaterFlow</PV_NAME>
+    </macros>
+    <file>SSM_General_status_dispLED2.opi</file>
+    <x>39</x>
+    <y>230</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_10</name>
+    <macros>
+      <DESC>Local control enable</DESC>
+      <PV_NAME_LED>LocalCtrlStat</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.opi</file>
+    <x>39</x>
+    <y>510</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_11</name>
+    <macros>
+      <DESC>Cabinet temp</DESC>
+      <PV_NAME_LED_HIGH>IntTErr</PV_NAME_LED_HIGH>
+      <PV_NAME>IntT</PV_NAME>
+      <PV_NAME_LED_LOW>IntTWarn</PV_NAME_LED_LOW>
+    </macros>
+    <file>SSM_General_status_dispLED3.opi</file>
+    <x>39</x>
+    <y>470</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_13</name>
+    <macros>
+      <DESC>Front door closed</DESC>
+      <PV_NAME_LED>DoorFrontStat</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.opi</file>
+    <x>39</x>
+    <y>390</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>DC Power Supplies</text>
+    <x>39</x>
+    <y>84</y>
+    <width>176</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>Local control</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RemoteCtrlEnbl</pv_name>
+    <text>Local control</text>
+    <x>91</x>
+    <y>565</y>
+    <width>120</width>
+    <height>38</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>Remote control</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RemoteCtrlEnbl</pv_name>
+    <text>EPICS control</text>
+    <x>270</x>
+    <y>565</y>
+    <width>120</width>
+    <height>38</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_14</name>
+    <macros>
+      <DESC>Water flow on load OK</DESC>
+      <PV_NAME_LED>LoadWaterFlowStat</PV_NAME_LED>
+    </macros>
+    <file>SSM_General_status_led.opi</file>
+    <x>39</x>
+    <y>310</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

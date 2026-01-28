@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-26 15:12:56 by konrad-->
+<!--Saved on 2026-01-28 12:07:03 by konrad-->
 <display version="2.0.0">
   <macros>
     <DISCIPLINE>RFS</DISCIPLINE>
@@ -65,25 +65,16 @@
         <group_name></group_name>
       </tab>
       <tab>
-        <name>Amplifier A</name>
+        <name>Amplifiers</name>
         <file>SSA/SSA_Main.bob</file>
         <macros>
-          <AMP_CHAR>A</AMP_CHAR>
-        </macros>
-        <group_name></group_name>
-      </tab>
-      <tab>
-        <name>Amplifier B</name>
-        <file>SSA/SSA_Main.bob</file>
-        <macros>
-          <AMP_CHAR>B</AMP_CHAR>
         </macros>
         <group_name></group_name>
       </tab>
     </tabs>
     <y>40</y>
-    <width>1740</width>
-    <height>860</height>
+    <width>1870</width>
+    <height>950</height>
     <direction>0</direction>
   </widget>
 </display>

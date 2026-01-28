@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 16:58:19 by konrad-->
+<display version="2.0.0">
+  <width>250</width>
+  <height>670</height>
+  <background_color>
+    <color name="Container_background" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_0</name>
+    <macros>
+      <SSM_NUM>1</SSM_NUM>
+    </macros>
+    <file>SSM_single_inf.bob</file>
+    <x>10</x>
+    <y>30</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <macros>
+      <SSM_NUM>2</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>70</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_2</name>
+    <macros>
+      <SSM_NUM>3</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>110</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_3</name>
+    <macros>
+      <SSM_NUM>4</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>150</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_4</name>
+    <macros>
+      <SSM_NUM>5</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>190</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_5</name>
+    <macros>
+      <SSM_NUM>6</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>230</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_6</name>
+    <macros>
+      <SSM_NUM>7</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>270</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_7</name>
+    <macros>
+      <SSM_NUM>8</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>310</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_8</name>
+    <macros>
+      <SSM_NUM>9</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>350</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_9</name>
+    <macros>
+      <SSM_NUM>10</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>390</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_10</name>
+    <macros>
+      <SSM_NUM>11</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>430</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_11</name>
+    <macros>
+      <SSM_NUM>12</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>470</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_12</name>
+    <macros>
+      <SSM_NUM>13</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>510</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_13</name>
+    <macros>
+      <SSM_NUM>14</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>550</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_14</name>
+    <macros>
+      <SSM_NUM>15</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>590</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_15</name>
+    <macros>
+      <SSM_NUM>16</SSM_NUM>
+    </macros>
+    <x>10</x>
+    <y>630</y>
+    <width>231</width>
+    <height>31</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="Visibility" prop_id="visible" out_exp="false">
+        <exp bool_exp="pv0 &lt; pv1">
+          <value>false</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+      <rule name="OPI file" prop_id="opi_file" out_exp="false">
+        <exp bool_exp="pv0 &gt;= pv1">
+          <value>SSM_single_inf.bob</value>
+        </exp>
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+        <pv_name>=$(SSM_NUM)</pv_name>
+      </rule>
+    </rules>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Arm</text>
+    <x>120</x>
+    <y>5</y>
+    <width>80</width>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Dwnld</text>
+    <x>185</x>
+    <y>5</y>
+    <width>61</width>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

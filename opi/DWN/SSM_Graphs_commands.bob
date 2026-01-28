@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 17:00:37 by konrad-->
+<display version="2.0.0">
+  <width>450</width>
+  <height>120</height>
+  <background_color>
+    <color name="Container_background" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>451</width>
+    <height>31</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Graphs</text>
+    <width>451</width>
+    <height>31</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs.bob</file>
+        <macros>
+          <TITLE>Powers Forwarded</TITLE>
+          <IDX1>0</IDX1>
+          <IDX2>1</IDX2>
+          <IDX3>2</IDX3>
+          <IDX4>3</IDX4>
+          <IDX5>4</IDX5>
+          <IDX6>5</IDX6>
+          <IDX7>12</IDX7>
+          <IDX8>14</IDX8>
+        </macros>
+        <target>window</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Power Forwarded</text>
+    <x>10</x>
+    <y>40</y>
+    <width>136</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_5</name>
+    <actions>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs.bob</file>
+        <macros>
+          <TITLE>Powers Reflected</TITLE>
+          <IDX1>6</IDX1>
+          <IDX2>7</IDX2>
+          <IDX3>8</IDX3>
+          <IDX4>9</IDX4>
+          <IDX5>10</IDX5>
+          <IDX6>11</IDX6>
+        </macros>
+        <target>window</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Power Reflected</text>
+    <x>10</x>
+    <y>75</y>
+    <width>136</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_6</name>
+    <actions>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs.bob</file>
+        <macros>
+          <TITLE>Currents</TITLE>
+          <IDX1>16</IDX1>
+          <IDX2>17</IDX2>
+          <IDX3>18</IDX3>
+          <IDX4>19</IDX4>
+          <IDX5>20</IDX5>
+          <IDX6>21</IDX6>
+          <IDX7>0</IDX7>
+          <IDX8>0</IDX8>
+        </macros>
+        <target>window</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Currents</text>
+    <x>155</x>
+    <y>40</y>
+    <width>136</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_7</name>
+    <actions>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs.bob</file>
+        <macros>
+          <TITLE>Voltages</TITLE>
+          <IDX1>22</IDX1>
+          <IDX2>23</IDX2>
+          <IDX3>24</IDX3>
+          <IDX4>25</IDX4>
+          <IDX5>26</IDX5>
+          <IDX6>27</IDX6>
+        </macros>
+        <target>window</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Voltages</text>
+    <x>155</x>
+    <y>75</y>
+    <width>136</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_8</name>
+    <actions>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs_comb_load.bob</file>
+        <macros>
+          <TITLE>Power Combiner &amp; Load</TITLE>
+          <IDX1>12</IDX1>
+          <IDX2>13</IDX2>
+          <IDX3>14</IDX3>
+          <IDX4>15</IDX4>
+        </macros>
+        <target>window</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Combiner &amp; Load</text>
+    <x>300</x>
+    <y>40</y>
+    <width>136</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Menu Button</name>
+    <actions>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs_pallets.bob</file>
+        <macros>
+          <PALLET>1</PALLET>
+          <IDX1>0</IDX1>
+          <IDX2>6</IDX2>
+          <IDX3>16</IDX3>
+          <IDX4>21</IDX4>
+        </macros>
+        <target>window</target>
+        <description>Pallet 1</description>
+      </action>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs_pallets.bob</file>
+        <macros>
+          <PALLET>2</PALLET>
+          <IDX1>0</IDX1>
+          <IDX2>6</IDX2>
+          <IDX3>16</IDX3>
+          <IDX4>21</IDX4>
+        </macros>
+        <target>window</target>
+        <description>Pallet 2</description>
+      </action>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs_pallets.bob</file>
+        <macros>
+          <PALLET>3</PALLET>
+          <IDX1>0</IDX1>
+          <IDX2>6</IDX2>
+          <IDX3>16</IDX3>
+          <IDX4>21</IDX4>
+        </macros>
+        <target>window</target>
+        <description>Pallet 3</description>
+      </action>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs_pallets.bob</file>
+        <macros>
+          <PALLET>4</PALLET>
+          <IDX1>0</IDX1>
+          <IDX2>6</IDX2>
+          <IDX3>16</IDX3>
+          <IDX4>21</IDX4>
+        </macros>
+        <target>window</target>
+        <description>Pallet 4</description>
+      </action>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs_pallets.bob</file>
+        <macros>
+          <PALLET>5</PALLET>
+          <IDX1>0</IDX1>
+          <IDX2>6</IDX2>
+          <IDX3>16</IDX3>
+          <IDX4>21</IDX4>
+        </macros>
+        <target>window</target>
+        <description>Pallet 5</description>
+      </action>
+      <action type="open_display">
+        <file>../SSM/SSM_graphs_pallets.bob</file>
+        <macros>
+          <PALLET>6</PALLET>
+          <IDX1>0</IDX1>
+          <IDX2>6</IDX2>
+          <IDX3>16</IDX3>
+          <IDX4>21</IDX4>
+        </macros>
+        <target>window</target>
+        <description>Pallet 6</description>
+      </action>
+    </actions>
+    <text>Pallets</text>
+    <x>300</x>
+    <y>75</y>
+    <width>136</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+</display>

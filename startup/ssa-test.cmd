@@ -18,9 +18,9 @@ epicsEnvSet(NUM_SSM, "8")
 epicsEnvSet(NUM_AMP, "2")
 iocshLoad("cab.iocsh", "SLAVE_ID=0")
 
-#epicsEnvSet(PREFIX_AMP, "$(CAB_SSA):$(DISCIPLINE)-Amp")
-#iocshLoad("amp.iocsh", "AMP_CHAR=A,NUM_SSM=4,AMP_SSM='1\\\,3\\\,5\\\,7'")
-#iocshLoad("amp.iocsh", "AMP_CHAR=B,NUM_SSM=4,AMP_SSM='2\\\,4\\\,6\\\,8'")
+epicsEnvSet(PREFIX_AMP, "$(CAB_SSA):$(DISCIPLINE)-Amp")
+iocshLoad("amp.iocsh", "AMP_CHAR=A,NUM_SSM=4,AMP_SSM='1\\\,3\\\,5\\\,7'")
+iocshLoad("amp.iocsh", "AMP_CHAR=B,NUM_SSM=4,AMP_SSM='2\\\,4\\\,6\\\,8'")
 
 #epicsEnvSet(PREFIX_PSU, "$(CAB_SSA):$(DISCIPLINE)-PSU")
 #iocshLoad("psu.iocsh", "PSU_NUM=1")

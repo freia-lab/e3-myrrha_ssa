@@ -13,7 +13,7 @@
   <grid_step_y>5</grid_step_y>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container</name>
-    <file>SSM_arm.opi</file>
+    <file>SSM_arm.bob</file>
     <x>10</x>
     <y>19</y>
     <width>248</width>
@@ -29,7 +29,7 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container_1</name>
-    <file>SSM_Trigger_commands.opi</file>
+    <file>SSM_Trigger_commands.bob</file>
     <x>10</x>
     <y>705</y>
     <width>339</width>
@@ -47,7 +47,7 @@
       </rule>
       <rule name="refreshRule" prop_id="opi_file" out_exp="false">
         <exp bool_exp="true">
-          <value>SSM_Trigger_commands.opi</value>
+          <value>SSM_Trigger_commands.bob</value>
         </exp>
         <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
       </rule>
@@ -72,7 +72,7 @@ widgetController.setPropertyValue("macros", macroInput);]]></text>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container_2</name>
-    <file>SSM_Mask_state.opi</file>
+    <file>SSM_Mask_state.bob</file>
     <x>265</x>
     <y>19</y>
     <width>1460</width>
@@ -90,7 +90,7 @@ widgetController.setPropertyValue("macros", macroInput);]]></text>
       </rule>
       <rule name="refreshRule" prop_id="opi_file" out_exp="false">
         <exp bool_exp="true">
-          <value>SSM_Mask_state.opi</value>
+          <value>SSM_Mask_state.bob</value>
         </exp>
         <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
       </rule>
@@ -115,7 +115,7 @@ widgetController.setPropertyValue("macros", macroInput);]]></text>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container_3</name>
-    <file>SSM_Graphs_commands.opi</file>
+    <file>SSM_Graphs_commands.bob</file>
     <x>370</x>
     <y>705</y>
     <width>441</width>
@@ -133,7 +133,7 @@ widgetController.setPropertyValue("macros", macroInput);]]></text>
       </rule>
       <rule name="refreshRule" prop_id="opi_file" out_exp="false">
         <exp bool_exp="true">
-          <value>SSM_Graphs_commands.opi</value>
+          <value>SSM_Graphs_commands.bob</value>
         </exp>
         <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
       </rule>

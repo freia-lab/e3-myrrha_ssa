@@ -1,0 +1,2206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 17:00:06 by konrad-->
+<display version="2.0.0">
+  <width>1460</width>
+  <height>680</height>
+  <background_color>
+    <color name="Container_background" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Voltage limit</text>
+    <x>1020</x>
+    <y>40</y>
+    <width>129</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_125</name>
+    <macros>
+      <DESC>P1</DESC>
+      <PV_NAME>Pall1VoltLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1020</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_126</name>
+    <macros>
+      <DESC>P2</DESC>
+      <PV_NAME>Pall2VoltLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1020</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_127</name>
+    <macros>
+      <DESC>P3</DESC>
+      <PV_NAME>Pall3VoltLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1020</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_128</name>
+    <macros>
+      <DESC>P4</DESC>
+      <PV_NAME>Pall4VoltLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1020</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_129</name>
+    <macros>
+      <DESC>P5</DESC>
+      <PV_NAME>Pall5VoltLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1020</x>
+    <y>220</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_130</name>
+    <macros>
+      <DESC>P6</DESC>
+      <PV_NAME>Pall6VoltLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1020</x>
+    <y>255</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_169</name>
+    <macros>
+      <DESC>P1</DESC>
+      <PV_NAME>Pall1CurrLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1165</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_170</name>
+    <macros>
+      <DESC>P2</DESC>
+      <PV_NAME>Pall2CurrLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1165</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_171</name>
+    <macros>
+      <DESC>P3</DESC>
+      <PV_NAME>Pall3CurrLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1165</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_172</name>
+    <macros>
+      <DESC>P4</DESC>
+      <PV_NAME>Pall4CurrLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1165</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_173</name>
+    <macros>
+      <DESC>P5</DESC>
+      <PV_NAME>Pall5CurrLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1165</x>
+    <y>220</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_174</name>
+    <macros>
+      <DESC>P6</DESC>
+      <PV_NAME>Pall6CurrLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1165</x>
+    <y>255</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>1460</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Trigger mask SSM</text>
+    <width>236</width>
+    <height>31</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>SSM status</text>
+    <x>10</x>
+    <y>40</y>
+    <width>121</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Pallet status</text>
+    <x>180</x>
+    <y>40</y>
+    <width>131</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Reset needed</text>
+    <x>345</x>
+    <y>40</y>
+    <width>141</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_4</name>
+    <macros>
+      <DESC>Limit summ.</DESC>
+      <PV_NAME>LimSummTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>10</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_5</name>
+    <macros>
+      <DESC>Warn summ.</DESC>
+      <PV_NAME>WarnSummTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>10</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_6</name>
+    <macros>
+      <DESC>Comm status</DESC>
+      <PV_NAME>CommStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>10</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_10</name>
+    <macros>
+      <DESC>Major Fault</DESC>
+      <PV_NAME>MajorFltTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>10</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_11</name>
+    <macros>
+      <DESC>P1 On/Off</DESC>
+      <PV_NAME>Pall1OnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_12</name>
+    <macros>
+      <DESC>P2 On/Off</DESC>
+      <PV_NAME>Pall2OnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_13</name>
+    <macros>
+      <DESC>P3 On/Off</DESC>
+      <PV_NAME>Pall3OnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_14</name>
+    <macros>
+      <DESC>P4 On/Off</DESC>
+      <PV_NAME>Pall4OnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_15</name>
+    <macros>
+      <DESC>P5 On/Off</DESC>
+      <PV_NAME>Pall5OnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>220</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_16</name>
+    <macros>
+      <DESC>P6 On/Off</DESC>
+      <PV_NAME>Pall6OnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>255</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_17</name>
+    <macros>
+      <DESC>P1 Sanity</DESC>
+      <PV_NAME>Pall1SanityTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>300</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_18</name>
+    <macros>
+      <DESC>P2 Sanity</DESC>
+      <PV_NAME>Pall2SanityTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>335</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_19</name>
+    <macros>
+      <DESC>P3 Sanity</DESC>
+      <PV_NAME>Pall3SanityTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>370</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_20</name>
+    <macros>
+      <DESC>P5 Sanity</DESC>
+      <PV_NAME>Pall5SanityTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>440</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>T warning</text>
+    <x>520</x>
+    <y>40</y>
+    <width>140</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>T limit</text>
+    <x>685</x>
+    <y>40</y>
+    <width>140</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Power</text>
+    <x>850</x>
+    <y>40</y>
+    <width>116</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Current limit</text>
+    <x>1165</x>
+    <y>40</y>
+    <width>158</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Reference</text>
+    <x>1305</x>
+    <y>40</y>
+    <width>131</width>
+    <height>31</height>
+    <font>
+      <font name="Header 3" family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_21</name>
+    <macros>
+      <DESC>P1</DESC>
+      <PV_NAME>Pall1RstNeededTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>345</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_22</name>
+    <macros>
+      <DESC>P2</DESC>
+      <PV_NAME>Pall2RstNeededTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>345</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_23</name>
+    <macros>
+      <DESC>P3</DESC>
+      <PV_NAME>Pall3RstNeededTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>345</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_24</name>
+    <macros>
+      <DESC>P4</DESC>
+      <PV_NAME>Pall4RstNeededTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>345</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_25</name>
+    <macros>
+      <DESC>P5</DESC>
+      <PV_NAME>Pall5RstNeededTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>345</x>
+    <y>220</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_26</name>
+    <macros>
+      <DESC>P6</DESC>
+      <PV_NAME>Pall6RstNeededTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>345</x>
+    <y>255</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_27</name>
+    <macros>
+      <DESC>Reference</DESC>
+      <PV_NAME>RefRstNeededTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>345</x>
+    <y>300</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_28</name>
+    <macros>
+      <DESC>Water in</DESC>
+      <PV_NAME>WaterInTWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_29</name>
+    <macros>
+      <DESC>Water out</DESC>
+      <PV_NAME>WaterOutTWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_30</name>
+    <macros>
+      <DESC>Air in</DESC>
+      <PV_NAME>AirInTWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_31</name>
+    <macros>
+      <DESC>Air out</DESC>
+      <PV_NAME>AirOutTWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_32</name>
+    <macros>
+      <DESC>Load 1</DESC>
+      <PV_NAME>Load1TWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>220</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_33</name>
+    <macros>
+      <DESC>Load 2</DESC>
+      <PV_NAME>Load2TWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>255</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_34</name>
+    <macros>
+      <DESC>IO Board</DESC>
+      <PV_NAME>IOBoardTWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>290</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_35</name>
+    <macros>
+      <DESC>Ref 10k</DESC>
+      <PV_NAME>Ref10kTWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>325</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_36</name>
+    <macros>
+      <DESC>ADC</DESC>
+      <PV_NAME>ADCTWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>360</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_37</name>
+    <macros>
+      <DESC>P4 Sanity</DESC>
+      <PV_NAME>Pall4SanityTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>405</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_38</name>
+    <macros>
+      <DESC>Pallet 1-2</DESC>
+      <PV_NAME>Pall12TWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>395</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_39</name>
+    <macros>
+      <DESC>Pallet 3-4</DESC>
+      <PV_NAME>Pall34TWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>430</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_40</name>
+    <macros>
+      <DESC>Pallet 5-6</DESC>
+      <PV_NAME>Pall56TWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>465</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_50</name>
+    <macros>
+      <DESC>CPU</DESC>
+      <PV_NAME>CPUTWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>520</x>
+    <y>500</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_54</name>
+    <macros>
+      <DESC>P1 VSWR</DESC>
+      <PV_NAME>Pall1VswrStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):TrigMaskWrite-Cmd</pv_name>
+    <text>Set to SSM</text>
+    <x>15</x>
+    <y>615</y>
+    <width>160</width>
+    <height>40</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):TrigMaskRead-Cmd</pv_name>
+    <text>Reload from SSM</text>
+    <x>250</x>
+    <y>615</y>
+    <width>160</width>
+    <height>40</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>loc://$(DID)_$(LCID)_set_mask_all_ssm(0)</pv_name>
+    <text>Set to all SSMs</text>
+    <x>485</x>
+    <y>615</y>
+    <width>160</width>
+    <height>40</height>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <scripts>
+      <script file="../scripts/set_mask_all_ssm.py">
+        <pv_name>loc://$(DID)_$(LCID)_set_mask_all_ssm</pv_name>
+        <pv_name trigger="false">CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledSSM</pv_name>
+      </script>
+    </scripts>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_96</name>
+    <macros>
+      <DESC>P6 Sanity</DESC>
+      <PV_NAME>Pall6SanityTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>180</x>
+    <y>475</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_110</name>
+    <macros>
+      <DESC>P1 dissip.</DESC>
+      <PV_NAME>Pall1PwrDisLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>380</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_111</name>
+    <macros>
+      <DESC>P2 dissip.</DESC>
+      <PV_NAME>Pall2PwrDisLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>415</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_112</name>
+    <macros>
+      <DESC>P3 dissip.</DESC>
+      <PV_NAME>Pall3PwrDisLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>450</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_113</name>
+    <macros>
+      <DESC>P4 dissip.</DESC>
+      <PV_NAME>Pall4PwrDisLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>485</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_114</name>
+    <macros>
+      <DESC>P5 dissip.</DESC>
+      <PV_NAME>Pall5PwrDisLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>520</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_115</name>
+    <macros>
+      <DESC>P6 dissip.</DESC>
+      <PV_NAME>Pall6PwrDisLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>555</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_116</name>
+    <macros>
+      <DESC>Load VSWR</DESC>
+      <PV_NAME>LoadVswrStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>335</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_117</name>
+    <macros>
+      <DESC>P2 VSWR</DESC>
+      <PV_NAME>Pall2VswrStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_118</name>
+    <macros>
+      <DESC>P3 VSWR</DESC>
+      <PV_NAME>Pall3VswrStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_119</name>
+    <macros>
+      <DESC>P4 VSWR</DESC>
+      <PV_NAME>Pall4VswrStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_120</name>
+    <macros>
+      <DESC>P5 VSWR</DESC>
+      <PV_NAME>Pall5VswrStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>220</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_121</name>
+    <macros>
+      <DESC>P6 VSWR</DESC>
+      <PV_NAME>Pall6VswrStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>255</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_122</name>
+    <macros>
+      <DESC>Comb. VSWR</DESC>
+      <PV_NAME>CombVswrStatTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>300</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_123</name>
+    <macros>
+      <DESC>Power warn</DESC>
+      <PV_NAME>PwrWarnTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>600</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_124</name>
+    <macros>
+      <DESC>Power limit</DESC>
+      <PV_NAME>PwrLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>850</x>
+    <y>635</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_156</name>
+    <macros>
+      <DESC>Water in</DESC>
+      <PV_NAME>WaterInTLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_137</name>
+    <macros>
+      <DESC>PSU</DESC>
+      <PV_NAME>RefStatPSUTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>80</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_138</name>
+    <macros>
+      <DESC>Fan 3</DESC>
+      <PV_NAME>RefStatFan3Trig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>360</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_139</name>
+    <macros>
+      <DESC>Fan 1 PSU</DESC>
+      <PV_NAME>RefStatFan1PSUTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>395</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_140</name>
+    <macros>
+      <DESC>Fan 2 PSU</DESC>
+      <PV_NAME>RefStatFan2PSUTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>430</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_141</name>
+    <macros>
+      <DESC>Fan 3 PSU</DESC>
+      <PV_NAME>RefStatFan3PSUTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>465</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_143</name>
+    <macros>
+      <DESC>Fan 2</DESC>
+      <PV_NAME>RefStatFan2Trig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>325</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_144</name>
+    <macros>
+      <DESC>12 V PSU</DESC>
+      <PV_NAME>RefStat12VTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_145</name>
+    <macros>
+      <DESC>Voltage</DESC>
+      <PV_NAME>RefStatRefTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_146</name>
+    <macros>
+      <DESC>GND</DESC>
+      <PV_NAME>RefStatGndTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_147</name>
+    <macros>
+      <DESC>ADC ref.</DESC>
+      <PV_NAME>RefStatADCTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>220</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_148</name>
+    <macros>
+      <DESC>12V fan</DESC>
+      <PV_NAME>RefStat12VFanTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>255</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_149</name>
+    <macros>
+      <DESC>Fan 1</DESC>
+      <PV_NAME>RefStatFan1Trig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>1304</x>
+    <y>290</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_157</name>
+    <macros>
+      <DESC>Water out</DESC>
+      <PV_NAME>WaterOutTLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>115</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_158</name>
+    <macros>
+      <DESC>Air in</DESC>
+      <PV_NAME>AirInTLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>150</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_159</name>
+    <macros>
+      <DESC>Air out</DESC>
+      <PV_NAME>AirOutTLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>185</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_160</name>
+    <macros>
+      <DESC>Load 1</DESC>
+      <PV_NAME>Load1TLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>220</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_161</name>
+    <macros>
+      <DESC>Load 2</DESC>
+      <PV_NAME>Load2TLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>255</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_162</name>
+    <macros>
+      <DESC>IO Board</DESC>
+      <PV_NAME>IOBoardTLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>290</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_163</name>
+    <macros>
+      <DESC>Ref 10k</DESC>
+      <PV_NAME>Ref10kTLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>325</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_164</name>
+    <macros>
+      <DESC>ADC</DESC>
+      <PV_NAME>ADCTLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>360</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_165</name>
+    <macros>
+      <DESC>Pallet 1-2</DESC>
+      <PV_NAME>Pall12TLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>395</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_166</name>
+    <macros>
+      <DESC>Pallet 3-4</DESC>
+      <PV_NAME>Pall34TLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>430</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_167</name>
+    <macros>
+      <DESC>Pallet 5-6</DESC>
+      <PV_NAME>Pall56TLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>465</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_168</name>
+    <macros>
+      <DESC>CPU</DESC>
+      <PV_NAME>CPUTLimTrig</PV_NAME>
+    </macros>
+    <file>SSM_state_label.bob</file>
+    <x>685</x>
+    <y>500</y>
+    <width>133</width>
+    <height>30</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>loc://$(DID)_DDM_Num_$(CAB_NUM)</pv_name>
+    <x>220</x>
+    <y>2</y>
+    <width>36</width>
+    <height>27</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <precision>0</precision>
+    <show_units>false</show_units>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

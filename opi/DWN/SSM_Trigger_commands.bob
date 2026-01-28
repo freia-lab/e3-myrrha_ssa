@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 16:59:33 by konrad-->
+<display version="2.0.0">
+  <width>336</width>
+  <height>120</height>
+  <background_color>
+    <color name="Container_background" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>5</grid_step_x>
+  <grid_step_y>5</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>336</width>
+    <height>31</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Top_bar" red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Trigger Commands</text>
+    <width>331</width>
+    <height>31</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
+    <text>Arm SSM $(SSM_NUM)</text>
+    <x>15</x>
+    <y>40</y>
+    <width>106</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
+    <text>Download buffer SSM $(SSM_NUM)</text>
+    <x>145</x>
+    <y>40</y>
+    <width>171</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-1:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-2:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-3:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-4:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-5:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-6:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-7:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-8:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-9:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-10:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
+    <text>Arm ALL</text>
+    <x>15</x>
+    <y>75</y>
+    <width>106</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-1:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-2:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-3:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-4:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-5:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-6:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-7:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-8:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-9:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-10:BfrDwnldTrigForce-Cmd</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
+    <text>Download ALL buffers</text>
+    <x>145</x>
+    <y>75</y>
+    <width>171</width>
+    <height>26</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+</display>

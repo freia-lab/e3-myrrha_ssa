@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 17:27:19 by konrad-->
+<display version="2.0.0">
+  <width>150</width>
+  <height>35</height>
+  <background_color>
+    <color name="Container_background" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(DESC)</text>
+    <x>48</x>
+    <y>5</y>
+    <width>91</width>
+    <foreground_color>
+      <color name="Container_foreground" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="checkbox" version="2.0.0">
+    <name>Check Box</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):$(PV_NAME)-Sel</pv_name>
+    <label></label>
+    <x>6</x>
+    <y>3</y>
+    <width>20</width>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <actions>
+    </actions>
+  </widget>
+</display>

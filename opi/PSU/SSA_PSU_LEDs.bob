@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 14:00:07 by konrad-->
+<display version="2.0.0">
+  <width>400</width>
+  <height>24</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1ACStat</pv_name>
+    <x>14</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2ACStat</pv_name>
+    <x>40</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3ACStat</pv_name>
+    <x>67</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_15</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1Enbl</pv_name>
+    <x>116</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_16</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2Enbl</pv_name>
+    <x>142</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_17</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3Enbl</pv_name>
+    <x>169</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_30</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1DCStat</pv_name>
+    <x>218</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_31</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2DCStat</pv_name>
+    <x>244</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_32</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3DCStat</pv_name>
+    <x>271</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_45</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1Fault</pv_name>
+    <x>314</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_46</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2Fault</pv_name>
+    <x>340</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_47</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3Fault</pv_name>
+    <x>367</x>
+    <y>3</y>
+    <width>16</width>
+    <height>16</height>
+    <off_color>
+      <color name="LED_ERROR" red="237" green="28" blue="36">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="LED_OK" red="105" green="190" blue="40">
+      </color>
+    </on_color>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+  </widget>
+</display>

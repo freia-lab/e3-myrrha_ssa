@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-01-28 16:32:55 by konrad-->
+<display version="2.0.0">
+  <width>500</width>
+  <height>450</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle</name>
+    <macros>
+      <pv_name></pv_name>
+    </macros>
+    <width>500</width>
+    <height>30</height>
+    <line_width>0</line_width>
+    <line_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="155" green="155" blue="155">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(NAME)</text>
+    <x>12</x>
+    <width>481</width>
+    <height>30</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_9</name>
+    <macros>
+      <DESC>Roof</DESC>
+      <PV_NAME>FanRoofS</PV_NAME>
+    </macros>
+    <file>SSM_General_status_dispLED.bob</file>
+    <x>39</x>
+    <y>96</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_1</name>
+    <macros>
+      <DESC>Left side 1</DESC>
+      <PV_NAME>FanLeft1S</PV_NAME>
+    </macros>
+    <file>SSM_General_status_dispLED.bob</file>
+    <x>39</x>
+    <y>192</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_2</name>
+    <macros>
+      <DESC>Left side 2</DESC>
+      <PV_NAME>FanLeft2S</PV_NAME>
+    </macros>
+    <file>SSM_General_status_dispLED.bob</file>
+    <x>39</x>
+    <y>234</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_3</name>
+    <macros>
+      <DESC>Right side 1</DESC>
+      <PV_NAME>FanRight1S</PV_NAME>
+    </macros>
+    <file>SSM_General_status_dispLED.bob</file>
+    <x>39</x>
+    <y>342</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_4</name>
+    <macros>
+      <DESC>Right side 2</DESC>
+      <PV_NAME>FanRight2S</PV_NAME>
+    </macros>
+    <file>SSM_General_status_dispLED.bob</file>
+    <x>39</x>
+    <y>384</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_5</name>
+    <macros>
+      <DESC>Roof PWM</DESC>
+      <PV_NAME>FanRoofPwm</PV_NAME>
+    </macros>
+    <file>SSM_General_status_disp.bob</file>
+    <x>39</x>
+    <y>54</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_6</name>
+    <macros>
+      <DESC>Left side PWM</DESC>
+      <PV_NAME>FanLeftPwm</PV_NAME>
+    </macros>
+    <file>SSM_General_status_disp.bob</file>
+    <x>39</x>
+    <y>150</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_7</name>
+    <macros>
+      <DESC>Right side PWM</DESC>
+      <PV_NAME>FanRightPwm</PV_NAME>
+    </macros>
+    <file>SSM_General_status_disp.bob</file>
+    <x>39</x>
+    <y>300</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>
