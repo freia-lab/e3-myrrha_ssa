@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-28 16:14:15 by konrad-->
+<!--Saved on 2026-01-29 17:14:09 by konrad-->
 <display version="2.0.0">
   <width>500</width>
   <height>804</height>
@@ -423,90 +423,6 @@ $(pv_value)</tooltip>
     </border_color>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Linking Container_15</name>
-    <macros>
-      <AMP_CHAR>B</AMP_CHAR>
-      <AMP_NUM>2</AMP_NUM>
-    </macros>
-    <x>39</x>
-    <y>522</y>
-    <width>421</width>
-    <height>34</height>
-    <resize>4</resize>
-    <transparent>true</transparent>
-    <actions>
-    </actions>
-    <rules>
-      <rule name="OPI" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="pv0 &lt;= pv1">
-          <value>SSM_General_Flags.opi</value>
-        </exp>
-        <pv_name>=$(AMP_NUM)</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
-      </rule>
-    </rules>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Linking Container_16</name>
-    <macros>
-      <AMP_CHAR>C</AMP_CHAR>
-      <AMP_NUM>3</AMP_NUM>
-    </macros>
-    <x>39</x>
-    <y>555</y>
-    <width>421</width>
-    <height>34</height>
-    <resize>4</resize>
-    <transparent>true</transparent>
-    <actions>
-    </actions>
-    <rules>
-      <rule name="OPI" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="pv0 &lt;= pv1">
-          <value>SSM_General_Flags.opi</value>
-        </exp>
-        <pv_name>=$(AMP_NUM)</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
-      </rule>
-    </rules>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Linking Container_17</name>
-    <macros>
-      <AMP_CHAR>D</AMP_CHAR>
-      <AMP_NUM>4</AMP_NUM>
-    </macros>
-    <x>39</x>
-    <y>588</y>
-    <width>421</width>
-    <height>34</height>
-    <resize>4</resize>
-    <transparent>true</transparent>
-    <actions>
-    </actions>
-    <rules>
-      <rule name="OPI" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="pv0 &lt;= pv1">
-          <value>SSM_General_Flags.opi</value>
-        </exp>
-        <pv_name>=$(AMP_NUM)</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
-      </rule>
-    </rules>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
-  <widget type="embedded" version="2.0.0">
     <name>Linking Container_18</name>
     <macros>
       <AMP>Amplifier A</AMP>
@@ -523,96 +439,6 @@ $(pv_value)</tooltip>
     <transparent>true</transparent>
     <actions>
     </actions>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Linking Container_19</name>
-    <macros>
-      <AMP>Amplifier B</AMP>
-      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
-      <AMP_CHAR>B</AMP_CHAR>
-      <AMP_NUM>2</AMP_NUM>
-    </macros>
-    <x>39</x>
-    <y>696</y>
-    <width>421</width>
-    <height>34</height>
-    <resize>4</resize>
-    <transparent>true</transparent>
-    <actions>
-    </actions>
-    <rules>
-      <rule name="OPI" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="pv0 &lt;= pv1">
-          <value>SSM_General_Flag.opi</value>
-        </exp>
-        <pv_name>=$(AMP_NUM)</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
-      </rule>
-    </rules>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Linking Container_20</name>
-    <macros>
-      <AMP>Amplifier C</AMP>
-      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
-      <AMP_CHAR>C</AMP_CHAR>
-      <AMP_NUM>3</AMP_NUM>
-    </macros>
-    <x>39</x>
-    <y>729</y>
-    <width>421</width>
-    <height>34</height>
-    <resize>4</resize>
-    <transparent>true</transparent>
-    <actions>
-    </actions>
-    <rules>
-      <rule name="OPI" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="pv0 &lt;= pv1">
-          <value>SSM_General_Flag.opi</value>
-        </exp>
-        <pv_name>=$(AMP_NUM)</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
-      </rule>
-    </rules>
-    <border_color>
-      <color red="0" green="128" blue="255">
-      </color>
-    </border_color>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Linking Container_21</name>
-    <macros>
-      <AMP>Amplifier D</AMP>
-      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
-      <AMP_CHAR>D</AMP_CHAR>
-      <AMP_NUM>4</AMP_NUM>
-    </macros>
-    <x>39</x>
-    <y>762</y>
-    <width>421</width>
-    <height>34</height>
-    <resize>4</resize>
-    <transparent>true</transparent>
-    <actions>
-    </actions>
-    <rules>
-      <rule name="OPI" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="pv0 &lt;= pv1">
-          <value>SSM_General_Flag.opi</value>
-        </exp>
-        <pv_name>=$(AMP_NUM)</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:NrInstalledAmp</pv_name>
-      </rule>
-    </rules>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -713,6 +539,48 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <border_color>
       <color red="0" green="0" blue="0">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_15</name>
+    <macros>
+      <AMP_CHAR>B</AMP_CHAR>
+      <AMP_NUM>2</AMP_NUM>
+    </macros>
+    <file>SSM_General_Flags.bob</file>
+    <x>39</x>
+    <y>525</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Linking Container_19</name>
+    <macros>
+      <AMP>Amplifier B</AMP>
+      <PV_NAME_LED>RFDriverStat</PV_NAME_LED>
+      <AMP_CHAR>B</AMP_CHAR>
+      <AMP_NUM>2</AMP_NUM>
+    </macros>
+    <file>SSM_General_Flag.bob</file>
+    <x>39</x>
+    <y>699</y>
+    <width>421</width>
+    <height>34</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
       </color>
     </border_color>
   </widget>

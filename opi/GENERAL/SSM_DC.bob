@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-28 16:10:34 by konrad-->
+<!--Saved on 2026-01-29 16:12:11 by konrad-->
 <display version="2.0.0">
   <width>500</width>
   <height>650</height>
@@ -115,7 +115,7 @@ $(pv_value)</tooltip>
       <DESC>External interlock 1</DESC>
       <PV_NAME_LED>ExtIntlk1</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.opi</file>
+    <file>SSM_General_status_led.bob</file>
     <x>39</x>
     <y>150</y>
     <width>421</width>
@@ -135,7 +135,7 @@ $(pv_value)</tooltip>
       <DESC>External interlock 2</DESC>
       <PV_NAME_LED>ExtIntlk2</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.opi</file>
+    <file>SSM_General_status_led.bob</file>
     <x>39</x>
     <y>190</y>
     <width>421</width>
@@ -155,7 +155,7 @@ $(pv_value)</tooltip>
       <DESC>Water flow OK</DESC>
       <PV_NAME_LED>WaterFlowStat</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.opi</file>
+    <file>SSM_General_status_led.bob</file>
     <x>39</x>
     <y>270</y>
     <width>421</width>
@@ -175,7 +175,7 @@ $(pv_value)</tooltip>
       <DESC>Leak detection OK</DESC>
       <PV_NAME_LED>Leak</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.opi</file>
+    <file>SSM_General_status_led.bob</file>
     <x>39</x>
     <y>350</y>
     <width>421</width>
@@ -195,7 +195,7 @@ $(pv_value)</tooltip>
       <DESC>Rear door closed</DESC>
       <PV_NAME_LED>DoorRearStat</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.opi</file>
+    <file>SSM_General_status_led.bob</file>
     <x>39</x>
     <y>430</y>
     <width>421</width>
@@ -216,7 +216,7 @@ $(pv_value)</tooltip>
       <PV_NAME_LED>WaterFlowInRange</PV_NAME_LED>
       <PV_NAME>WaterFlow</PV_NAME>
     </macros>
-    <file>SSM_General_status_dispLED2.opi</file>
+    <file>SSM_General_status_dispLED2.bob</file>
     <x>39</x>
     <y>230</y>
     <width>421</width>
@@ -236,7 +236,7 @@ $(pv_value)</tooltip>
       <DESC>Local control enable</DESC>
       <PV_NAME_LED>LocalCtrlStat</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.opi</file>
+    <file>SSM_General_status_led.bob</file>
     <x>39</x>
     <y>510</y>
     <width>421</width>
@@ -258,7 +258,7 @@ $(pv_value)</tooltip>
       <PV_NAME>IntT</PV_NAME>
       <PV_NAME_LED_LOW>IntTWarn</PV_NAME_LED_LOW>
     </macros>
-    <file>SSM_General_status_dispLED3.opi</file>
+    <file>SSM_General_status_dispLED3.bob</file>
     <x>39</x>
     <y>470</y>
     <width>421</width>
@@ -278,7 +278,7 @@ $(pv_value)</tooltip>
       <DESC>Front door closed</DESC>
       <PV_NAME_LED>DoorFrontStat</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.opi</file>
+    <file>SSM_General_status_led.bob</file>
     <x>39</x>
     <y>390</y>
     <width>421</width>
@@ -372,7 +372,7 @@ $(pv_value)</tooltip>
       <DESC>Water flow on load OK</DESC>
       <PV_NAME_LED>LoadWaterFlowStat</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.opi</file>
+    <file>SSM_General_status_led.bob</file>
     <x>39</x>
     <y>310</y>
     <width>421</width>

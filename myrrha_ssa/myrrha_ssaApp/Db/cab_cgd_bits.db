@@ -111,3 +111,40 @@ record(bi, "$(PREFIX):IntTErr") {
     field(ZNAM, "Error")
     field(ONAM, "OK")
 }
+
+#################################################
+# Help records (to avoid the scripts in the OPI
+#
+
+record(calc, "$(PREFIX):IntTStatus") {
+    field(DESC, "Internal temperature status")
+    field(INPA, "$(PREFIX):IntTErr NPP MSS")
+    field(INPB, "$(PREFIX):IntTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+
+record(calc, "$(PREFIX):IntTStatus") {
+    field(DESC, "Internal temperature status")
+    field(INPA, "$(PREFIX):IntTErr NPP MSS")
+    field(INPB, "$(PREFIX):IntTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+
+record(calc, "$(PREFIX):ExtT1Status") {
+    field(DESC, "External temperature 1 status")
+    field(INPA, "$(PREFIX):ExtT1Err NPP MSS")
+    field(INPB, "$(PREFIX):ExtT1Warn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+
+record(calc, "$(PREFIX):ExtT2Status") {
+    field(DESC, "External temperature 2 status")
+    field(INPA, "$(PREFIX):ExtT2Err NPP MSS")
+    field(INPB, "$(PREFIX):ExtT2Warn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+
