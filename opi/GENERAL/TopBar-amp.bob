@@ -1,220 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
-  <actions hook="false" hook_all="false" />
-  <auto_scale_widgets>
-    <auto_scale_widgets>false</auto_scale_widgets>
-    <min_width>-1</min_width>
-    <min_height>-1</min_height>
-  </auto_scale_widgets>
-  <auto_zoom_to_fit_all>false</auto_zoom_to_fit_all>
-  <background_color>
-    <color name="Top_bar" red="155" green="155" blue="155" />
-  </background_color>
-  <boy_version>5.1.0</boy_version>
-  <foreground_color>
-    <color red="192" green="192" blue="192" />
-  </foreground_color>
-  <grid_space>6</grid_space>
-  <height>55</height>
-  <macros>
-    <include_parent_macros>true</include_parent_macros>
-  </macros>
-  <name></name>
-  <rules />
-  <scripts />
-  <show_close_button>true</show_close_button>
-  <show_edit_range>true</show_edit_range>
-  <show_grid>true</show_grid>
-  <show_ruler>true</show_ruler>
-  <snap_to_geometry>true</snap_to_geometry>
-  <widget_type>Display</widget_type>
+<!--Saved on 2026-01-29 15:49:04 by konrad-->
+<display version="2.0.0">
   <width>100</width>
-  <wuid>-19652eec:17334232981:-5a3f</wuid>
-  <x>-1</x>
-  <y>-1</y>
-  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0.0">
-    <actions hook="false" hook_all="false" />
-    <alarm_pulsing>false</alarm_pulsing>
-    <auto_size>false</auto_size>
-    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-    <background_color>
-      <color red="255" green="255" blue="255" />
-    </background_color>
-    <border_alarm_sensitive>true</border_alarm_sensitive>
-    <border_color>
-      <color red="0" green="128" blue="255" />
-    </border_color>
-    <border_style>0</border_style>
-    <border_width>1</border_width>
-    <enabled>true</enabled>
-    <font>
-      <opifont.name fontName="DejaVu Sans" height="12" style="0" pixels="false">Default</opifont.name>
-    </font>
-    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
-    <foreground_color>
-      <color red="0" green="0" blue="0" />
-    </foreground_color>
-    <format_type>0</format_type>
-    <height>31</height>
-    <horizontal_alignment>0</horizontal_alignment>
+  <height>55</height>
+  <background_color>
+    <color name="Top_bar" red="155" green="155" blue="155">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <grid_step_x>6</grid_step_x>
+  <grid_step_y>6</grid_step_y>
+  <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
-    <precision>0</precision>
-    <precision_from_pv>true</precision_from_pv>
     <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):FwdPwr</pv_name>
-    <pv_value />
-    <rotation_angle>0.0</rotation_angle>
-    <rules />
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>true</height_scalable>
-      <keep_wh_ratio>false</keep_wh_ratio>
-    </scale_options>
-    <scripts />
-    <show_units>true</show_units>
-    <text>######</text>
-    <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-    <transparent>false</transparent>
-    <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
-    <widget_type>Text Update</widget_type>
-    <width>100</width>
-    <wrap_words>false</wrap_words>
-    <wuid>-19652eec:17334232981:-5a24</wuid>
-    <x>0</x>
     <y>28</y>
-  </widget>
-  <widget typeId="org.csstudio.opibuilder.widgets.LED" version="1.0.0">
-    <actions hook="false" hook_all="false" />
-    <alarm_pulsing>false</alarm_pulsing>
-    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
-    <background_color>
-      <color red="240" green="240" blue="240" />
-    </background_color>
-    <bit>-1</bit>
-    <border_alarm_sensitive>true</border_alarm_sensitive>
-    <border_color>
-      <color red="0" green="128" blue="255" />
-    </border_color>
-    <border_style>0</border_style>
-    <border_width>1</border_width>
-    <bulb_border>3</bulb_border>
-    <bulb_border_color>
-      <color red="150" green="150" blue="150" />
-    </bulb_border_color>
-    <data_type>0</data_type>
-    <effect_3d>false</effect_3d>
-    <enabled>true</enabled>
-    <font>
-      <opifont.name fontName="DejaVu Sans" height="12" style="0" pixels="false">Default</opifont.name>
-    </font>
-    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <height>31</height>
     <foreground_color>
-      <color red="192" green="192" blue="192" />
+      <color red="0" green="0" blue="0">
+      </color>
     </foreground_color>
-    <height>26</height>
-    <name>LED</name>
-    <pv_name></pv_name>
-    <pv_value />
-    <rules>
-      <rule name="Rule" prop_id="pv_value" out_exp="true">
-        <exp bool_exp="pv0==1">
-          <value>2</value>
-        </exp>
-        <exp bool_exp="pv1==1">
-          <value>1</value>
-        </exp>
-        <exp bool_exp="pv2==1">
-          <value>3</value>
-        </exp>
-        <exp bool_exp="true">
-          <value>0</value>
-        </exp>
-        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):AlarmSumm</pv>
-        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):WarnSumm</pv>
-        <pv trig="true">CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):SomePallRunning</pv>
-      </rule>
-    </rules>
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>true</height_scalable>
-      <keep_wh_ratio>true</keep_wh_ratio>
-    </scale_options>
-    <scripts />
-    <show_boolean_label>false</show_boolean_label>
-    <square_led>true</square_led>
-    <state_color_0>
-      <color name="LED_OK" red="105" green="190" blue="40" />
-    </state_color_0>
-    <state_color_1>
-      <color name="LED_WARNING" red="255" green="128" blue="64" />
-    </state_color_1>
-    <state_color_2>
-      <color name="LED_ERROR" red="237" green="28" blue="36" />
-    </state_color_2>
-    <state_color_3>
-      <color name="LED_RUNNING" red="247" green="211" blue="0" />
-    </state_color_3>
-    <state_color_fallback>
-      <color name="LED_OFF" red="77" green="82" blue="85" />
-    </state_color_fallback>
-    <state_count>4</state_count>
-    <state_label_0>S01</state_label_0>
-    <state_label_1>S02</state_label_1>
-    <state_label_2>S03</state_label_2>
-    <state_label_3>S04</state_label_3>
-    <state_label_fallback>ERR</state_label_fallback>
-    <state_value_0>0.0</state_value_0>
-    <state_value_1>1.0</state_value_1>
-    <state_value_2>2.0</state_value_2>
-    <state_value_3>3.0</state_value_3>
-    <tooltip>$(pv_name)
-$(pv_value)</tooltip>
-    <visible>true</visible>
-    <widget_type>LED</widget_type>
-    <width>50</width>
-    <wuid>-19652eec:17334232981:-5a23</wuid>
-    <x>30</x>
-    <y>0</y>
-  </widget>
-  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
-    <actions hook="false" hook_all="false" />
-    <auto_size>false</auto_size>
     <background_color>
-      <color red="255" green="255" blue="255" />
+      <color red="255" green="255" blue="255">
+      </color>
     </background_color>
-    <border_color>
-      <color red="0" green="128" blue="255" />
-    </border_color>
-    <border_style>0</border_style>
-    <border_width>1</border_width>
-    <enabled>true</enabled>
-    <font>
-      <opifont.name fontName="DejaVu Sans" height="12" style="1" pixels="false">Default Bold</opifont.name>
-    </font>
-    <foreground_color>
-      <color red="0" green="0" blue="0" />
-    </foreground_color>
-    <height>20</height>
-    <horizontal_alignment>1</horizontal_alignment>
-    <name>Label_6</name>
-    <rules />
-    <scale_options>
-      <width_scalable>true</width_scalable>
-      <height_scalable>true</height_scalable>
-      <keep_wh_ratio>false</keep_wh_ratio>
-    </scale_options>
-    <scripts />
-    <text>$(AMP_CHAR)</text>
-    <tooltip></tooltip>
-    <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
-    <visible>true</visible>
-    <widget_type>Label</widget_type>
-    <width>20</width>
     <wrap_words>false</wrap_words>
-    <wuid>-19652eec:17334232981:-5a22</wuid>
-    <x>0</x>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):GlblStatus</pv_name>
+    <x>32</x>
+    <y>2</y>
+    <width>46</width>
+    <height>22</height>
+    <foreground_color>
+      <color red="192" green="192" blue="192">
+      </color>
+    </foreground_color>
+    <line_color>
+      <color red="150" green="150" blue="150">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+    </actions>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="LED_OK" red="105" green="190" blue="40">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="LED_WARNING" red="255" green="128" blue="64">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="LED_ERROR" red="237" green="28" blue="36">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>3</value>
+        <label></label>
+        <color>
+          <color name="LED_RUNNING" red="247" green="211" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label>ERR</fallback_label>
+    <fallback_color>
+      <color name="LED_OFF" red="77" green="82" blue="85">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>$(AMP_CHAR)</text>
     <y>3</y>
+    <width>20</width>
+    <font>
+      <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
   </widget>
 </display>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-26 15:12:37 by konrad-->
+<!--Saved on 2026-01-29 15:43:41 by konrad-->
 <display version="2.0.0">
   <macros>
     <DISCIPLINE>RFS</DISCIPLINE>
@@ -141,7 +141,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_5</name>
-    <pv_name>loc://SSM_Status</pv_name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:GlblSSMStatus</pv_name>
     <x>301</x>
     <y>33</y>
     <width>46</width>
@@ -157,25 +157,6 @@
     <square>true</square>
     <actions>
     </actions>
-    <rules>
-      <rule name="Rule" prop_id="pv_name" out_exp="true">
-        <exp bool_exp="pv0==1">
-          <expression>3</expression>
-        </exp>
-        <exp bool_exp="pv1==1">
-          <expression>2</expression>
-        </exp>
-        <exp bool_exp="pv2==1">
-          <expression>1</expression>
-        </exp>
-        <exp bool_exp="true">
-          <expression>0</expression>
-        </exp>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:AmpAlarmSumm</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:AmpWarnSumm</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:SomePallRunning</pv_name>
-      </rule>
-    </rules>
     <states>
       <state>
         <value>0</value>
@@ -218,7 +199,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_6</name>
-    <pv_name>loc://PSU_Status</pv_name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:GlblPSUStatus</pv_name>
     <x>362</x>
     <y>33</y>
     <width>46</width>
@@ -234,24 +215,6 @@
     <square>true</square>
     <actions>
     </actions>
-    <rules>
-      <rule name="Rule" prop_id="pv_name" out_exp="true">
-        <exp bool_exp="pv0!=0">
-          <expression>2</expression>
-        </exp>
-        <exp bool_exp="pv1==0">
-          <expression>1</expression>
-        </exp>
-        <exp bool_exp="pv1!=0">
-          <expression>0</expression>
-        </exp>
-        <exp bool_exp="true">
-          <expression>0</expression>
-        </exp>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:PSUFaultSumm</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:SomePSUOn</pv_name>
-      </rule>
-    </rules>
     <states>
       <state>
         <value>0</value>

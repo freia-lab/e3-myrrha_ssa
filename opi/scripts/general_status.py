@@ -1,4 +1,10 @@
-from org.csstudio.opibuilder.scriptUtil import PVUtil
+from org.csstudio.display.builder.runtime.script import ScriptUtil, PVUtil
+
+# Use ScriptUtil to get the actual PV object
+pv = ScriptUtil.getPrimaryPV(widget)
+
+if not pv:
+    exit
 
 no_error = 0
 warning = 1
@@ -28,8 +34,10 @@ error_values = {
 
 have_warning = False
 have_error = False
+print (pvs)
 for p in pvs:
     name = p.getName()
+    print(name)
     value = PVUtil.getLong(p)
     for k, v in error_values.items():
         if name.endswith(k) and value == v:
@@ -39,8 +47,12 @@ for p in pvs:
         break
 
 if have_error:
-    widget.setValue(error)
+    # Now you can use PVUtil to write or read
+    PVUtil.writePV(pv.getName(),error, 1)
+    print("Error")
 elif have_warning:
-    widget.setValue(warning)
+    PVUtil.writePV(pv.getName(), warning, 1)
+    print("Warning")
 else:
-    widget.setValue(no_error)
+    print("OK")
+    PVUtil.writePV(pv.getName(), no_error, 1)
