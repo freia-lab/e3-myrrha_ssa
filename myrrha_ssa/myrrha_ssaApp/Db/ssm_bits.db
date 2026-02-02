@@ -644,3 +644,17 @@ record(bi, "$(PREFIX)-$(SSM_NUM):RefStatFan3PSU") {
     field(ONAM, "OK")
 }
 
+#################################################
+# Help records (to avoid the scripts in the OPI)
+#
+
+record(calc, "$(PREFIX)-$(SSM_NUM):SSMStatus") {
+    field(DESC, "SSM Status")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):MajorFlt NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):LimSumm NPP MSS")
+    field(INPC, "$(PREFIX)-$(SSM_NUM):WarnSumm NPP MSS")
+    field(INPD, "$(PREFIX)-$(SSM_NUM):PallStat NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?3:(B=0?3:(C=0?2:((D&0xff)?1:0)))")
+}
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-28 11:13:44 by konrad-->
+<!--Saved on 2026-02-02 16:42:38 by konrad-->
 <display version="2.0.0">
   <width>1700</width>
   <height>875</height>
@@ -114,11 +114,6 @@
       <transparent>true</transparent>
       <actions>
       </actions>
-      <scripts>
-        <script file="../scripts/amplifier_ssm.py">
-          <pv_name>CAB-$(CAB_NUM):RFS-$(DEVICE):SSMList</pv_name>
-        </script>
-      </scripts>
       <widget type="embedded" version="2.0.0">
         <name>SSM_Container_2</name>
         <macros>
@@ -296,11 +291,6 @@
       <transparent>true</transparent>
       <actions>
       </actions>
-      <scripts>
-        <script file="../scripts/amplifier_ssm.py">
-          <pv_name>CAB-$(CAB_NUM):RFS-$(DEVICE):SSMList</pv_name>
-        </script>
-      </scripts>
       <widget type="embedded" version="2.0.0">
         <name>SSM_Container_5</name>
         <macros>
