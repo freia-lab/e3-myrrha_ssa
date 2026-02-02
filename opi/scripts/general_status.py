@@ -34,10 +34,9 @@ error_values = {
 
 have_warning = False
 have_error = False
-print (pvs)
+
 for p in pvs:
     name = p.getName()
-    print(name)
     value = PVUtil.getLong(p)
     for k, v in error_values.items():
         if name.endswith(k) and value == v:
@@ -49,10 +48,7 @@ for p in pvs:
 if have_error:
     # Now you can use PVUtil to write or read
     PVUtil.writePV(pv.getName(),error, 1)
-    print("Error")
 elif have_warning:
     PVUtil.writePV(pv.getName(), warning, 1)
-    print("Warning")
 else:
-    print("OK")
     PVUtil.writePV(pv.getName(), no_error, 1)

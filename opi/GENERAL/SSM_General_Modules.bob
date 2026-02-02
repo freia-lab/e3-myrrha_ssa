@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-28 16:42:44 by konrad-->
+<!--Saved on 2026-02-02 11:53:14 by konrad-->
 <display version="2.0.0">
   <width>500</width>
   <height>340</height>
@@ -151,37 +151,6 @@ $(pv_value)</tooltip>
       </color>
     </border_color>
   </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_2</name>
-    <actions execute_as_one="true">
-      <action type="write_pv">
-        <pv_name>$(pv_name)</pv_name>
-        <value>1</value>
-        <description>WritePV</description>
-      </action>
-    </actions>
-    <pv_name>loc://$(DID)_$(LCID)_ResetAllSSMs(0)</pv_name>
-    <text>Reset all</text>
-    <x>174</x>
-    <y>269</y>
-    <width>152</width>
-    <height>43</height>
-    <foreground_color>
-      <color red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color red="240" green="240" blue="240">
-      </color>
-    </background_color>
-    <scripts>
-      <script file="../scripts/reset_all.py">
-        <pv_name trigger="false">CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):NrInstalledSSM</pv_name>
-        <pv_name>$(pv_name)</pv_name>
-      </script>
-    </scripts>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
-  </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
     <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):AllCommStat</pv_name>
@@ -232,5 +201,74 @@ $(pv_value)</tooltip>
       <color red="0" green="128" blue="255">
       </color>
     </border_color>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <macros>
+      <SSM_PREFIX>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM</SSM_PREFIX>
+    </macros>
+    <x>174</x>
+    <y>269</y>
+    <width>152</width>
+    <height>43</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_2</name>
+      <actions execute_as_one="true">
+        <action type="write_pv">
+          <pv_name>$(SSM_PREFIX)-1:Rst-Cmd</pv_name>
+          <value>1</value>
+          <description>Reset SSM-1</description>
+        </action>
+        <action type="write_pv">
+          <pv_name>$(SSM_PREFIX)-2:Rst-Cmd</pv_name>
+          <value>1</value>
+          <description>Reset SSM-2</description>
+        </action>
+        <action type="write_pv">
+          <pv_name>$(SSM_PREFIX)-3:Rst-Cmd</pv_name>
+          <value>1</value>
+          <description>Reset SSM-3</description>
+        </action>
+        <action type="write_pv">
+          <pv_name>$(SSM_PREFIX)-4:Rst-Cmd</pv_name>
+          <value>1</value>
+          <description>Reset SSM-4</description>
+        </action>
+        <action type="write_pv">
+          <pv_name>$(SSM_PREFIX)-5:Rst-Cmd</pv_name>
+          <value>1</value>
+          <description>Reset SSM-5</description>
+        </action>
+        <action type="write_pv">
+          <pv_name>$(SSM_PREFIX)-6:Rst-Cmd</pv_name>
+          <value>1</value>
+          <description>Reset SSM-6</description>
+        </action>
+        <action type="write_pv">
+          <pv_name>$(SSM_PREFIX)-7:Rst-Cmd</pv_name>
+          <value>1</value>
+          <description>Reset SSM-7</description>
+        </action>
+        <action type="write_pv">
+          <pv_name>$(SSM_PREFIX)-8:Rst-Cmd</pv_name>
+          <value>1</value>
+          <description>Reset SSM-8</description>
+        </action>
+      </actions>
+      <text>Reset all</text>
+      <width>152</width>
+      <height>43</height>
+      <foreground_color>
+        <color red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
   </widget>
 </display>

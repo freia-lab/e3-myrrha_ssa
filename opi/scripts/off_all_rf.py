@@ -1,19 +1,18 @@
-from org.csstudio.opibuilder.scriptUtil import ConsoleUtil
-from pv_interface import pvCreate as pvCreate, \
-                         pvGet as pvGet, \
-                         pvSet as pvSet
+from org.csstudio.display.builder.runtime.script import ScriptUtil, PVUtil
+from java.lang import Exception as JavaException
 
+cab_num = widget.getDisplayModel().getPropertyValue("macros").getValue('CAB_NUM')
+discipline = widget.getDisplayModel().getPropertyValue("macros").getValue('DISCIPLINE')
 
-cab_num = widget.getMacroValue('CAB_NUM')
-discipline = widget.getMacroValue('DISCIPLINE')
 pv_fmt = 'CAB-{}:{}-Amp-{{}}:RFOff-Cmd'.format(cab_num, discipline)
-reg_ssa = ['A', 'B', 'C', 'D']
+reg_ssa = ['A', 'B']
 
 for pv_ssa in [pv_fmt.format(reg) for reg in reg_ssa] :
-    pv = pvCreate(pv_ssa)
+    print(pv_ssa)
     try :
-        pvGet(pv)
-        pvSet(pv, 1)       
-    except RuntimeError:
-        ConsoleUtil.writeInfo("PV "+ pv.getName() + " not defined");
-    pv.stop()
+        PVUtil.writePV(pv_ssa, 1, 1000)
+    except JavaException as je:
+        # Catches Java-level issues (Timeout, PV not found, Network error)
+        print("Java Error: Failed to write to " + pv_ssa)
+        print("Details: " + str(je.getMessage()))
+ 

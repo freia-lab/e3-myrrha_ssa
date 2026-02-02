@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-23 15:08:19 by konrad-->
+<!--Saved on 2026-01-30 09:19:37 by konrad-->
 <display version="2.0.0">
   <macros>
     <DISCIPLINE>RFS</DISCIPLINE>
@@ -20,7 +20,7 @@
     <macros>
       <NAME>Cabinet general status</NAME>
     </macros>
-    <file>SSM_DC.opi</file>
+    <file>SSM_DC.bob</file>
     <x>38</x>
     <y>14</y>
     <width>499</width>
@@ -40,7 +40,7 @@
     <macros>
       <NAME>Solid State amplifier Modules</NAME>
     </macros>
-    <file>SSM_General_Modules.opi</file>
+    <file>SSM_General_Modules.bob</file>
     <x>632</x>
     <y>14</y>
     <width>499</width>
@@ -60,7 +60,7 @@
     <macros>
       <NAME>Fan speed</NAME>
     </macros>
-    <file>SSM_General_Fan.opi</file>
+    <file>SSM_General_Fan.bob</file>
     <x>632</x>
     <y>380</y>
     <width>499</width>
@@ -80,7 +80,7 @@
     <macros>
       <NAME>RF output power</NAME>
     </macros>
-    <file>SSM_General_RF_output.opi</file>
+    <file>SSM_General_RF_output.bob</file>
     <x>1220</x>
     <y>14</y>
     <width>499</width>

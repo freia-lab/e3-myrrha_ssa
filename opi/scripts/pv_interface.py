@@ -1,7 +1,12 @@
-from org.csstudio.simplepv import VTypeHelper, BasicDataType
-from org.csstudio.opibuilder.util import BOYPVFactory
+# Standard Phoebus script utilities
+from org.csstudio.display.builder.runtime.script import ScriptUtil, PVUtil
+
+# For handling VTypes (if you need to check timestamps or alarms)
+from org.phoebus.archive.vtype import VTypeHelper 
+
+# Standard Python/Java imports
 from time import sleep
-from java.lang import RuntimeException
+from java.lang import Exception as JavaException # Use generic Exception for safety
 
 pvTimeoutMs = 1000  # used to ensure PVs are synchronous.
 pvPollMs = 1000 / 50
@@ -61,10 +66,7 @@ def pvCopy(sourcePV, destPV):
 # Creates a new IPV object, like PVUtil.create(), except it doesn't
 # tie it to a widget, so make SURE it is stopped after use.
 def pvCreate(pvName):
-    pv = BOYPVFactory.createPV(pvName, False, 20)
-    pv.start()
-    return pv
-
+    return pvName
 
 # Wraps pvGet() with connect() and stop().
 def pvConnectAndGet(pvName):
@@ -75,11 +77,7 @@ def pvConnectAndGet(pvName):
 
 # pvConnectAndGet() for list of PVs.
 def pvConnectAndGetList(pvNames):
-    pvs = [pvCreate(n) for n in pvNames]
-    values = [pvGet(pv) for pv in pvs]
-    [pv.stop() for pv in pvs]
-
-    return values
+    return pvNames
 
 # Wraps pvSet() with connect() and stop().
 def pvConnectAndSet(pvName, value):
@@ -90,7 +88,16 @@ def pvConnectAndSet(pvName, value):
 
 # pvConnectAndSet() for list of PVs.
 def pvConnectAndSetList(pvNames, values):
-    pvs = [pvCreate(n) for n in pvNames]
+    timweout = 1
+    for name, value in zip(pvNames, values):
+        try:
+            # This replaces the need for start(), write(), and stop()
+            PVUtil.writePV(name, value, timeout)
+            print("Successfully set " + name + " to " + str(value))
+        except Exception as e:
+            print("Failed to set PV " + name + ": " + str(e))    pvs = [pvCreate(n) for n in pvNames]
+"""            
     [pvSet(pv, value) for pv, value in zip(pvs, values)]
     [pvGet(pv) for pv in pvs]
     [pv.stop() for pv in pvs]
+"""

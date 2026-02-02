@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-29 17:17:35 by konrad-->
+<!--Saved on 2026-01-30 09:11:36 by konrad-->
 <display version="2.0.0">
   <width>400</width>
   <height>30</height>
@@ -67,6 +67,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_2</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):GlblStatus</pv_name>
     <x>206</x>
     <y>3</y>
     <width>26</width>
@@ -82,21 +83,6 @@
     <square>true</square>
     <actions>
     </actions>
-    <rules>
-      <rule name="Rule" prop_id="tooltip" out_exp="true">
-        <exp bool_exp="pv0 == 1">
-          <expression>2</expression>
-        </exp>
-        <exp bool_exp="pv1 == 1">
-          <expression>1</expression>
-        </exp>
-        <exp bool_exp="pv1 == 0">
-          <expression>0</expression>
-        </exp>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):AlarmSumm</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):WarnSumm</pv_name>
-      </rule>
-    </rules>
     <states>
       <state>
         <value>0</value>
