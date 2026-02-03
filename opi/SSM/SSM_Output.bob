@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-28 13:36:27 by konrad-->
+<!--Saved on 2026-02-03 10:32:29 by konrad-->
 <display version="2.0.0">
   <width>200</width>
   <height>150</height>
@@ -236,6 +236,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_14</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):PwrLimWarn</pv_name>
     <x>162</x>
     <y>2</y>
     <width>26</width>
@@ -251,21 +252,6 @@ $(pv_value)</tooltip>
     <square>true</square>
     <actions>
     </actions>
-    <rules>
-      <rule name="Rule" prop_id="pv_value" out_exp="true">
-        <exp bool_exp="pv0==0">
-          <expression>2</expression>
-        </exp>
-        <exp bool_exp="pv1==0">
-          <expression>1</expression>
-        </exp>
-        <exp bool_exp="pv1==1">
-          <expression>0</expression>
-        </exp>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):PwrLim</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):PwrWarn</pv_name>
-      </rule>
-    </rules>
     <states>
       <state>
         <value>0</value>

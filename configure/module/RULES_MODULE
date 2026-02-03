@@ -5,3 +5,16 @@ db: conf
 
 .PHONY: hdrs
 hdrs:
+
+# Local FREIA additions
+
+OPIS_HOME = /opt/epics/OPIS
+OPI_DIR = /opt/epics/opi/bob
+LINK_DIR = ../../OPIS
+
+.PHONY: opiinstall	## Install the OPIs
+opiinstall:
+	mkdir -p $(OPIS_HOME)/$(E3_MODULE_NAME)
+	rsync -va --delete --exclude 'README.md' $(TOP)/opi/ $(OPIS_HOME)/$(E3_MODULE_NAME)/$(OPI_VERSION)/
+	cd $(OPI_DIR); rm -f $(OPI_DIRNAME); ln -s $(LINK_DIR)/$(E3_MODULE_NAME)/$(OPI_VERSION)/ $(OPI_DIRNAME)
+

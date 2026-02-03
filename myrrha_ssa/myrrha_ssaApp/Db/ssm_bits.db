@@ -658,3 +658,137 @@ record(calc, "$(PREFIX)-$(SSM_NUM):SSMStatus") {
     field(CALC, "A=0?3:(B=0?3:(C=0?2:((D&0xff)?1:0)))")
 }
 
+record(calc, "$(PREFIX)-$(SSM_NUM):SSMLimWarn") {
+    field(DESC, "SSM Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):LimSumm NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):WarnSumm NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+
+record(calc, "$(PREFIX)-$(SSM_NUM):PwrLimWarn") {
+    field(DESC, "SSM Power Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):PwrLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):PwrWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+
+record(calc, "$(PREFIX)-$(SSM_NUM):RefStatFans") {
+    field(DESC, "SSM Fans status")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):RefStatFan1 NPP MSS")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):RefStatFan2 NPP MSS")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):RefStatFan3 NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "!(A&B&C)")
+}
+
+record(calc, "$(PREFIX)-$(SSM_NUM):RefStatSumm") {
+    field(DESC, "SSM Status")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):RefStatPSU NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):RefStatADC NPP MSS")
+    field(INPC, "$(PREFIX)-$(SSM_NUM):RefStat12V NPP MSS")
+    field(INPD, "$(PREFIX)-$(SSM_NUM):RefStat12VFan NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A&B&C&D")
+}
+
+record(calc, "$(PREFIX)-$(SSM_NUM):TLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):TLimStat NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):TWarnStat NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A<8191?2:(B<8191?1:0)")
+}
+
+record(calc, "$(PREFIX)-$(SSM_NUM):WaterInTLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):WaterInTLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):WaterInTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):WaterOutTLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):WaterOutTLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):WaterOutTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):AirInTLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):AirInTLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):AirInTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):AirOutTLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):AirOutTLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):AirOutTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):Load1TLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):Load1TLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):Load1TWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):Load2TLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):Load2TLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):Load2TWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):IOBoardTLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):IOBoardTLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):IOBoardTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):Ref10kTLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):Ref10kTLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):Ref10kTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):ADCTLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):ADCTLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):ADCTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):Pall12TLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):Pall12TLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):Pall12TWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):Pall34TLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):Pall34TLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):Pall34TWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):Pall56TLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):Pall56TLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):Pall56TWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}
+record(calc, "$(PREFIX)-$(SSM_NUM):CPUTLimWarn") {
+    field(DESC, "SSM Temperatures Limits & Warnings")
+    field(INPA, "$(PREFIX)-$(SSM_NUM):CPUTLim NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):CPUTWarn NPP MSS")
+    field(SCAN, "1 second")
+    field(CALC, "A=0?2:(B=0?1:0)")
+}

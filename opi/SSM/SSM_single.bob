@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-28 13:43:53 by konrad-->
+<!--Saved on 2026-02-03 14:02:38 by konrad-->
 <display version="2.0.0">
   <name>SSM_mail</name>
   <macros>
@@ -32,39 +32,8 @@
     <width>220</width>
     <height>355</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="true">
-        <exp bool_exp="true">
-          <expression>""</expression>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Pallet.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_val = widget.getMacroValue("N");
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-macroInput.put("N", N_val);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -81,39 +50,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>220</width>
     <height>355</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="true">
-        <exp bool_exp="true">
-          <expression>""</expression>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Pallet.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_val = widget.getMacroValue("N");
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-macroInput.put("N", N_val);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -130,39 +68,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>220</width>
     <height>355</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="true">
-        <exp bool_exp="true">
-          <expression>""</expression>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Pallet.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_val = widget.getMacroValue("N");
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-macroInput.put("N", N_val);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -179,39 +86,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>220</width>
     <height>355</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="true">
-        <exp bool_exp="true">
-          <expression>""</expression>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Pallet.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_val = widget.getMacroValue("N");
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-macroInput.put("N", N_val);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -228,39 +104,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>220</width>
     <height>355</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="true">
-        <exp bool_exp="true">
-          <expression>""</expression>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Pallet.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_val = widget.getMacroValue("N");
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-macroInput.put("N", N_val);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -277,39 +122,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>220</width>
     <height>355</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="true">
-        <exp bool_exp="true">
-          <expression>""</expression>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Pallet.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_val = widget.getMacroValue("N");
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-macroInput.put("N", N_val);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -323,38 +137,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>200</width>
     <height>150</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="true">
-        <exp bool_exp="true">
-          <expression>""</expression>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Load.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -368,37 +152,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>300</width>
     <height>290</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value></value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_information.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -412,37 +167,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>200</width>
     <height>150</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value></value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Output.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -456,37 +182,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>200</width>
     <height>155</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value></value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_PSU.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -500,37 +197,8 @@ widgetController.setPropertyValue("macros", macroInput);
     <width>200</width>
     <height>145</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value></value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Fan.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -541,40 +209,11 @@ widgetController.setPropertyValue("macros", macroInput);
     <file>SSM_Temperature.bob</file>
     <x>1454</x>
     <y>15</y>
-    <width>248</width>
-    <height>359</height>
+    <width>250</width>
+    <height>370</height>
     <resize>2</resize>
-    <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value></value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Temperature.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>
@@ -998,34 +637,6 @@ $(pv_value)</tooltip>
     <transparent>true</transparent>
     <actions>
     </actions>
-    <rules>
-      <rule name="startRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value></value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-      <rule name="refreshRule" prop_id="opi_file" out_exp="false">
-        <exp bool_exp="true">
-          <value>SSM_Status_Control.bob</value>
-        </exp>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </rule>
-    </rules>
-    <scripts>
-      <script file="EmbeddedJs">
-        <text><![CDATA[importPackage(Packages.org.csstudio.opibuilder.scriptUtil);
-
-var macroInput = DataUtil.createMacrosInput(true);		// varable macroInput will have needed properties/functions for creating/editing "Macros" properties
-
-var N_SSM = PVUtil.getLong(pvArray[0]);
-
-macroInput.put("SSM_NUM", N_SSM);
-widgetController.setPropertyValue("macros", macroInput);
-]]></text>
-        <pv_name>loc://$(DID)_DDM_Num</pv_name>
-      </script>
-    </scripts>
     <border_color>
       <color red="0" green="128" blue="255">
       </color>

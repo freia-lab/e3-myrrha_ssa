@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-28 16:51:15 by konrad-->
+<!--Saved on 2026-02-03 11:29:58 by konrad-->
 <display version="2.0.0">
   <width>250</width>
   <height>20</height>
@@ -60,6 +60,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_14</name>
+    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):$(PV_NAME)LimWarn</pv_name>
     <x>8</x>
     <y>2</y>
     <width>16</width>
@@ -75,21 +76,6 @@
     <square>true</square>
     <actions>
     </actions>
-    <rules>
-      <rule name="Rule" prop_id="pv_value" out_exp="true">
-        <exp bool_exp="pv0==0">
-          <expression>2</expression>
-        </exp>
-        <exp bool_exp="pv1==0">
-          <expression>1</expression>
-        </exp>
-        <exp bool_exp="pv1==1">
-          <expression>0</expression>
-        </exp>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):$(PV_NAME)Lim</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):$(PV_NAME)Warn</pv_name>
-      </rule>
-    </rules>
     <states>
       <state>
         <value>0</value>
