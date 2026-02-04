@@ -10,4 +10,4 @@
 # @type STRING
 # The number of the PSU
 
-iocshLoad("psu.iocsh", "PREFIX_PSU=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM)")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PREFIX_PSU=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM)")

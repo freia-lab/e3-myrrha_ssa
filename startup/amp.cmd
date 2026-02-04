@@ -18,4 +18,4 @@
 # @type STRING
 # The list of SSMs in this amplifier, separated by commas
 
-loadIocsh("amp.iocsh", "PREFIX_AMP=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR),NUM_SSM=$(NUM_SSM),AMP_SSM=$(AMP_SSM)")
+loadIocsh("$(myrrha_ssa_DIR)amp.iocsh", "PREFIX_AMP=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR),NUM_SSM=$(NUM_SSM),AMP_SSM=$(AMP_SSM)")

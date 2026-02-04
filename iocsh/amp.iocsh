@@ -8,5 +8,5 @@
 #- AMP_SSM       - The list of SSMs in this amplifier, separated by commas
 #-#############################################################################
 
-dbLoadRecords("amp.db", "PREFIX=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR),NUM_SSM=$(NUM_SSM),AMP_SSM=$(AMP_SSM)")
-dbLoadRecords("amp_cmd.db", "PREFIX=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR)")
+dbLoadRecords("$(myrrha_ssa_DB)amp.db", "PREFIX=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR),NUM_SSM=$(NUM_SSM),AMP_SSM=$(AMP_SSM)")
+dbLoadRecords("$(myrrha_ssa_DB)amp_cmd.db", "PREFIX=$(PREFIX_AMP),PREFIX_CGD=$(PREFIX_CGD),AMP_CHAR=$(AMP_CHAR)")

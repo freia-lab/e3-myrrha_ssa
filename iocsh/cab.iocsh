@@ -12,13 +12,13 @@
 epicsEnvSet(SYNC_MAN_CMD, 2)
 epicsEnvSet(SYNC_MAN_CGD, 3)
 
-dbLoadRecords("cab_cmd.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CMD)")
-dbLoadRecords("cab_cmd_bits.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CMD)")
+dbLoadRecords("$(myrrha_ssa_DB)cab_cmd.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CMD)")
+dbLoadRecords("$(myrrha_ssa_DB)cab_cmd_bits.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CMD)")
 
-dbLoadRecords("cab_cgd_ijclab.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CGD)")
-#dbLoadRecords("cab_cgd.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CGD)")
-dbLoadRecords("cab_cgd_bits.db", "PREFIX=$(PREFIX_CGD)")
-dbLoadRecords("cab_misc.db", "PREFIX=$(PREFIX_CGD),NUM_PSU=$(NUM_PSU),NUM_SSM=$(NUM_SSM),NUM_AMP=$(NUM_AMP)")
+dbLoadRecords("$(myrrha_ssa_DB)cab_cgd_ijclab.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CGD)")
+#dbLoadRecords("$(myrrha_ssa_DB)cab_cgd.db", "PREFIX=$(PREFIX_CGD),SLAVE_ID=$(SLAVE_ID),SYNC_MAN=$(SYNC_MAN_CGD)")
+dbLoadRecords("$(myrrha_ssa_DB)cab_cgd_bits.db", "PREFIX=$(PREFIX_CGD)")
+dbLoadRecords("$(myrrha_ssa_DB)cab_misc.db", "PREFIX=$(PREFIX_CGD),NUM_PSU=$(NUM_PSU),NUM_SSM=$(NUM_SSM),NUM_AMP=$(NUM_AMP)")
 
 epicsEnvUnset(SYNC_MAN_CMD)
 epicsEnvUnset(SYNC_MAN_CGD)

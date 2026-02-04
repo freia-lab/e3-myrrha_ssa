@@ -10,4 +10,4 @@
 # @type STRING
 # The number of the IOC process in this cabinet
 
-loadIocsh("ecat.iocsh", "PREFIX_ECAT=$(PREFIX_ECAT),ECAT_FREQ=$(ECAT_FREQ),IOC_NUM=$(IOC_NUM)")
+loadIocsh("$(myrrha_ssa_DIR)ecat.iocsh", "PREFIX_ECAT=$(PREFIX_ECAT),ECAT_FREQ=$(ECAT_FREQ),IOC_NUM=$(IOC_NUM)")

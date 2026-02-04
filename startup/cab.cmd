@@ -22,4 +22,4 @@
 # @type STRING
 # The total number of amplifiers installed
 
-loadIocsh("cab.iocsh", "PREFIX_CGD=$(PREFIX_CGD),CAB_NUM=$(CAB_NUM),SLAVE_ID=$(SLAVE_ID),NUM_PSU=$(NUM_PSU),NUM_SSM=$(NUM_SSM),NUM_AMP=$(NUM_AMP)")
+loadIocsh("$(myrrha_ssa_DIR)cab.iocsh", "PREFIX_CGD=$(PREFIX_CGD),CAB_NUM=$(CAB_NUM),SLAVE_ID=$(SLAVE_ID),NUM_PSU=$(NUM_PSU),NUM_SSM=$(NUM_SSM),NUM_AMP=$(NUM_AMP)")

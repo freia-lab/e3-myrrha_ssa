@@ -9,4 +9,4 @@
 ecat2configure(0, $(ECAT_FREQ), 0, 1)
 installLastResortEventProvider
 
-dbLoadRecords("ecat.db", "PREFIX=$(PREFIX_ECAT),IOC_NUM=$(IOC_NUM)")
+dbLoadRecords("$(myrrha_ssa_DB)ecat.db", "PREFIX=$(PREFIX_ECAT),IOC_NUM=$(IOC_NUM)")
