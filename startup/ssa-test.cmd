@@ -1,5 +1,5 @@
-require myrrha_ssa,master
-require myrrha_ecat,master
+require myrrha_ssa
+require ecat2
 
 epicsEnvSet(IOC_NUM, "1")
 epicsEnvSet(CAB_NUM, "190")
@@ -10,17 +10,18 @@ epicsEnvSet(CAB_SSA, "CAB-$(CAB_NUM)")
 epicsEnvSet(CAB_IOC, "CAB-$(IOC_CAB_NUM)")
 
 epicsEnvSet(PREFIX_ECAT, "$(CAB_IOC):$(DISCIPLINE)-IOC")
-iocshLoad("ecat.iocsh", "IOC_NUM=$(IOC_NUM),ECAT_FREQ=100")
+iocshLoad("$(ecat2_DIR)ecat2.iocsh", "IOC_NUM=$(IOC_NUM),ECAT_FREQ=100")
+dbLoadRecords("$(myrrha_ssa_DB)ecat.db", "PREFIX=$(PREFIX_ECAT),IOC_NUM=$(IOC_NUM)")
 
 epicsEnvSet(PREFIX_CGD, "$(CAB_SSA):$(DISCIPLINE)-CGD")
 epicsEnvSet(NUM_PSU, "5")
 epicsEnvSet(NUM_SSM, "8")
 epicsEnvSet(NUM_AMP, "2")
-iocshLoad("cab.iocsh", "SLAVE_ID=0")
+iocshLoad("$(myrrha_ssa_DIR)cab.iocsh", "SLAVE_ID=0")
 
 epicsEnvSet(PREFIX_AMP, "$(CAB_SSA):$(DISCIPLINE)-Amp")
-iocshLoad("amp.iocsh", "AMP_CHAR=A,NUM_SSM=4,AMP_SSM='1\\\,3\\\,5\\\,7'")
-iocshLoad("amp.iocsh", "AMP_CHAR=B,NUM_SSM=4,AMP_SSM='2\\\,4\\\,6\\\,8'")
+iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=A,NUM_SSM=4,AMP_SSM='1\\\,3\\\,5\\\,7'")
+iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=B,NUM_SSM=4,AMP_SSM='2\\\,4\\\,6\\\,8'")
 
 #epicsEnvSet(PREFIX_PSU, "$(CAB_SSA):$(DISCIPLINE)-PSU")
 #iocshLoad("psu.iocsh", "PSU_NUM=1")

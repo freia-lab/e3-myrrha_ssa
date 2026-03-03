@@ -10,7 +10,8 @@ epicsEnvSet(CAB_SSA, "CAB-$(CAB_NUM)")
 epicsEnvSet(CAB_IOC, "CAB-$(IOC_CAB_NUM)")
 
 epicsEnvSet(PREFIX_ECAT, "$(CAB_IOC):$(DISCIPLINE)-IOC")
-iocshLoad("$(myrrha_ssa_DIR)ecat.iocsh", "IOC_NUM=$(IOC_NUM),ECAT_FREQ=100")
+iocshLoad("$(ecat2_DIR)ecat2.iocsh", "IOC_NUM=$(IOC_NUM),ECAT_FREQ=100")
+dbLoadRecords("$(myrrha_ssa_DB)ecat.db", "PREFIX=$(PREFIX_ECAT),IOC_NUM=$(IOC_NUM)")
 
 epicsEnvSet(PREFIX_CGD, "$(CAB_SSA):$(DISCIPLINE)-CGD")
 epicsEnvSet(NUM_PSU, "5")
