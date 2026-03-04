@@ -6,7 +6,8 @@
 #- IOC_NUM       - The number of the IOC process in this cabinet
 #-#############################################################################
 
-ecat2configure(0, $(ECAT_FREQ), 0, 1)
+ecat2configure(0, $(ECAT_FREQ), 1, 0)
+ecat2configure(1, $(ECAT_FREQ), 1, 1)
 installLastResortEventProvider
 
 dbLoadRecords("$(myrrha_ssa_DB)ecat.db", "PREFIX=$(PREFIX_ECAT),IOC_NUM=$(IOC_NUM)")
