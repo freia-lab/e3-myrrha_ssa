@@ -24,7 +24,7 @@ iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=A,NUM_SSM=4,AMP_SSM='1\\\,3\\\
 iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=B,NUM_SSM=4,AMP_SSM='2\\\,4\\\,6\\\,8'")
 
 epicsEnvSet(PREFIX_PSU, "$(CAB_SSA):$(DISCIPLINE)-PSU")
-#iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=1")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=1")
 #iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=2")
 #iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=3")
 #iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=4")
@@ -41,4 +41,3 @@ iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=1")
 #iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=6")
 #iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=7")
 #iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=8")
-
