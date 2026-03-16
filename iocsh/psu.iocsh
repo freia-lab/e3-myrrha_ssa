@@ -4,10 +4,11 @@
 #- PREFIX_PSU    - Prefix used for record names
 #- PREFIX_CGD    - Prefix used for CGD records
 #- PSU_NUM       - The number of the PSU
+#- CALC_INP	 - The input # (A-F) of the $(PREFIX_CGD):iPSUFaultSummCalc
 #-#############################################################################
 
 dbLoadRecords("$(myrrha_ssa_DB)psu_cmd.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM)")
-dbLoadRecords("$(myrrha_ssa_DB)psu.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM)")
+dbLoadRecords("$(myrrha_ssa_DB)psu.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM),CALC_INP=$(CALC_INP)")
 dbLoadRecords("$(myrrha_ssa_DB)psu_mod.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM),MOD_NUM=1")
 dbLoadRecords("$(myrrha_ssa_DB)psu_mod.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM),MOD_NUM=2")
 dbLoadRecords("$(myrrha_ssa_DB)psu_mod.db", "PREFIX=$(PREFIX_PSU),PREFIX_CGD=$(PREFIX_CGD),PSU_NUM=$(PSU_NUM),MOD_NUM=3")
