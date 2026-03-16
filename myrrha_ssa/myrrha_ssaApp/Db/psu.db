@@ -31,6 +31,7 @@ record(printf, "$(PREFIX)-$(PSU_NUM):iFaultSummPushDest") {
     field(FMT, "$(PREFIX_CGD):iPSUFaultSummCalc.INP%X CA")
     field(INP0, "$(PREFIX)-$(PSU_NUM):iPSUPushLetter PP")
     field(OUT, "$(PREFIX)-$(PSU_NUM):iFaultSummPush.OUT CA")
+    field(SIZV, "60")
     field(PINI, "RUNNING")
 }
 
@@ -78,6 +79,7 @@ record(printf, "$(PREFIX)-$(PSU_NUM):iSomeOnPushDest") {
     field(FMT, "$(PREFIX_CGD):iSomePSUOnCalc.INP%X CA")
     field(INP0, "$(PREFIX)-$(PSU_NUM):iPSUPushLetter PP")
     field(OUT, "$(PREFIX)-$(PSU_NUM):iSomeOnPush.OUT CA")
+    field(SIZV, "60")
     field(PINI, "RUNNING")
 }
 

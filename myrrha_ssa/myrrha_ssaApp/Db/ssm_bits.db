@@ -677,8 +677,8 @@ record(calc, "$(PREFIX)-$(SSM_NUM):PwrLimWarn") {
 record(calc, "$(PREFIX)-$(SSM_NUM):RefStatFans") {
     field(DESC, "SSM Fans status")
     field(INPA, "$(PREFIX)-$(SSM_NUM):RefStatFan1 NPP MSS")
-    field(INPA, "$(PREFIX)-$(SSM_NUM):RefStatFan2 NPP MSS")
-    field(INPA, "$(PREFIX)-$(SSM_NUM):RefStatFan3 NPP MSS")
+    field(INPB, "$(PREFIX)-$(SSM_NUM):RefStatFan2 NPP MSS")
+    field(INPC, "$(PREFIX)-$(SSM_NUM):RefStatFan3 NPP MSS")
     field(SCAN, "1 second")
     field(CALC, "!(A&B&C)")
 }
