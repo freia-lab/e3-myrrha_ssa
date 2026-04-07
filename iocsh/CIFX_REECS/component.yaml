@@ -1,0 +1,8 @@
+component:
+  name: CIFX_REECS
+  description: "Custom EtherCAT slave with 250 IN + 250 OUT"
+  version: 1
+
+files:
+  - ethercat_slave.yaml
+  

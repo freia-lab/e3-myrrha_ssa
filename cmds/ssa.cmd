@@ -1,28 +1,43 @@
-require myrrha_ssa,master
-require ecat2,3.0.5
+require myrrha_ssa,3.3.0+0
+require ecat2
 
-epicsEnvSet(CAB_NUM, "3")
-epicsEnvSet(IOC_NUM, "100")
-epicsEnvSet(CAB_SSA, "CAB-$(CAB_NUM)")
-epicsEnvSet(CAB_IOC, "CAB-$(IOC_NUM)")
+epicsEnvSet(IOC_NUM, "1")
+epicsEnvSet(CAB_NUM, "190")
+epicsEnvSet(IOC_CAB_NUM, "100")
 epicsEnvSet(DISCIPLINE, "RFS")
 
-epicsEnvSet(PREFIX_CGD, "$(CAB_SSA):$(DISCIPLINE)-CGD")
-epicsEnvSet(SLAVE_ID, "0")
-epicsEnvSet(ECAT_FREQ, "100")
+epicsEnvSet(CAB_SSA, "CAB-$(CAB_NUM)")
+epicsEnvSet(CAB_IOC, "CAB-$(IOC_CAB_NUM)")
 
-loadIocsh("cab.iocsh")
+epicsEnvSet(PREFIX_ECAT, "$(CAB_IOC):$(DISCIPLINE)-IOC")
+
+iocshLoad("$(myrrha_ssa_DIR)ecat.iocsh", "IOC_NUM=$(IOC_NUM),ECAT_FREQ=100")
+
+epicsEnvSet(PREFIX_CGD, "$(CAB_SSA):$(DISCIPLINE)-CGD")
+epicsEnvSet(NUM_PSU, "5")
+epicsEnvSet(NUM_SSM, "8")
+epicsEnvSet(NUM_AMP, "2")
+iocshLoad("$(myrrha_ssa_DIR)cab.iocsh", "SLAVE_ID=0")
 
 epicsEnvSet(PREFIX_AMP, "$(CAB_SSA):$(DISCIPLINE)-Amp")
-
-loadIocsh("amp.iocsh", "AMP_CHAR=A")
+iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=A,NUM_SSM=4,AMP_SSM='1\\\,3\\\,5\\\,7'")
+#iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=B,NUM_SSM=4,AMP_SSM='2\\\,4\\\,6\\\,8'")
 
 epicsEnvSet(PREFIX_PSU, "$(CAB_SSA):$(DISCIPLINE)-PSU")
-
-loadIocsh("psu.iocsh", "PSU_NUM=2")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=1,CALC_INP=A")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=2,CALC_INP=B")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=3,CALC_INP=C")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=4,CALC_INP=D")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=5,CALC_INP=E")
 
 epicsEnvSet(PREFIX_SSM, "$(CAB_SSA):$(DISCIPLINE)-SSM")
 epicsEnvSet(IP_ADDR_BASE, "10.100")
 epicsEnvSet(POLL_MS, "1000")
-
-loadIocsh("ssm.iocsh", "SSM_NUM=1")
+iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=1,SSM_ADDR=10.100.190.1")
+#iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=2")
+#iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=3")
+#iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=4")
+#iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=5")
+#iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=6")
+#iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=7")
+#iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=8")
