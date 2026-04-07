@@ -13,7 +13,7 @@
   <grid_step_y>6</grid_step_y>
   <widget type="led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1ACStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1ACStat</pv_name>
     <x>14</x>
     <y>3</y>
     <width>16</width>
@@ -40,7 +40,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2ACStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2ACStat</pv_name>
     <x>40</x>
     <y>3</y>
     <width>16</width>
@@ -67,7 +67,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_2</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3ACStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3ACStat</pv_name>
     <x>67</x>
     <y>3</y>
     <width>16</width>
@@ -94,7 +94,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_15</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1Enbl</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1Enbl</pv_name>
     <x>116</x>
     <y>3</y>
     <width>16</width>
@@ -121,7 +121,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_16</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2Enbl</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2Enbl</pv_name>
     <x>142</x>
     <y>3</y>
     <width>16</width>
@@ -148,7 +148,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_17</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3Enbl</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3Enbl</pv_name>
     <x>169</x>
     <y>3</y>
     <width>16</width>
@@ -175,7 +175,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_30</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1DCStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1DCStat</pv_name>
     <x>218</x>
     <y>3</y>
     <width>16</width>
@@ -202,7 +202,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_31</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2DCStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2DCStat</pv_name>
     <x>244</x>
     <y>3</y>
     <width>16</width>
@@ -229,7 +229,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_32</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3DCStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3DCStat</pv_name>
     <x>271</x>
     <y>3</y>
     <width>16</width>
@@ -256,7 +256,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_45</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1Fault</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1Fault</pv_name>
     <x>314</x>
     <y>3</y>
     <width>16</width>
@@ -283,7 +283,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_46</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2Fault</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2Fault</pv_name>
     <x>340</x>
     <y>3</y>
     <width>16</width>
@@ -310,7 +310,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_47</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3Fault</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3Fault</pv_name>
     <x>367</x>
     <y>3</y>
     <width>16</width>

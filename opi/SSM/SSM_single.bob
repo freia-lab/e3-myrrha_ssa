@@ -3,7 +3,7 @@
 <display version="2.0.0">
   <name>SSM_mail</name>
   <macros>
-    <PREFIX>CAB-03:RFS-SSM-01</PREFIX>
+    <PREFIX>$(PRFX)03:RFS-SSM-01</PREFIX>
     <DISCIPLINE>RFS</DISCIPLINE>
   </macros>
   <width>1750</width>

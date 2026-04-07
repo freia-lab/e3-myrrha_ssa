@@ -73,7 +73,7 @@ $(pv_value)</tooltip>
     <traces>
       <trace>
         <name>Pallet 1</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX1)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX1)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -87,7 +87,7 @@ $(pv_value)</tooltip>
       </trace>
       <trace>
         <name>Pallet 2</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX2)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX2)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -101,7 +101,7 @@ $(pv_value)</tooltip>
       </trace>
       <trace>
         <name>Pallet 3</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX3)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX3)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -115,7 +115,7 @@ $(pv_value)</tooltip>
       </trace>
       <trace>
         <name>Pallet 4</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX4)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX4)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -129,7 +129,7 @@ $(pv_value)</tooltip>
       </trace>
       <trace>
         <name>Pallet 5</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX5)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX5)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -143,7 +143,7 @@ $(pv_value)</tooltip>
       </trace>
       <trace>
         <name>Pallet 6</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX6)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX6)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -180,7 +180,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
     <text>Arm SSM $(SSM_NUM)</text>
     <x>24</x>
     <y>756</y>
@@ -205,7 +205,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
     <text>Download buffer SSM $(SSM_NUM)</text>
     <x>232</x>
     <y>756</y>
@@ -223,7 +223,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):TrigStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):TrigStat</pv_name>
     <x>138</x>
     <y>756</y>
     <width>26</width>
@@ -250,7 +250,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldInd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldInd</pv_name>
     <x>414</x>
     <y>756</y>
     <width>26</width>

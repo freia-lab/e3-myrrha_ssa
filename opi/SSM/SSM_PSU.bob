@@ -85,7 +85,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):PSUFeedback</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):PSUFeedback</pv_name>
     <x>88</x>
     <y>53</y>
     <width>98</width>
@@ -110,7 +110,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):ADCRefVolt</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):ADCRefVolt</pv_name>
     <x>88</x>
     <y>79</y>
     <width>98</width>
@@ -204,7 +204,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatPSU</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatPSU</pv_name>
     <x>8</x>
     <y>54</y>
     <width>16</width>
@@ -231,7 +231,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_2</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatADC</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatADC</pv_name>
     <x>8</x>
     <y>80</y>
     <width>16</width>
@@ -258,7 +258,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_3</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStat12V</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStat12V</pv_name>
     <x>8</x>
     <y>107</y>
     <width>16</width>
@@ -285,7 +285,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_4</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStat12VFan</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStat12VFan</pv_name>
     <x>8</x>
     <y>132</y>
     <width>16</width>
@@ -312,7 +312,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatSumm</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):RefStatSumm</pv_name>
     <x>162</x>
     <y>2</y>
     <width>26</width>

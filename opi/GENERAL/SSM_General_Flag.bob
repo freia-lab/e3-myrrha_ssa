@@ -42,7 +42,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_2</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):$(PV_NAME_LED)</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):$(PV_NAME_LED)</pv_name>
     <x>62</x>
     <y>2</y>
     <width>26</width>

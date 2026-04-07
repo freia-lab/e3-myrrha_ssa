@@ -61,7 +61,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):FwdPwr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):FwdPwr</pv_name>
     <x>66</x>
     <y>41</y>
     <width>98</width>
@@ -110,7 +110,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RflPwr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RflPwr</pv_name>
     <x>66</x>
     <y>71</y>
     <width>98</width>
@@ -159,7 +159,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_2</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):Vswr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):Vswr</pv_name>
     <x>66</x>
     <y>111</y>
     <width>98</width>
@@ -208,7 +208,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):Eff</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):Eff</pv_name>
     <x>66</x>
     <y>141</y>
     <width>98</width>

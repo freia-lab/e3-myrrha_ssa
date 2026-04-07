@@ -68,7 +68,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
     <text>Arm SSM $(SSM_NUM)</text>
     <x>15</x>
     <y>40</y>
@@ -93,7 +93,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
     <text>Download buffer SSM $(SSM_NUM)</text>
     <x>145</x>
     <y>40</y>
@@ -113,57 +113,57 @@ $(pv_value)</tooltip>
     <name>Action Button_3</name>
     <actions execute_as_one="true">
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-1:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-1:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-2:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-2:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-3:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-3:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-4:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-4:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-5:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-5:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-6:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-6:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-7:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-7:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-8:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-8:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-9:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-9:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-10:BfrDwnldTrigEnbl-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-10:BfrDwnldTrigEnbl-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
     <text>Arm ALL</text>
     <x>15</x>
     <y>75</y>
@@ -183,57 +183,57 @@ $(pv_value)</tooltip>
     <name>Action Button_4</name>
     <actions execute_as_one="true">
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-1:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-1:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-2:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-2:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-3:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-3:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-4:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-4:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-5:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-5:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-6:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-6:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-7:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-7:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-8:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-8:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-9:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-9:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
       <action type="write_pv">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-10:BfrDwnldTrigForce-Cmd</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-10:BfrDwnldTrigForce-Cmd</pv_name>
         <value>1</value>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
     <text>Download ALL buffers</text>
     <x>145</x>
     <y>75</y>

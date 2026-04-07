@@ -50,7 +50,7 @@
     <traces>
       <trace>
         <name>Power forwarded</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX1)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX1)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -64,7 +64,7 @@
       </trace>
       <trace>
         <name>Power Reflected</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX2)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX2)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -117,7 +117,7 @@
     <traces>
       <trace>
         <name>Current</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX3)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX3)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -131,7 +131,7 @@
       </trace>
       <trace>
         <name>Voltage</name>
-        <y_pv>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX4)]</y_pv>
+        <y_pv>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDataValues.VAL[$(IDX4)]</y_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
@@ -200,7 +200,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigEnbl-Cmd</pv_name>
     <text>Arm SSM $(SSM_NUM)</text>
     <x>18</x>
     <y>816</y>
@@ -225,7 +225,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldTrigForce-Cmd</pv_name>
     <text>Download buffer SSM $(SSM_NUM)</text>
     <x>226</x>
     <y>816</y>
@@ -243,7 +243,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):TrigStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):TrigStat</pv_name>
     <x>132</x>
     <y>816</y>
     <width>26</width>
@@ -270,7 +270,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldInd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):BfrDwnldInd</pv_name>
     <x>408</x>
     <y>816</y>
     <width>26</width>

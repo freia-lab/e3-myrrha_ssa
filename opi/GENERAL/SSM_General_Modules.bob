@@ -153,7 +153,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):AllCommStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):AllCommStat</pv_name>
     <x>47</x>
     <y>175</y>
     <width>26</width>
@@ -205,7 +205,7 @@ $(pv_value)</tooltip>
   <widget type="group" version="3.0.0">
     <name>Group</name>
     <macros>
-      <SSM_PREFIX>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM</SSM_PREFIX>
+      <SSM_PREFIX>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM</SSM_PREFIX>
     </macros>
     <x>174</x>
     <y>269</y>

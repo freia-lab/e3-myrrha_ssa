@@ -20,7 +20,7 @@
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):On-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):On-Cmd</pv_name>
     <text>All on</text>
     <x>12</x>
     <y>90</y>
@@ -44,7 +44,7 @@
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Rst-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Rst-Cmd</pv_name>
     <text>Reset all</text>
     <x>126</x>
     <y>90</y>
@@ -68,7 +68,7 @@
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Off-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Off-Cmd</pv_name>
     <text>All off</text>
     <x>241</x>
     <y>90</y>
@@ -92,7 +92,7 @@
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Sanity-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Sanity-Cmd</pv_name>
     <text>Sanity</text>
     <x>414</x>
     <y>90</y>
@@ -116,7 +116,7 @@
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Flow-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Flow-Cmd</pv_name>
     <text>Flow</text>
     <x>534</x>
     <y>90</y>
@@ -133,7 +133,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_14</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):SSMLimWarn</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):SSMLimWarn</pv_name>
     <x>135</x>
     <y>3</y>
     <width>37</width>
@@ -205,7 +205,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):MajorFlt</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):MajorFlt</pv_name>
     <x>521</x>
     <y>4</y>
     <width>39</width>

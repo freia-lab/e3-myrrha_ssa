@@ -35,7 +35,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):$(PV_NAME)</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):$(PV_NAME)</pv_name>
     <x>145</x>
     <y>1</y>
     <width>98</width>
@@ -60,7 +60,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_14</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):$(PV_NAME)LimWarn</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):$(PV_NAME)LimWarn</pv_name>
     <x>8</x>
     <y>2</y>
     <width>16</width>

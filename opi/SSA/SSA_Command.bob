@@ -68,7 +68,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):On-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):On-Cmd</pv_name>
     <text>On</text>
     <x>70</x>
     <y>50</y>
@@ -93,7 +93,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):Off-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):Off-Cmd</pv_name>
     <text>Off</text>
     <x>270</x>
     <y>50</y>
@@ -118,7 +118,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RFOn-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RFOn-Cmd</pv_name>
     <text>RF on</text>
     <x>70</x>
     <y>120</y>
@@ -143,7 +143,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RFOff-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):RFOff-Cmd</pv_name>
     <text>RF Off</text>
     <x>270</x>
     <y>120</y>
@@ -239,7 +239,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):CommStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):CommStat</pv_name>
     <x>8</x>
     <y>192</y>
     <width>26</width>
