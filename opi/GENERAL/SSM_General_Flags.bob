@@ -40,7 +40,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):RFDriverPSUStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):RFDriverPSUStat</pv_name>
     <x>20</x>
     <y>3</y>
     <width>26</width>
@@ -67,7 +67,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_2</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):GlblStatus</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):GlblStatus</pv_name>
     <x>206</x>
     <y>3</y>
     <width>26</width>

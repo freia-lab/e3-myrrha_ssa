@@ -45,7 +45,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:FwdPwr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:FwdPwr</pv_name>
     <x>1015</x>
     <y>28</y>
     <height>31</height>
@@ -90,21 +90,21 @@
     </actions>
     <scripts>
       <script file="../scripts/general_status.py">
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtIntlk1</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtIntlk2</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:WaterFlowInRange</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:WaterFlowStat</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:Leak</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:DoorFrontStat</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:DoorRearStat</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:LoadWaterFlowStat</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:RFLineTStat</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT1Warn</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT2Warn</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:IntTWarn</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT1Err</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT2Err</pv_name>
-        <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:IntTErr</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:ExtIntlk1</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:ExtIntlk2</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:WaterFlowInRange</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:WaterFlowStat</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:Leak</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:DoorFrontStat</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:DoorRearStat</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:LoadWaterFlowStat</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:RFLineTStat</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT1Warn</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT2Warn</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:IntTWarn</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT1Err</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:ExtT2Err</pv_name>
+        <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:IntTErr</pv_name>
       </script>
     </scripts>
     <states>
@@ -141,7 +141,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_5</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:GlblSSMStatus</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:GlblSSMStatus</pv_name>
     <x>301</x>
     <y>24</y>
     <width>46</width>
@@ -199,7 +199,7 @@
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_6</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:GlblPSUStatus</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:GlblPSUStatus</pv_name>
     <x>362</x>
     <y>24</y>
     <width>46</width>

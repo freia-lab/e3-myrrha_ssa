@@ -20,7 +20,7 @@
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):On-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):On-Cmd</pv_name>
     <text>On</text>
     <x>48</x>
     <y>3</y>
@@ -45,7 +45,7 @@
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Off-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Off-Cmd</pv_name>
     <text>Off</text>
     <x>120</x>
     <y>3</y>
@@ -63,7 +63,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Volt</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Volt</pv_name>
     <x>277</x>
     <y>7</y>
     <width>80</width>
@@ -112,7 +112,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1Curr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1Curr</pv_name>
     <x>457</x>
     <y>7</y>
     <width>80</width>
@@ -137,7 +137,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_2</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2Curr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2Curr</pv_name>
     <x>556</x>
     <y>7</y>
     <width>80</width>
@@ -162,7 +162,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3Curr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3Curr</pv_name>
     <x>655</x>
     <y>7</y>
     <width>80</width>
@@ -202,7 +202,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1T</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod1T</pv_name>
     <x>1297</x>
     <y>7</y>
     <width>80</width>
@@ -227,7 +227,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_5</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2T</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod2T</pv_name>
     <x>1396</x>
     <y>7</y>
     <width>80</width>
@@ -252,7 +252,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_6</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3T</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-PSU-$(PSU_NUM):Mod3T</pv_name>
     <x>1495</x>
     <y>7</y>
     <width>80</width>

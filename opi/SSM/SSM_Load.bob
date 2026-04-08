@@ -86,7 +86,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Load6kWFwdPwr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Load6kWFwdPwr</pv_name>
     <x>88</x>
     <y>53</y>
     <width>98</width>
@@ -111,7 +111,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Load6kWRflPwr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):Load6kWRflPwr</pv_name>
     <x>88</x>
     <y>79</y>
     <width>98</width>
@@ -160,7 +160,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):LoadVswr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):LoadVswr</pv_name>
     <x>88</x>
     <y>116</y>
     <width>98</width>
@@ -209,7 +209,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_4</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):LoadVswrStat</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):LoadVswrStat</pv_name>
     <x>14</x>
     <y>117</y>
     <width>16</width>

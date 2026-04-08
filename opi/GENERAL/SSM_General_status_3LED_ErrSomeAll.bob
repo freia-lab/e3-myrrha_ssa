@@ -13,7 +13,7 @@
   <grid_step_y>6</grid_step_y>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME)Status</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME)Status</pv_name>
     <x>8</x>
     <y>2</y>
     <width>26</width>
@@ -86,7 +86,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME)</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME)</pv_name>
     <x>67</x>
     <y>6</y>
     <width>86</width>

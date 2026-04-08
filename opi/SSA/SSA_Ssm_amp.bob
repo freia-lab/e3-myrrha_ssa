@@ -61,7 +61,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):CombFwdPwr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):CombFwdPwr</pv_name>
     <x>67</x>
     <y>53</y>
     <width>78</width>
@@ -110,7 +110,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):CombRflPwr</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):CombRflPwr</pv_name>
     <x>67</x>
     <y>103</y>
     <width>78</width>
@@ -159,7 +159,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):SSMStatus</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-SSM-$(SSM_NUM):SSMStatus</pv_name>
     <x>158</x>
     <y>54</y>
     <width>66</width>

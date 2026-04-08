@@ -13,7 +13,7 @@
   <grid_step_y>6</grid_step_y>
   <widget type="led" version="2.0.0">
     <name>LED</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME_LED)</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):$(PV_NAME_LED)</pv_name>
     <x>8</x>
     <y>2</y>
     <width>26</width>

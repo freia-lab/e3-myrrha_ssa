@@ -68,7 +68,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:PSUOn-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:PSUOn-Cmd</pv_name>
     <text>All on</text>
     <x>30</x>
     <y>64</y>
@@ -115,7 +115,7 @@ $(pv_value)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_45</name>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):PSUFaultSumm</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-$(DEVICE):PSUFaultSumm</pv_name>
     <x>410</x>
     <y>73</y>
     <width>28</width>
@@ -149,7 +149,7 @@ $(pv_value)</tooltip>
         <description>WritePV</description>
       </action>
     </actions>
-    <pv_name>CAB-$(CAB_NUM):$(DISCIPLINE)-CGD:PSUOff-Cmd</pv_name>
+    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-CGD:PSUOff-Cmd</pv_name>
     <text>All off</text>
     <x>186</x>
     <y>64</y>
