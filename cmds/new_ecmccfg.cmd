@@ -2,14 +2,27 @@ require ecmccfg
 
 
 # 1. Add EtherCAT master
-iocshLoad ${ecmccfg_DIR}startup.cmd, "ECMC_VER=8.0.2+0,EC_RATE=100,MODE=DAQ,TMP_DIR=/tmp"
-
+iocshLoad ${ecmccfg_DIR}startup.cmd, "ECMC_VER=11.0.6+0,EC_RATE=100,MODE=DAQ,TMP_DIR=/tmp,ECMC_EC_TOOL_PATH=/opt/etherlab/bin/ethercat,ECmasterECMC_DIR=empty"
 
 # 2. Add your slave
-${SCRIPTEXEC} ${ECMC_CONFIG_ROOT}/addSlave.cmd,   "HW_DESC=CIFX_REECS, SLAVE_ID=0"
+${SCRIPTEXEC} ${ECMC_CONFIG_ROOT}addSlave.cmd,   "HW_DESC=CIFX,SLAVE_ID=0,DEFAULT_SUBS=False"
+
+
+#ecmcConfig "EcReadSdo(0,0x2000,0x0,1)"
+#ecmcConfig "EcReadSdo(0,0x2001,0x0,1)"
+#ecmcConfig "EcReadSdo(0,0x3000,0x0,1)"
+#ecmcConfig "EcReadSdo(0,0x3001,0x0,1)"
+
+#ecmcConfigOrDie "Cfg.EcAddEntryComplete(${ECMC_EC_SLAVE_NUM},${ECMC_EC_VENDOR_ID},${ECMC_EC_PRODUCT_ID},1,2,0x1600,0x0000,0x0,8,out_p0_0)"
+#ecmcConfigOrDie "Cfg.EcAddEntryComplete(${ECMC_EC_SLAVE_NUM},${ECMC_EC_VENDOR_ID},${ECMC_EC_PRODUCT_ID},1,2,0x1601,0x0000,0x0,8,out_p1)"
+
+${SCRIPTEXEC} ${ECMC_CONFIG_ROOT}/applyConfig.cmd
+
+#ecmcConfigOrDie "Cfg.EcAddEntryComplete(${ECMC_EC_SLAVE_NUM},${ECMC_EC_VENDOR_ID},${ECMC_EC_PRODUCT_ID},2,3,0x1a00,0x0000,0x0,8,in_p0)"
+#ecmcConfigOrDie "Cfg.EcAddEntryComplete(${ECMC_EC_SLAVE_NUM},${ECMC_EC_VENDOR_ID},${ECMC_EC_PRODUCT_ID},2,3,0x1a01,0x0000,0x0,8,in_p1)"
 
 # 4. Finalize whole EtherCAT scan + PDO assignment
-${SCRIPTEXEC} ${ECMC_CONFIG_ROOT}/applyConfig.cmd
+#${SCRIPTEXEC} ${ECMC_CONFIG_ROOT}/applyConfig.cmd
 # ================================================================
 # CIFX_post.cmd — AFTER Cfg.EcApplyConfig(1)
 # Correct mapping for two PDOs per direction.
