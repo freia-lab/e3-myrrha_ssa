@@ -554,8 +554,8 @@ record(ai, "$(PREFIX):iPSU1Volt") {
     field(TSE, -1)
     field(EGU, "V")
     field(LINR, "SLOPE")
-    field(ESLO, "0.001")
-    field(PREC, "3")
+    field(ESLO, "1")
+    field(PREC, "0")
 }
 
 record(ai, "$(PREFIX):iPSU1Mod1Curr") {
@@ -677,8 +677,8 @@ record(ai, "$(PREFIX):iPSU2Volt") {
     field(TSE, -1)
     field(EGU, "V")
     field(LINR, "SLOPE")
-    field(ESLO, "0.001")
-    field(PREC, "3")
+    field(ESLO, "1")
+    field(PREC, "0")
 }
 
 record(ai, "$(PREFIX):iPSU2Mod1Curr") {
@@ -800,8 +800,8 @@ record(ai, "$(PREFIX):iPSU3Volt") {
     field(TSE, -1)
     field(EGU, "V")
     field(LINR, "SLOPE")
-    field(ESLO, "0.001")
-    field(PREC, "3")
+    field(ESLO, "1")
+    field(PREC, "0")
 }
 
 record(ai, "$(PREFIX):iPSU3Mod1Curr") {
@@ -923,8 +923,8 @@ record(ai, "$(PREFIX):iPSU4Volt") {
     field(TSE, -1)
     field(EGU, "V")
     field(LINR, "SLOPE")
-    field(ESLO, "0.001")
-    field(PREC, "3")
+    field(ESLO, "1")
+    field(PREC, "0")
 }
 
 record(ai, "$(PREFIX):iPSU4Mod1Curr") {
@@ -1046,8 +1046,8 @@ record(ai, "$(PREFIX):iPSU5Volt") {
     field(TSE, -1)
     field(EGU, "V")
     field(LINR, "SLOPE")
-    field(ESLO, "0.001")
-    field(PREC, "3")
+    field(ESLO, "1")
+    field(PREC, "0")
 }
 
 record(ai, "$(PREFIX):iPSU5Mod1Curr") {
