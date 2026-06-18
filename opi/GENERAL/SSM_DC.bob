@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-29 16:12:11 by konrad-->
+<!--Saved on 2026-06-18 14:31:25 by konrad-->
 <display version="2.0.0">
   <width>500</width>
   <height>650</height>
@@ -233,10 +233,10 @@ $(pv_value)</tooltip>
   <widget type="embedded" version="2.0.0">
     <name>Linking Container_10</name>
     <macros>
-      <DESC>Local control enable</DESC>
+      <DESC>Remote control enabled</DESC>
       <PV_NAME_LED>LocalCtrlStat</PV_NAME_LED>
     </macros>
-    <file>SSM_General_status_led.bob</file>
+    <file>SSM_local_status_led.bob</file>
     <x>39</x>
     <y>510</y>
     <width>421</width>

@@ -6,10 +6,10 @@ num_ssms = PVUtil.getLong(pvs[1])
 this_ssm = int(widget.getMacroValue('SSM_NUM'))
 other_ssms = [i for i in range(1, num_ssms + 1) if i != this_ssm]
 
-pv_fmt = 'CAB-{}:{}-SSM-{{}}:{{}}StatTrigMask-Sel'.format(
+pv_fmt = 'HPRF-{}:{}-SSM-{{}}:{{}}StatTrigMask-Sel'.format(
     widget.getMacroValue('CAB_NUM'),
     widget.getMacroValue('DISCIPLINE'))
-commit_pv_fmt = 'CAB-{}:{}-SSM-{{}}:TrigMaskWrite-Cmd.PROC'.format(
+commit_pv_fmt = 'HPRF-{}:{}-SSM-{{}}:TrigMaskWrite-Cmd.PROC'.format(
     widget.getMacroValue('CAB_NUM'),
     widget.getMacroValue('DISCIPLINE'))
 

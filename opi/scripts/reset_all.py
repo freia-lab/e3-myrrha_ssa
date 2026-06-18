@@ -3,7 +3,7 @@ from org.csstudio.display.builder.runtime.script import ScriptUtil, PVUtil
 
 cab_num = widget.getDisplayModel().getPropertyValue("macros").getValue('CAB_NUM')
 discipline = widget.getDisplayModel().getPropertyValue("macros").getValue('DISCIPLINE')
-prefix = 'CAB-{}:{}-'.format(cab_num, discipline)
+prefix = 'HPRF-{}:{}-'.format(cab_num, discipline)
 pvs = ScriptUtil.getPrimaryPV(widget)
 num_ssm = PVUtil.getLong(pvs)
 fmt = prefix + 'SSM-{}:Rst-Cmd'

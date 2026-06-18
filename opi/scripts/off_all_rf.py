@@ -4,7 +4,7 @@ from java.lang import Exception as JavaException
 cab_num = widget.getDisplayModel().getPropertyValue("macros").getValue('CAB_NUM')
 discipline = widget.getDisplayModel().getPropertyValue("macros").getValue('DISCIPLINE')
 
-pv_fmt = 'CAB-{}:{}-Amp-{{}}:RFOff-Cmd'.format(cab_num, discipline)
+pv_fmt = 'HPRF-{}:{}-Amp-{{}}:RFOff-Cmd'.format(cab_num, discipline)
 reg_ssa = ['A', 'B']
 
 for pv_ssa in [pv_fmt.format(reg) for reg in reg_ssa] :

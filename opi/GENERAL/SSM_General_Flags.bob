@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-01-30 09:11:36 by konrad-->
+<!--Saved on 2026-06-18 13:30:44 by konrad-->
 <display version="2.0.0">
   <width>400</width>
   <height>30</height>
@@ -38,39 +38,12 @@
       </color>
     </border_color>
   </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED</name>
-    <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):RFDriverPSUStat</pv_name>
-    <x>20</x>
-    <y>3</y>
-    <width>26</width>
-    <height>26</height>
-    <off_color>
-      <color name="LED_ERROR" red="237" green="28" blue="36">
-      </color>
-    </off_color>
-    <on_color>
-      <color name="LED_OK" red="105" green="190" blue="40">
-      </color>
-    </on_color>
-    <foreground_color>
-      <color red="192" green="192" blue="192">
-      </color>
-    </foreground_color>
-    <line_color>
-      <color red="150" green="150" blue="150">
-      </color>
-    </line_color>
-    <square>true</square>
-    <actions>
-    </actions>
-  </widget>
   <widget type="multi_state_led" version="2.0.0">
     <name>LED_2</name>
     <pv_name>$(PRFX)$(CAB_NUM):$(DISCIPLINE)-Amp-$(AMP_CHAR):GlblStatus</pv_name>
-    <x>206</x>
-    <y>3</y>
-    <width>26</width>
+    <x>40</x>
+    <y>2</y>
+    <width>168</width>
     <height>26</height>
     <foreground_color>
       <color red="192" green="192" blue="192">
