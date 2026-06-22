@@ -1,0 +1,58 @@
+10.100.190.40    // IP address
+255.255.255.0    // Subnet mask
+10.100.190.254   // Gateway
+10.100.190.250   // NTP server 1
+195.200.224.67   // NTP server 2
+3.35338e-3  // Water flow slope
+2.01796e+1  // Water flow offset
+6.20000e+1  // Water flow warning
+5.50000e+1  // Water flow limit
+1.00000e+0  // External temperature 1 slope
+0.00000e+0  // External temperature 1 offset
+4.00000e+1  // External temperature 1 warning
+5.00000e+1  // External temperature 1 limit
+1.00000e+0  // External temperature 2 slope
+0.00000e+0  // External temperature 2 offset
+4.00000e+1  // External temperature 2 warning
+5.00000e+1  // External temperature 2 limit
+1.00000e+0  // Internal temperature slope
+0.00000e+0  // Internal temperature offset
+4.00000e+1  // Internal temperature warning
+5.00000e+1  // Internal temperature limit
+-2.5754E-11  // RF detector 1 square param
+5.0417E-05  // RF detector 1 slope
+1.5745E+00  // RF detector 1 offset
+3.1261E+05  // RF detector 1 gain
+-2.0211E-11  // RF detector 2 square param
+5.1992E-05  // RF detector 2 slope
+1.6214E+00  // RF detector 2 offset
+3.1550E+05  // RF detector 2 gain
+-2.7928E-11  // RF detector 3 square param
+5.1714E-05  // RF detector 3 slope
+1.6233E+00  // RF detector 3 offset
+3.1623E+05  // RF detector 3 gain
+-1.3142E-11  // RF detector 4 square param
+5.0744E-05  // RF detector 4 slope
+1.5824E+00  // RF detector 4 offset
+3.1915E+05  // RF detector 4 gain
+1.42293E+2  // Fan 1 right slope (outlet)
+2.39644E+3  // Fan 1 right offset (outlet)
+1.50000E+1  // Fan 1 right limit (%)
+1.58195E+2  // Fan 2 right slope (inlet)
+2.38097E+3  // Fan 2 right offset (inlet)
+1.50000E+1  // Fan 2 right limit (%)
+1.44185E+2  // Fan 1 left slope (outlet)
+2.10833E+3  // Fan 1 left offset (outlet)
+1.50000E+1  // Fan 1 left limit (%)
+1.57974E+2  // Fan 2 left slope (inlet)
+2.08345E+3  // Fan 2 left offset (inlet)
+1.50000E+1  // Fan 2 left limit (%)
+1.27836E+1  // Fan roof slope
+-2.54949E+1  // Fan roof offset
+1.50000E+1  // Fan roof limit (%)
+2.50000e+1  // Fan roof minimum set point (%)
+5.00000e+1  // Fan filtering constant
+5.50000e+1  // PSU temperature warning
+6.00000e+1  // PSU temperature limit
+
+// !!! PLEASE RESPECT THE FORMAT NUMBER, SPACE, //, COMMENT. THE LINE ORDER CAN NOT BE CHANGED !!!
