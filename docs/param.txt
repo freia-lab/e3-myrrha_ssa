@@ -1,7 +1,7 @@
 10.100.190.40    // IP address
 255.255.255.0    // Subnet mask
 10.100.190.254   // Gateway
-10.100.190.250   // NTP server 1
+10.100.190.101   // NTP server 1
 195.200.224.67   // NTP server 2
 3.31800e-3  // Water flow slope
 -1.8740e+1  // Water flow offset
